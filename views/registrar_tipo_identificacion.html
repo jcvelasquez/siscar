@@ -1,0 +1,93 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_tipos_identificacion">Tipos de Identificacion</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Registrar tipo de identificacion</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> REGISTRAR TIPO DE IDENTIFICACION</div>
+                    <div class="actions">
+                 <!--       <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_tipos_vehiculos" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>-->
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+                        
+                          <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                        
+                            <h3 class="form-section font-lg sbold">Información general</h3>
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Tipo de identificacion</label>
+                                        <div class="col-md-10">
+                                            <input type="text" name="tipo_identificacion" id="tipo_identificacion" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                               
+                            <div class="row">
+                            
+                            	<div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Estado</label>
+                                        <div class="col-md-3">
+                                            <select class="bs-select form-control" data-style="btn-success" tabindex="6" id="estado_tipo_identificacion" name="estado_tipo_identificacion">
+                                            	<option value="">Seleccione</option>
+                                                <option value="1">ACTIVO</option>
+                                                <option value="0">INACTIVO</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">                                    
+                                    <button type="submit" class="btn green grabar"><i class="fa fa-check"></i> Grabar</button>
+                        			<a ui-sref="private.listar_tipos_identificacion" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                    <input type="hidden" name="usuarios_idusuarios" id="usuarios_idusuarios" value="{{settings.idusuario}}"/>
+                                        <input type="hidden" name="usuario_creacion" id="usuario_creacion" value="{{settings.usuario}}"/>
+                                        <input type="hidden" name="usuario_modificacion" id="usuario_modificacion" value="{{settings.usuario}}"/>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+

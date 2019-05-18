@@ -1,0 +1,344 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+
+<!-- BEGIN PAGE BREADCRUMB -->
+<div class="row">
+    <div class="col-md-8">
+        <ul class="page-breadcrumb breadcrumb">
+          <li> <a ui-sref="dashboard">Inicio</a> <i class="fa fa-circle"></i> </li>
+          <li> <a ui-sref="private.listar_solicitudes_mantenimiento">Solicitudes</a> <i class="fa fa-circle"></i> </li>
+          <li class="active"> Registrar solicitud</li>
+        </ul>
+    </div>
+	<div class="col-md-2 pull-right text-right">
+    
+        <div class="btn-group">
+            <a class="btn yellow btn-xs" href="javascript:;" data-toggle="dropdown">
+                <i class="fa fa-question-circle"></i>
+                <span class="hidden-xs"> AYUDA </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="ayuda/SOLICITUD_MANTENIMIENTO.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Registrar solicitud mantenimiento?</a>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+
+<!-- END PAGE BREADCRUMB --> 
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+  <div class="col-md-12"> 
+    <!-- BEGIN PORTLET-->
+    <div class="portlet box blue">
+      <div class="portlet-title">
+        <div class="caption"><i class="fa-info-circle"></i> REGISTRAR SOLICITUD DE MANTENIMIENTO</div>
+      </div>
+      <div class="portlet-body form"> 
+        <!-- BEGIN FORM-->
+        <form action="#" class="form-horizontal" id="form">
+          <div class="form-body">
+            <div class="alert alert-danger display-hide">
+              <button class="close" data-close="alert"></button>
+              Compruebe que todos los campos esten completos para poder grabar. </div>
+            <div class="row">
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Fecha solicitud</label>
+                  <div class="col-md-4">
+                    <div class="input-group date date-picker">
+                      <input name="fecha_solicitud" type="text" tabindex="2" data-date-format="dd/mm/yyyy" class="form-control" id="fecha_solicitud">
+                      <span class="input-group-btn">
+                      <button class="btn default" type="button"> <i class="fa fa-calendar"></i> </button>
+                      </span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Solicita la sede</label>
+                  <div class="col-md-8">
+                    <select class="bs-select form-control" tabindex="3" data-style="btn-info" id="sedes_idsedes" name="sedes_idsedes"
+                                            data-live-search="true" data-size="8">
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-3">Al Vehiculo</label>
+                  <div class="col-md-9">
+                    <select class="bs-select form-control" tabindex="4" data-style="btn-info" id="vehiculos_idvehiculos" name="vehiculos_idvehiculos"
+                                            data-live-search="true" data-size="8" disabled="disabled">
+                      <option value="">Seleccione una sede</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="control-label col-md-2">Descripcion de solicitud</label>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" tabindex="5" id="descripcion_solicitud" name="descripcion_solicitud">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- END: ROW UPLOAD --> 
+            
+          </div>
+          <div class="form-actions">
+            <div class="row">
+              <div class="col-md-12 text-right">
+                <button type="submit" tabindex="7" id="grabar_solicitud" class="btn green grabar"><i class="fa fa-check"></i> Grabar solicitud</button>
+                <a ui-sref="private.listar_solicitudes_mantenimiento" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar  </a>
+                <input type="hidden" name="usuarios_idusuarios" value="{{settings.sesion.idusuario}}"/>
+                <input type="hidden" name="usuario_creacion" value="{{settings.sesion.usuario}}"/>
+                <input type="hidden" name="usuario_modificacion" value="{{settings.sesion.usuario}}"/>
+                <input type="hidden" name="estado_solicitud" value="1" id="estado_solicitud"/>
+                
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- END FORM--> 
+      </div>
+    </div>
+    
+    <!-- END PORTLET--> 
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12"> 
+    <!-- BEGIN PORTLET-->
+    
+    <div class="portlet box blue" id="items_sistemas">
+      <div class="portlet-title">
+        <div class="caption "> <i class="fa fa-info-circle"></i>AGREGAR SERVICIOS Y COMPONENTES A REPARAR</div>
+      </div>
+      <div class="portlet-body form">
+        <form action="#" class="form-horizontal" id="form_servicios">
+          <div class="form-body">
+            <div class="alert alert-danger items display-hide">
+              <button class="close" data-close="alert"></button>
+              Compruebe que todos los campos esten completos para poder grabar. </div>
+            <div class="row margin-bottom-20">
+              <div class="col-md-12">
+                <table class="table table-striped table-bordered table-hover" id="datatable_servicios">
+                  <thead>
+                    <tr>
+                      <th>Sistema</th>
+                      <th>Servicio</th>
+                      <th>Componente</th>
+                      <th>Tipo</th>
+                      <th>Problema</th>
+                      <th width="80">¿Es alerta?</th>
+                      <th width="80"> </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Sistema</label>
+                  <div class="col-md-8">
+                    <select class="bs-select form-control" tabindex="8" data-style="btn-info" id="idmantenimiento_sistemas" 
+                                                            name="idmantenimiento_sistemas" data-live-search="true" data-size="8">
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="control-label col-md-3">Servicios</label>
+                  <div class="col-md-8">
+                    <select class="bs-select form-control" tabindex="9" data-style="btn-info" id="idmantenimiento_servicios" name="idmantenimiento_servicios" data-live-search="true" data-size="8">
+                      <option value="">Seleccione un sistema primero</option>
+                    </select>
+                  </div>
+                  <a id="agregar_servicio" class="col-md-1 btn btn-primary btn-danger"><i class="fa fa-plus"></i></a> </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="control-label col-md-3">Componente</label>
+                  <div class="col-md-8">
+                    <select class="bs-select form-control" tabindex="10" data-style="btn-info" id="idmantenimiento_componentes" 
+                                                        	name="idmantenimiento_componentes" data-live-search="true" data-size="8">
+                      <option value="">Seleccione un sistema primero</option>
+                    </select>
+                  </div>
+                  <a id="agregar_componente" class="col-md-1 btn btn-primary btn-danger"><i class="fa fa-plus"></i></a> </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="control-label col-md-3">Tipo</label>
+                  <div class="col-md-9">
+                    <select class="bs-select form-control" tabindex="11" data-style="btn-info" 
+                            id="idmantenimiento_tipos_servicios" name="idmantenimiento_tipos_servicios" data-live-search="true" data-size="8">
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row hide" id="seleccionar_alerta">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="control-label col-md-1">¿Es alerta?</label>
+                  <div class="col-md-5">
+                    <select class="bs-select form-control" data-style="btn-info" 
+                                                        	data-live-search="true" data-size="8" id="idmantenimiento_alertas" name="idmantenimiento_alertas">
+                      <option value="">Seleccione un servicio para filtrar una alerta</option>
+                    </select>
+                    <input type="hidden" name="is_alerta" id="is_alerta" value="0" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="control-label col-md-1">Describa el problema</label>
+                  <div class="col-md-11">
+                    <textarea class="form-control" name="descripcion_problema" tabindex="12" id="descripcion_problema" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <div class="row">
+              <div class="col-md-12  text-right">
+                <button type="submit" tabindex="13" id="grabar_servicios" class="btn green"><i class="fa fa-plus"></i> Agregar a la solicitud</button>
+                <input type="hidden" name="usuarios_idusuarios" value="{{settings.sesion.idusuario}}"/>
+                <input type="hidden" name="usuario_creacion" value="{{settings.sesion.usuario}}"/>
+                <input type="hidden" name="usuario_modificacion" value="{{settings.sesion.usuario}}"/>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ********************* -->
+<!--   MODAL DE SERVICIOS  -->
+<!-- ********************* -->
+<div id="modal_servicios" class="container modal fade" tabindex="-1" data-focus-on="input:first">
+  <form action="#" class="form-horizontal" id="form_nuevo_servicio">
+    <div class="modal-header bg-blue-hoki bg-font-blue-hoki">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+      <h4 class="modal-title"></h4>
+    </div>
+    <div class="modal-body bg-grey-cararra">
+      <div class="form-body">
+        <div class="alert alert-danger display-hide">
+          <button class="close" data-close="alert"></button>
+          Compruebe que todos los campos esten completos para poder grabar. </div>
+        <div class="row">
+          <div class="col-md-7">
+            <div class="form-group">
+              <label class="control-label col-md-3">Nombre servicio</label>
+              <div class="col-md-9">
+                <input tabindex="30" type="text" class="form-control" tabindex="2" id="nombre_servicio" name="nombre_servicio">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="form-group">
+              <label class="control-label col-md-4">Codigo servicio</label>
+              <div class="col-md-8">
+                <input tabindex="31" type="text" class="form-control" tabindex="2" id="cod_servicio" name="cod_servicio">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row margin-bottom-20">
+          <div class="col-md-7">
+            <div class="form-group">
+              <label class="control-label col-md-3">Descripcion servicio</label>
+              <div class="col-md-9">
+                <input tabindex="32" type="text" class="form-control" tabindex="2" id="descripcion_servicio" name="descripcion_servicio">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="form-group">
+              <label class="control-label col-md-4">Tipo servicio</label>
+              <div class="col-md-8">
+                <select tabindex="33" class="bs-select form-control" data-style="btn-info" tabindex="6" id="idmantenimiento_tipos_servicios_nuevo" name="idmantenimiento_tipos_servicios_nuevo">
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer bg-grey bg-font-grey">
+      <button type="submit" tabindex="34" id="grabar_seleccionar_servicio" class="btn btn-success">Agregar y seleccionar</button>
+      <button type="button" data-dismiss="modal" class="btn btn-danger">Cancelar</button>
+      <input type="hidden" name="usuarios_idusuarios" value="{{settings.sesion.idusuario}}"/>
+      <input type="hidden" name="usuario_creacion" value="{{settings.sesion.usuario}}"/>
+      <input type="hidden" name="usuario_modificacion" value="{{settings.sesion.usuario}}"/>
+    </div>
+  </form>
+</div>
+
+
+<!-- ********************* -->
+<!-- MODAL DEL COMPONENTES -->
+<!-- ********************* -->
+<div id="modal_componentes" class="container modal fade" tabindex="-1" data-focus-on="input:first">
+  <form action="#" class="form-horizontal" id="form_nuevo_componente">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+      <h4 class="modal-title"></h4>
+    </div>
+    <div class="modal-body">
+      <div class="form-body">
+        <div class="alert alert-danger display-hide">
+          <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+        </div>
+        <h3 class="form-section font-lg sbold margin-bottom-20">Información general del componente: </h3>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="form-group">
+              <label class="control-label col-md-3">Nombre componente</label>
+              <div class="col-md-9">
+                <input tabindex="30" type="text" class="form-control" tabindex="2" id="nombre_componente" name="nombre_componente">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="control-label col-md-5">Codigo componente</label>
+              <div class="col-md-7">
+                <input tabindex="31" type="text" class="form-control" tabindex="2" id="cod_componente" name="cod_componente">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer bg-grey bg-font-grey">
+      <button type="submit" tabindex="34" id="grabar_seleccionar_componente" class="btn btn-success">Agregar y seleccionar</button>
+      <button type="button" data-dismiss="modal" class="btn btn-danger"><i class="fa fa-times"></i> Cancelar</button>
+    </div>
+  </form>
+</div>

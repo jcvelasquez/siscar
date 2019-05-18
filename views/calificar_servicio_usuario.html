@@ -1,0 +1,183 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_servicios">Servicios</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active">Finalizar servicio </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+     
+     <div class="row margin-bottom-20">
+        <div class="col-md-12">
+        	<a ui-sref="private.listar_servicios" class="btn btn-primary btn-success sbold"><i class="fa fa-mail-reply"></i> REGRESAR </a>
+        </div>                       
+	 </div>
+	
+	<div class="row" id="cabecera_servicio">
+        <div class="col-md-12 col-sm-12">
+            <div class="portlet solid blue-hoki">
+                <div class="portlet-title" style="padding:10px 20px 0 20px;">
+                    <div class="caption bold">
+                        <i class="fa fa-info-circle"></i> DETALLES DEL SERVICIO</div>
+                    <div class="actions">
+                        
+                    </div>
+                </div>
+                <div class="portlet-body" style="padding:10px 20px;">
+                	<div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Estado de asignacion</div>
+                        <div class="col-md-4 value"><span class="label label-success" data-display="es_asignado"> </span></div>
+                    </div>
+                	<div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Area solicitante</div>
+                        <div class="col-md-4 value" data-display="nombre_area"> </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Usuario que solicita </div>
+                        <div class="col-md-3 value" data-display="usuario_solicita"> </div>
+                    </div>  
+                    <div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Motivo del servicio </div>
+                        <div class="col-md-4 value" data-display="motivo_comision"> </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Lugar del servicio </div>
+                        <div class="col-md-3 value" data-display="lugar_destino"> </div>
+                    </div>
+                    <div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Fecha / Hora Inicio <br />programada</div>
+                        <div class="col-md-4 value" data-display="fecha_inicio">  </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Fecha / Hora - Fin <br />programada </div>
+                        <div class="col-md-3 value" data-display="fecha_fin"> </div>
+                    </div>   
+                    <div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Tipo de vehiculo </div>
+                        <div class="col-md-4 value" data-display="tipo_vehiculo">  </div>
+                    </div>  
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    
+    
+    
+    <div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-calendar-check-o"></i> CALIFICACION DE SERVICIO - USUARIO</div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form_calificacion_servicio">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>  
+                                   
+                                   <div class="row">
+                               
+                                            <div class="col-md-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Calificacion de servicio</label>
+                                                    <div class="col-md-10">
+                                                        <div class="md-radio-inline">
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio1" name="calificacion_usuario" class="md-radiobtn" value="1">
+                                                                <label for="radio1">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i> </label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio2" name="calificacion_usuario" class="md-radiobtn" value="2">
+                                                                <label for="radio2">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio3" name="calificacion_usuario" class="md-radiobtn" value="3">
+                                                                <label for="radio3">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio4" name="calificacion_usuario" class="md-radiobtn" value="4">
+                                                                <label for="radio4">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio5" name="calificacion_usuario" class="md-radiobtn" value="5">
+                                                                <label for="radio5">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                    </div>
+                                        
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Observaciones del usuario sobre la<br />ejecucion del servicio</label>
+                                                    <div class="col-md-10">
+                                                        <textarea class="form-control" name="observaciones_usuario" id="observaciones_usuario" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+  
+                        
+                        </div>
+                        	
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" id="grabar_calificacion" class="btn green"><i class="fa fa-check"></i> Registrar calificacion</button>
+                        			<a ui-sref="private.listar_servicios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                    
+                                    <input type="hidden" name="usuario_creacion" value="{{settings.sesion.usuario}}"/>
+                                    <input type="hidden" name="usuarios_idusuarios" value="{{settings.sesion.idusuario}}"/>
+                                    <input type="hidden" name="usuario_modificacion" value="{{settings.sesion.usuario}}"/>
+                                    
+                                    
+                                     
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                       
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+
+

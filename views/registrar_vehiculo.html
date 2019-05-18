@@ -1,0 +1,522 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<div class="row">
+    <div class="col-md-8">
+        <ul class="page-breadcrumb breadcrumb">
+             <li>
+                <a ui-sref="dashboard">Inicio</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <a ui-sref="private.listar_vehiculos">Vehiculos</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="active"> Registrar vehiculo</li>
+        </ul>
+    </div>
+	<div class="col-md-2 pull-right text-right">
+    
+        <div class="btn-group">
+            <a class="btn yellow btn-xs" href="javascript:;" data-toggle="dropdown">
+                <i class="fa fa-question-circle"></i>
+                <span class="hidden-xs"> AYUDA </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="ayuda/REGISTRAR_VEHICULO.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Registrar un vehiculo?</a>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> REGISTRAR VEHICULO</div>
+                    <div class="actions">
+                        <!--<a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Ver ficha tecnica </a>
+                        <a ui-sref="private.listar_vehiculos" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>-->
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+                       
+                            <h3 class="form-section font-lg sbold">Información general</h3>
+                            
+                            <div class="row">
+                                
+                                 <div class="col-md-4">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-6">Sede</label>
+                                        <div class="col-md-6">
+                                            <select class="bs-select form-control" data-style="btn-info" id="sedes_idsedes" name="sedes_idsedes"
+                                            data-live-search="true" data-size="8">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <div class="row">
+                                
+                                <div class="col-md-12">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-2">Descripcion vehiculo</label>
+                                        <div class="col-md-10">
+                                            <input type="text" placeholder="" class="form-control" id="descripcion_vehiculo" name="descripcion_vehiculo" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            
+                            <div class="row">
+                                
+                                <div class="col-md-4">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-6">Marca</label>
+                                        <div class="col-md-6">
+                                            <select class="bs-select form-control" id="idmarcas_vehiculos" name="idmarcas_vehiculos" data-style="btn-info"
+                                            data-live-search="true" data-size="8">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                 <div class="col-md-4">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Modelo</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" id="idmodelos_vehiculos" name="idmodelos_vehiculos" data-style="btn-info"
+                                            data-live-search="true" data-size="8">
+                                            <option value="">Seleccione una marca</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Tipo vehiculo</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" id="idtipos_vehiculo" name="idtipos_vehiculo" data-style="btn-info"
+                                            		data-live-search="true" data-size="8">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <div class="row">
+                                
+                                <div class="col-md-4">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-6">Estado vehiculo</label>
+                                        <div class="col-md-6">
+                                            <select class="bs-select form-control" data-style="btn-info" name="estado_vehiculo" id="estado_vehiculo">
+                                            	<option value="">Seleccione</option>
+                                                <option value="1">ACTIVO</option>
+                                                <option value="0">INACTIVO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <h3 class="form-section font-lg sbold">Información de indicadores</h3>
+                            
+                            <div class="row">
+                            
+                            
+                            	<div class="col-md-4">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-6">Combustible</label>
+                                        <div class="col-md-6">
+                                            <select class="bs-select form-control" data-style="btn-info" id="idtipo_combustible" name="idtipo_combustible">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-5">Unidad de medida</label>
+                                        <div class="col-md-7">
+                                        	<select class="bs-select form-control" data-style="btn-info" id="idmedida_combustible" name="idmedida_combustible">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>                                
+
+								<div class="col-md-4">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-5">Unidad de uso</label>
+                                        <div class="col-md-7">
+                                            <select class="bs-select form-control" id="idmedida_uso" name="idmedida_uso" data-style="btn-info">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                            
+                            
+                                
+                                                        
+                            <h3 class="form-section font-lg sbold">Información adicional</h3>
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-5">Número serie</label>
+                                        <div class="col-md-7">
+                                            <input type="text" placeholder="" id="nro_serie" name="nro_serie" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            	<div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-5">Número serie motor</label>
+                                        <div class="col-md-7">
+                                            <input type="text" placeholder="" id="nro_motor" name="nro_motor" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-5">Numero placa</label>
+                                        <div class="col-md-5">
+                                            <input type="text" placeholder="" class="form-control" id="placa_vehiculo" name="placa_vehiculo" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                            </div>
+                            
+                            
+                            <div class="row"> 
+                            
+                            	
+                                	<div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-5">Kilometraje actual</label>
+                                            <div class="col-md-7">
+                                                <input type="text" id="kilometraje_inicio" name="kilometraje_inicio" placeholder="" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                
+    								<div class="col-md-4">
+                                    	 <div class="form-group">
+                                            <label class="col-md-5 control-label">Color (calendario)</label>
+                                            <div class="col-md-7">
+                                                <input type="text" id="color_calendario" name="color_calendario" class="form-control" data-control="hue"> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-5">Vencimiento SOAT</label>
+                                            <div class="col-md-5">
+                                                <div class="input-group date-picker">
+                                                    <input name="vencimiento_soat" type="text" data-date-format="dd/mm/yyyy" class="form-control" id="vencimiento_soat" />
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                            </div>    
+
+							<div class="row">
+                            
+                            
+                            		<div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-5">Año fabricación</label>
+                                            <div class="col-md-7">
+                                                <input id="ano_fabricacion" type="text" value="10" name="ano_fabricacion"> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-5">¿Es Pool?</label>
+                                            <div class="col-md-7">
+                                                <select class="bs-select form-control" data-style="btn-info" name="es_pool" id="es_pool">
+                                                    <option value="">Seleccione</option>
+                                                    <option value="1">SI</option>
+                                                    <option value="0">NO</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-5">Clase transparencia</label>
+                                            <div class="col-md-7">
+                                                <select class="bs-select form-control" data-style="btn-info" name="clase_transparencia" id="clase_transparencia">
+                                                    <option value="">Seleccione</option>
+                                                    <option value="1">OFICIAL</option>
+                                                    <option value="2">SEGURIDAD</option>
+                                                    <option value="3">POOL</option>
+                                                    <option value="4">OPERATIVO</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                            
+                            
+                            </div>                                
+                            
+                            
+                            
+                                   
+                       </div> 
+                       
+                       <div class="form-actions">
+                                <div class="row">
+                                    <div class="col-md-12 text-right">
+                                    
+                                    	<button type="submit" id="grabar_vehiculo" class="btn green grabar"><i class="fa fa-check"></i> Grabar</button>
+                                        <a ui-sref="private.listar_vehiculos" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                        <input type="hidden" id="id" name="id" value="" />
+                                        <input type="hidden" name="usuarios_idusuarios" id="usuarios_idusuarios" value="{{settings.idusuario}}"/>
+                                        <input type="hidden" name="usuario_creacion" id="usuario_creacion" value="{{settings.usuario}}"/>
+                                        <input type="hidden" name="usuario_modificacion" id="usuario_modificacion" value="{{settings.usuario}}"/>
+                                    </div>
+                                </div>
+                            </div>
+                                                
+                    </form>
+                    <!-- END FORM-->
+                    
+                    </div> 
+                    
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+  
+  
+  <div class="row">
+    <div class="col-md-12">
+                <div class="portlet box blue" id="documentos_adjuntos">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-gift"></i>DOCUMENTOS ADJUNTOS AL VEHICULO</div>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse"> </a>
+       <!--                         <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                                <a href="javascript:;" class="reload"> </a>
+                                <a href="javascript:;" class="remove"> </a>-->
+                            </div>
+                        </div>
+                        
+                        <div class="portlet-body form">
+                        
+                                <div class="form-body">
+                                
+                                	<div class="row margin-bottom-20">
+                                    	<div class="col-md-12">
+                                            <table class="table table-striped table-bordered table-hover" id="datatable_adjuntos">
+                                                <thead>
+                                                    <tr>
+                                                    	<th>Imagen</th>
+                                                        <th>Nombre archivo</th>
+                                                        <th>Tamaño de archivo</th>
+                                                        <th width="80">  </th>
+                                                        <th width="80">  </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                                                    
+                                    <div class="row" ng-controller="FileUploadCtrl" nv-file-drop="" uploader="uploader" filters="queueLimit">
+            
+                                        <div class="col-md-12">
+                                                    
+                                                    <div ng-show="uploader.isHTML5">
+        
+                                                        <div class="file-drop-zone margin-bottom-20" nv-file-over="" uploader="uploader" over-class="file-drop-zone-over"> Puede arrastrar y soltar archivos en esta zona para adjuntar a la recarga... o presione el boton "Elegir archivos" de la parte inferior.</div>
+                                                       
+                                                        <input type="file" nv-file-select="" uploader="uploader" multiple />
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="table-scrollable table-scrollable-borderless">
+                                                        <table class="table table-hover table-light">
+                                                            <thead>
+                                                                <tr class="uppercase">
+                                                                    <th width="50%">Archivo</th>
+                                                                    <th ng-show="uploader.isHTML5">Tamaño</th>
+                                                                    <th ng-show="uploader.isHTML5">Progreso</th>
+                                                                    <th>Estado</th>
+                                                                    <th>Acciones</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr ng-repeat="item in uploader.queue">
+                                                                    <td>
+                                                                        <strong>{{ item.file.name }}</strong>
+                                                                    </td>
+                                                                    <td ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                                                                    <td ng-show="uploader.isHTML5">
+                                                                        <div class="progress progress-sm" style="margin-bottom: 0;">
+                                                                            <div class="progress-bar progress-bar-info" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span ng-show="item.isSuccess" class="text-success">
+                                                                            <i class="glyphicon glyphicon-ok"></i>
+                                                                        </span>
+                                                                        <span ng-show="item.isCancel" class="text-info">
+                                                                            <i class="glyphicon glyphicon-ban-circle"></i>
+                                                                        </span>
+                                                                        <span ng-show="item.isError" class="text-danger">
+                                                                            <i class="glyphicon glyphicon-remove"></i>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td nowrap>
+                                                                        <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                                                            <span class="glyphicon glyphicon-upload"></span> Subir y grabar </button>
+                                                                        <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+                                                                            <span class="glyphicon glyphicon-ban-circle"></span> Cancelar </button>
+                                                                        <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                                                                            <span class="glyphicon glyphicon-trash"></span> Borrar </button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div>
+                                                        <p>Progreso de cola:</p>
+                                                        <div class="progress progress-sm" style="">
+                                                            <div class="progress-bar progress-bar-info" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-success btn-s" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">
+                                                        <span class="glyphicon glyphicon-upload"></span> Subir y grabar todos</button>
+                                                    <button type="button" class="btn btn-warning btn-s" ng-click="uploader.cancelAll()" ng-disabled="!uploader.isUploading">
+                                                        <span class="glyphicon glyphicon-ban-circle"></span> Cancelar todos </button>
+                                                    <button type="button" class="btn btn-danger btn-s" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length">
+                                                        <span class="glyphicon glyphicon-trash"></span> Borrar todos</button>
+                                                
+        
+                                        </div>
+                                    </div>
+                                    
+                                   </div> 
+                                   
+                                   <div class="form-actions hide">
+                                        <div class="row">
+                                            <div class="col-md-12  text-right">
+                                                <button type="submit" id="grabar_adjuntos" class="btn green"><i class="fa fa-check"></i> Grabar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+ 		</div>
+ </div>
+ 
+ 
+ 
+<script>
+	
+	
+    function FileUploadCtrl($scope, FileUploader, $rootScope)
+    {
+				
+        var uploader = $scope.uploader = new FileUploader(
+        {
+            url: 'database/UploadVehiculosService.php',
+			removeAfterUpload : true
+        }); 
+		
+		uploader.filters.push({
+			name: 'fileFilter',
+			fn: function(item /*{File|FileLikeObject}*/, options) {
+				var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
+				return '|jpg|png|jpeg|bmp|gif|pdf|'.indexOf(type) !== -1;
+			}
+		});
+		
+        uploader.onBeforeUploadItem = function(fileItem)
+        {
+            console.info('onBeforeUploadItem', fileItem);
+			fileItem.formData.push({ 
+				vehiculos_idvehiculos: $rootScope.$state.params.id , 
+				usuario_creacion : $('#usuario_creacion').val(),
+				upload_path : $rootScope.settings.uploadPathVehiculos
+			});
+        };
+		
+		uploader.onSuccessItem = function(fileItem, response, status, headers)
+        {
+            console.info('onSuccessItem', fileItem, response, status, headers);
+        };
+        uploader.onErrorItem = function(fileItem, response, status, headers)
+        {
+            console.info('onErrorItem', fileItem, response, status, headers);
+        };
+        uploader.onCancelItem = function(fileItem, response, status, headers)
+        {
+            console.info('onCancelItem', fileItem, response, status, headers);
+        };
+        uploader.onCompleteItem = function(fileItem, response, status, headers)
+        {
+            console.info('onCompleteItem', fileItem, response, status, headers);
+        };
+        
+        uploader.onCompleteAll = function()
+        {
+			$( "#datatable_adjuntos" ).DataTable().ajax.reload()
+        };
+		
+		console.info('uploader', uploader);
+		
+    };
+	
+</script>

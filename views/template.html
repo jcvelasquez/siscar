@@ -1,0 +1,230 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="dashboard">jQuery Plugins</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Form Tools </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-gift"></i>Pedido de movilidad de uso oficial</div>
+                    <div class="tools">
+                        <a href="javascript:;" class="collapse"> </a>
+                        <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                        <a href="javascript:;" class="reload"> </a>
+                        <a href="javascript:;" class="remove"> </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal">
+                        <div class="form-body">
+                            <h3 class="form-section">Informacion de la comision</h3>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Area solicitante</label>
+                                        <div class="col-md-9">
+                                            <select class="form-control">
+                                                <option value="">Direccion de promocion y negocio</option>
+                                                <option value="">Presidencia</option>
+                                                <option value="">Asesoria legal</option>
+                                                <option value="">Gerencia</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Tipo de vehiculo</label>
+                                        <div class="col-md-9">
+                                            <select class="form-control">
+                                                <option value="">Camioneta pick-up</option>
+                                                <option value="">Camioneta suv</option>
+                                                <option value="">Auto sedan</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+              
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">¿Quien solicita?</label>
+                                        <div class="col-md-9">
+                                            <select class="form-control">
+                                                <option value="">Nombre de usuario 1</option>
+                                                <option value="">Nombre de usuario 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Fecha comision</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="dd/mm/aaaaa">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Hora comision</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+              
+                            </div>
+                            
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Tipo comision</label>
+                                        <div class="col-md-9">
+                                        	<div class="input-group">
+                                                <div class="icheck-inline">
+                                                    <label>
+                                                        <input type="radio" name="radio2" class="icheck"> Ida </label>
+                                                    <label>
+                                                        <input type="radio" name="radio2" checked class="icheck"> Ida y vuelta</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                            </div>
+                            
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-12">
+      <div class="portlet box blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-gift"></i>Agregar comisionados a la solicitud</div>
+                    <div class="tools">
+                        <a href="javascript:;" class="collapse"> </a>
+                        <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                        <a href="javascript:;" class="reload"> </a>
+                        <a href="javascript:;" class="remove"> </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <div class="form-body">
+                        <div class="form-group">
+                            <form action="#" class="mt-repeater form-horizontal">
+
+                                <div data-repeater-list="group-a">
+                                    <div data-repeater-item class="mt-repeater-item">
+                                        <!-- jQuery Repeater Container -->
+                                        <div class="mt-repeater-input">
+                                            <label class="control-label">Nombre comisionado</label>
+                                            <br/>
+                                            <input type="text" name="text-input" class="form-control" value="John Smith" /> </div>
+                                        
+                                        <div class="mt-repeater-input mt-repeater-textarea">
+                                            <label class="control-label">Motivo de visita oficial</label>
+                                            <br/>
+                                            <textarea name="textarea-input" class="form-control" rows="3">This role is to follow up with all meetings and ensure that each operational process flow moves accordingly in a timely manner.</textarea>
+                                        </div>
+                                        
+                                        <div class="mt-repeater-input">
+                                            <label class="control-label">Direccion</label>
+                                            <br/>
+                                            <input type="text" name="text-input" class="form-control" value="John Smith" /> </div>
+                                            
+                                        <div class="mt-repeater-input mt-radio-inline">
+                                            <label class="control-label">Ubigeo</label>
+                                            <br/>
+                                            <select name="select-input" class="form-control">
+                                                <option value="A" selected>Marketing</option>
+                                                <option value="B">Creative</option>
+                                                <option value="C">Development</option>
+                                            </select>
+                                            <br/>
+                                                <select name="select-input" class="form-control">
+                                                    <option value="A" selected>Marketing</option>
+                                                    <option value="B">Creative</option>
+                                                    <option value="C">Development</option>
+                                                </select>
+                                             <br/>
+                                            <select name="select-input" class="form-control">
+                                                <option value="A" selected>Palacio de gobierno</option>
+                                                <option value="B">Creative</option>
+                                                <option value="C">Development</option>
+                                            </select>
+                                        </div>
+                                        <!--<div class="mt-repeater-input mt-checkbox-inline">
+                                            <label class="control-label">Provincia</label>
+                                                <br/>
+                                                <select name="select-input" class="form-control">
+                                                    <option value="A" selected>Marketing</option>
+                                                    <option value="B">Creative</option>
+                                                    <option value="C">Development</option>
+                                                </select>
+                                        </div>
+                                        <div class="mt-repeater-input">
+                                            <label class="control-label">Destino</label>
+                                            <br/>
+                                            <select name="select-input" class="form-control">
+                                                <option value="A" selected>Palacio de gobierno</option>
+                                                <option value="B">Creative</option>
+                                                <option value="C">Development</option>
+                                            </select>
+                                        </div>-->
+                                        <div class="mt-repeater-input">
+                                            <a href="javascript:;" data-repeater-delete class="btn btn-danger mt-repeater-delete">
+                                                <i class="fa fa-close"></i> Borrar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="javascript:;" data-repeater-create class="btn btn-success mt-repeater-add">
+                                    <i class="fa fa-plus"></i> Agregar comisionado</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+      </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT -->
+<script>
+    ComponentsFormTools.init(); // init todo page
+</script>

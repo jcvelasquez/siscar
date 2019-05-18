@@ -1,0 +1,409 @@
+<style>
+#datatable_tareas table tbody tr { background:none !important; }
+</style>
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_ordenes_trabajo">Ordenes de Trabajo</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Ejecutar tareas</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+
+<div class="row margin-bottom-20">
+	 <div class="col-md-6">
+         <a ui-sref="private.listar_ordenes_trabajo" class="btn btn-primary btn-warning">
+                <i class="fa fa-mail-reply"></i> REGRESAR 
+         </a>
+    </div>
+    <div class="col-md-6 text-right">
+       
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="portlet solid blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-info-circle"></i> INFORMACI&Oacute;N DE LA ORDEN DE TRABAJO A EJECUTAR</div>
+                    <div class="actions">
+                       
+                    </div>
+                </div>
+                <div class="portlet-body">
+
+                	<!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+                        
+                        
+                        	<div class="row">
+                            
+                                    
+                                    
+                                     <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6">FECHA ORDEN TRABAJO</label>
+                                            <div class="col-md-6">
+                                                  <input name="fecha_orden_trabajo" type="text" readonly="readonly" class="form-control" id="fecha_orden_trabajo" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6">INICIO ESTIMADO</label>
+                                            <div class="col-md-6">
+                                                  <input name="fecha_estimada_inicio" type="text" readonly="readonly" class="form-control" id="fecha_estimada_inicio">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6">FIN ESTIMADO</label>
+                                            <div class="col-md-6">
+                                                  <input name="fecha_estimada_fin" type="text" readonly="readonly" class="form-control" id="fecha_estimada_fin">
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                                                   
+                            <div class="row">
+                            
+                            		 <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2">DESCRIPCION EVALUACION</label>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" readonly="readonly" tabindex="2" id="descripcion_evaluacion" name="descripcion_evaluacion">
+                                            </div>
+                                        </div>
+                                    </div>
+                          
+                          
+                           </div>
+                                                   
+                            <div class="row static-info">
+                            
+                            		<div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6">SEDE</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" readonly="readonly" tabindex="2" id="nombre_sede" name="nombre_sede">
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6">VEHICULO</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" readonly="readonly" tabindex="2" id="placa_vehiculo" name="placa_vehiculo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6"># ORDEN TRABAJO</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" readonly="readonly" tabindex="2" id="idorden_trabajo" name="idorden_trabajo">
+                                            </div>
+                                        </div>
+                                    </div>
+  
+
+                            </div>
+                            
+                            
+                            
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+
+                <div class="portlet box blue">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-info-circle"></i> TAREAS A EJECUTAR ASIGNADAS A LA ORDEN DE TRABAJO</div>
+                        </div>
+                        <div class="portlet-body form">
+                        
+                        	<form action="#" class="form-horizontal" id="form_ejecucion">
+                            	<div class="form-body">
+                                
+                                	<div class="row margin-bottom-20">
+                                    	<div class="col-md-12">
+                                            <table class="table table-striped table-bordered table-hover" id="datatable_tareas">
+                                                <thead>
+                                                    <tr>
+														<!--<th>Servicio</th>
+                                                        <th>Componente</th>-->
+	                                                    <th>Problema</th>
+                                                        <th>Evaluacion</th>
+                                                        <th>Accion</th>
+                                                        <th class="costo">Costo</th>
+                                                        <!--<th>Comentarios</th>
+                                                        <th>% Trabajo</th>-->
+                                                        <th>¿Se ejecuto?</th>
+                                                        <th width="60"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                	
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th colspan="3" style="text-align:right">MONTO TOTAL DE ORDEN DE TRABAJO:&nbsp;&nbsp;</th>
+                                                        <th colspan="1"></th>
+                                                        <th colspan="2"></th>
+                                                    </tr>
+                                                  </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="registro_tareas" class="hide">    
+                                    
+                                    <h3 class="form-section font-lg sbold"> <i class="fa fa-info-circle"></i> INFORMACION DE LA TAREA A EJECUTAR</h3>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Descripcion del problema</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" readonly="readonly" class="form-control" value="" tabindex="2" id="descripcion_problema" name="descripcion_problema"> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Evaluacion del problema</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" readonly="readonly" class="form-control" value="" tabindex="2" id="descripcion_diagnostico" name="descripcion_diagnostico"> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Acción para solucionar</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" readonly="readonly" class="form-control" id="descripcion_accion" name="descripcion_accion"> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-6">Costo de acción</label>
+                                                    <div class="col-md-6">
+                                                        <input type="text" readonly="readonly" class="form-control mask-numeric" value="" tabindex="2" id="costo_accion" name="costo_accion"> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                   
+                                    
+                                    <h3 class="form-section font-lg sbold"> <i class="fa fa-info-circle"></i> INFORMACION DE LA EJECUCION</h3>
+                                    
+                                    <div class="alert alert-danger items display-hide">
+                                         <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                                   </div>
+                                   
+                                   <div class="row"> 
+                                     
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-6">Fecha ejecución</label>
+                                                    <div class="col-md-6">
+                                                        <div class="input-group date date-picker">
+                                                            <input name="fecha_trabajo_ejecutado"  data-date-format="dd/mm/yyyy" type="text" class="form-control" id="fecha_trabajo_ejecutado">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn default" type="button">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                        <!-- /input-group -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                               
+                                    </div>
+                                    
+                                    <div class="row">
+                               
+                                            <div class="col-md-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Calificacion de ejecucion</label>
+                                                    <div class="col-md-10">
+                                                        <div class="md-radio-inline">
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio1" name="calificacion_trabajo_ejecutado" class="md-radiobtn" value="1">
+                                                                <label for="radio1">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i> Muy mala </label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio2" name="calificacion_trabajo_ejecutado" class="md-radiobtn" value="2">
+                                                                <label for="radio2">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i> Mala</label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio3" name="calificacion_trabajo_ejecutado" class="md-radiobtn" value="3">
+                                                                <label for="radio3">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> Regular </label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio4" name="calificacion_trabajo_ejecutado" class="md-radiobtn" value="4">
+                                                                <label for="radio4">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> Buena </label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio5" name="calificacion_trabajo_ejecutado" class="md-radiobtn" value="5">
+                                                                <label for="radio5">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> Excelente </label>
+                                                            </div>
+                                                            <!--<div class="md-radio">
+                                                                <input type="radio" id="radio6" name="calificacion_trabajo_ejecutado" class="md-radiobtn" value="0">
+                                                                <label for="radio6">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> SIN CALIFICACION </label>
+                                                            </div>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Resultados de la<br />ejecución de la tarea</label>
+                                                    <div class="col-md-10">
+                                                        <textarea class="form-control" name="comentarios_trabajo_ejecutado" id="comentarios_trabajo_ejecutado" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">% de ejecucion</label>
+                                                    <div class="col-md-10">
+                                                         <input id="porcentaje_trabajo_ejecutado" name="porcentaje_trabajo_ejecutado" type="text" /> 
+                                                         <span class="help-block text-danger helper hide"><h6>El % de ejecucion debe ser mayor a 10.</h6></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">¿Se ejecuto trabajo?</label>
+                                                    <div class="col-md-5">
+                                                        <input type="checkbox" id="se_ejecuto_trabajo" name="se_ejecuto_trabajo" class="make-switch" 
+                                                            data-on-text="SI" data-off-text="NO"
+                                                            data-on-color="success" data-off-color="danger">
+                                                    </div>
+                                                </div>
+                                            </div>
+                               
+                                    </div>
+                                    
+                                    <div class="row hide" id="motivo_no_ejecuto_section"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Explique el porque<br />no se ejecuto la tarea</label>
+                                                    <div class="col-md-10">
+                                                        <textarea class="form-control" name="motivo_no_ejecuto" id="motivo_no_ejecuto" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                    
+                                </div>
+                                  
+
+                            </div>
+                           
+                            <div class="form-actions hide" id="actions_ejecucion">
+                                <div class="row">
+                                    <div class="col-md-12  text-right">
+                                        <button type="submit" id="grabar_ejecucion" class="btn green"><i class="fa fa-check"></i> Grabar ejecucion</button>
+                                        <button type="button" id="cancelar_ejecucion" class="btn btn-danger"><i class="fa fa-times"></i> Cancelar</button>
+                                        <input type="hidden" name="usuario_creacion" value="{{settings.usuario}}"/>           
+                                        <input type="hidden" name="usuario_modificacion" value="{{settings.usuario}}"/>                                   
+                                        <input type="hidden" name="idtrabajos_x_evaluaciones" id="idtrabajos_x_evaluaciones"/>
+                                    </div>
+                                </div>
+                            </div>
+                           </form>          
+                        </div>
+                    </div>
+ 		</div>
+ </div>
+
+
+
+<!-- END MAIN CONTENT -->
+<script>
+    //ComponentsFormTools.init(); // init todo page
+</script>

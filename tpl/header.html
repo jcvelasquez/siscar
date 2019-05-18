@@ -1,0 +1,494 @@
+<!-- BEGIN HEADER TOP -->
+<div class="page-header-top">
+    <div class="container-fluid">
+        <!-- BEGIN LOGO -->
+        <div class="page-logo">
+            <a ui-sref="private.disponibilidad_vehiculos">
+                <img src="{{settings.layoutPath}}/img/logo-siex-minag-finales.png" alt="logo" class="logo-default"> 
+            </a>
+        </div>
+        <!-- END LOGO -->
+        <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+        <a href="javascript:;" class="menu-toggler"></a>
+        <!-- END RESPONSIVE MENU TOGGLER -->
+        <!-- BEGIN TOP NAVIGATION MENU -->
+        <div class="top-menu">
+            <ul class="nav navbar-nav pull-right">
+                <!-- BEGIN NOTIFICATION DROPDOWN -->
+                <li class="dropdown dropdown-extended dropdown-dark dropdown-notification hide" id="header_notification_bar">
+                    <a href="javascript:;" class="dropdown-toggle" dropdown-menu-hover data-toggle="dropdown" data-close-others="true">
+                        <i class="icon-bell"></i>
+                        <span class="badge badge-default">7</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="external">
+                            <h3>You have
+                                <strong>12 pending</strong> tasks</h3>
+                            <a href="javascript:;">view all</a>
+                        </li>
+                        <li>
+                            <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                <li>
+                                    <a href="javascript:;">	
+                                        <span class="time">just now</span>
+                                        <span class="details">
+                                            <span class="label label-sm label-icon label-success">
+                                                <i class="fa fa-plus"></i>
+                                            </span> New user registered. </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="time">3 mins</span>
+                                        <span class="details">
+                                            <span class="label label-sm label-icon label-danger">
+                                                <i class="fa fa-bolt"></i>
+                                            </span> Server #12 overloaded. </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="time">10 mins</span>
+                                        <span class="details">
+                                            <span class="label label-sm label-icon label-warning">
+                                                <i class="fa fa-bell-o"></i>
+                                            </span> Server #2 not responding. </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="time">14 hrs</span>
+                                        <span class="details">
+                                            <span class="label label-sm label-icon label-info">
+                                                <i class="fa fa-bullhorn"></i>
+                                            </span> Application error. </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="time">2 days</span>
+                                        <span class="details">
+                                            <span class="label label-sm label-icon label-danger">
+                                                <i class="fa fa-bolt"></i>
+                                            </span> Database overloaded 68%. </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="time">3 days</span>
+                                        <span class="details">
+                                            <span class="label label-sm label-icon label-danger">
+                                                <i class="fa fa-bolt"></i>
+                                            </span> A user IP blocked. </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="time">4 days</span>
+                                        <span class="details">
+                                            <span class="label label-sm label-icon label-warning">
+                                                <i class="fa fa-bell-o"></i>
+                                            </span> Storage Server #4 not responding dfdfdfd. </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="time">5 days</span>
+                                        <span class="details">
+                                            <span class="label label-sm label-icon label-info">
+                                                <i class="fa fa-bullhorn"></i>
+                                            </span> System Error. </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="time">9 days</span>
+                                        <span class="details">
+                                            <span class="label label-sm label-icon label-danger">
+                                                <i class="fa fa-bolt"></i>
+                                            </span> Storage server failed. </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- END NOTIFICATION DROPDOWN -->
+                <!-- BEGIN TODO DROPDOWN -->
+                <li class="dropdown dropdown-extended dropdown-dark dropdown-tasks hide" id="header_task_bar">
+                    <a href="javascript:;" class="dropdown-toggle" dropdown-menu-hover data-toggle="dropdown" data-close-others="true">
+                        <i class="icon-calendar"></i>
+                        <span class="badge badge-default">3</span>
+                    </a>
+                    <ul class="dropdown-menu extended tasks">
+                        <li class="external">
+                            <h3>Tienes
+                                <strong>5</strong> servicios ejecutandose</h3>
+                            <a ui-sref="listar_servicios">Ver todo</a>
+                        </li>
+                        <li>
+                            <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="task">
+                                            <span class="desc">New release v1.2 </span>
+                                            <span class="percent">30%</span>
+                                        </span>
+                                        <span class="progress">
+                                            <span style="width: 40%;" class="progress-bar progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">40% Complete</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="task">
+                                            <span class="desc">Application deployment</span>
+                                            <span class="percent">65%</span>
+                                        </span>
+                                        <span class="progress">
+                                            <span style="width: 65%;" class="progress-bar progress-bar-danger" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">65% Complete</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="task">
+                                            <span class="desc">Mobile app release</span>
+                                            <span class="percent">98%</span>
+                                        </span>
+                                        <span class="progress">
+                                            <span style="width: 98%;" class="progress-bar progress-bar-success" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">98% Complete</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="task">
+                                            <span class="desc">Database migration</span>
+                                            <span class="percent">10%</span>
+                                        </span>
+                                        <span class="progress">
+                                            <span style="width: 10%;" class="progress-bar progress-bar-warning" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">10% Complete</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="task">
+                                            <span class="desc">Web server upgrade</span>
+                                            <span class="percent">58%</span>
+                                        </span>
+                                        <span class="progress">
+                                            <span style="width: 58%;" class="progress-bar progress-bar-info" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">58% Complete</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="task">
+                                            <span class="desc">Mobile development</span>
+                                            <span class="percent">85%</span>
+                                        </span>
+                                        <span class="progress">
+                                            <span style="width: 85%;" class="progress-bar progress-bar-success" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">85% Complete</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="task">
+                                            <span class="desc">New UI release</span>
+                                            <span class="percent">38%</span>
+                                        </span>
+                                        <span class="progress progress-striped">
+                                            <span style="width: 38%;" class="progress-bar progress-bar-important" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">38% Complete</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- END TODO DROPDOWN -->
+                <li class="droddown dropdown-separator">
+                    <span class="separator"></span>
+                </li>
+                <!-- BEGIN USER LOGIN DROPDOWN -->
+                <li class="dropdown dropdown-user dropdown-dark">
+                    <a href="javascript:;" class="dropdown-toggle" dropdown-menu-hover data-toggle="dropdown" data-close-others="true">
+                        <span class="username username-hide-mobile">{{settings.sesion.nombres}} {{settings.sesion.apellidos}} | <b>{{settings.sesion.sede}}</b> | <b>AREA:</b> {{settings.sesion.area}} | <b>ROL:</b> {{settings.sesion.rol}}</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-default">
+                        <!--<li>
+                        	<a href="#/perfil/dashboard">
+                                <i class="icon-user"></i> Mi Perfil </a>
+                        </li>-->
+                        <li>
+                            <a ui-sref="login">
+                                <i class="icon-key"></i> Cerrar sesion </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- END USER LOGIN DROPDOWN -->
+
+            </ul>
+        </div>
+        <!-- END TOP NAVIGATION MENU -->
+    </div>
+</div>
+<!-- END HEADER TOP -->
+<!-- BEGIN HEADER MENU -->
+<div class="page-header-menu">
+    <div class="container-fluid">
+        <!-- BEGIN HEADER SEARCH BOX -->
+        
+        <div class="row">
+        	
+            <div class="col-md-10">
+            		<div class="hor-menu">
+                        <ul class="nav navbar-nav">
+                            
+                            <li class="menu-dropdown classic-menu-dropdown active">
+                                <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;"> Servicios
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-left">
+                                    <li>
+                                        <a ui-sref="private.listar_servicios"><i class="fa fa-list"></i> Solicitudes</a>
+                                    </li>
+                                    <li>
+                                        <a ui-sref="private.disponibilidad_vehiculos"><i class="fa fa-list"></i> Verificar disponibilidad</a>
+                                    </li>
+                                    <li>
+                                        <a ui-sref="private.listar_servicios_chofer"><i class="fa fa-list"></i> Servicios chofer</a>
+                                    </li>
+                                    <li class="hide_to_user">
+                                        <a ui-sref="private.listar_vales"><i class="fa fa-list"></i> Vales</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="menu-dropdown classic-menu-dropdown">
+                                <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;"> Combustible <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-left">
+                                    <li class="hide_to_user">
+                                        <a ui-sref="private.listar_contratos"><i class="icon-puzzle"></i> Contratos</a>
+                                    </li>
+                                    <li class="hide_to_user">
+                                        <a ui-sref="private.listar_oc"><i class="icon-puzzle"></i> Orden Compra</a>
+                                    </li>
+                                    <li class="hide_to_user">
+                                        <a ui-sref="private.listar_facturas"><i class="icon-puzzle"></i> Facturas</a>
+                                    </li>
+                                    <li class="hide_to_user show_to_chofer">
+                                        <a ui-sref="private.listar_facturas_gastos"><i class="icon-puzzle"></i> Facturas de viajes</a>
+                                    </li>
+            						<li class="hide_to_user show_to_chofer">
+                                        <a ui-sref="private.listar_tickets"><i class="icon-puzzle"></i> Tickets / Vales</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="menu-dropdown classic-menu-dropdown hide_to_user">
+                                <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;"> Mantenimiento
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-left">
+                                    <li>
+                                    	<a ui-sref="private.listar_fichas_tecnicas"><i class="fa fa-automobile"></i> Fichas técnicas</a>
+                                    </li>
+                                    <li>
+                                    	<a ui-sref="private.listar_alertas"><i class="fa fa-bell"></i> Alertas para mantenimiento preventivo</a>
+                                    </li>
+                                    <li>
+                                    	<a ui-sref="private.listar_solicitudes_mantenimiento"><i class="icon-puzzle"></i> Solicitudes de trabajo de mantenimiento</a>
+                                    </li>
+                                    <li>
+                                    	<a ui-sref="private.listar_evaluaciones_mantenimiento"><i class="icon-puzzle"></i> Evaluaciones e informes técnicos</a>
+                                    </li>
+                                    <li>
+                                        <a ui-sref="private.listar_aprobaciones_evaluaciones"><i class="icon-puzzle"></i> Aprobar evaluaciones</a>
+                                    </li>
+									<li>
+                                    	<a ui-sref="private.listar_ordenes_trabajo"><i class="icon-puzzle"></i> Ordenes de trabajo</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="menu-dropdown classic-menu-dropdown hide_to_user">
+                                <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" ui-sref="private.generar_reportes"> Reportes </a>
+                            </li>
+                            
+                            <li class="menu-dropdown classic-menu-dropdown hide">
+                                <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;"> Incidentes <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-left">
+                                    <li>
+                                        <a ui-sref="#"><i class="fa fa-list"></i> Listar incidentes</a>
+                                    </li>
+                                    <li>
+                                        <a ui-sref="#"><i class="fa fa-plus"></i> Registrar incidente</a>
+                                    </li>
+                                    
+            
+                                </ul>
+                            </li>
+
+                            
+                        </ul>
+                    </div>
+            </div>
+            
+            <div class="col-md-2">
+            	<div class="hor-menu pull-right">
+                    <ul class="nav navbar-nav">
+                    
+                    	<li class="menu-dropdown mega-menu-dropdown hide_to_user">
+                            <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="#" class="dropdown-toggle"> <i class="icon-settings"></i> 			
+                            	Configuración
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" style="min-width: 690px; margin-left:-510px;">
+                                <li>
+                                    <div class="mega-menu-content">
+                                        <div class="row">
+                                        	<div class="col-md-3">
+                                                <ul class="mega-menu-submenu">
+                                                    <li>
+                                                        <h3>TRANSPORTE</h3>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_areas"><i class="icon-puzzle"></i> Areas</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_escala_movilidad"><i class="icon-puzzle"></i> Escala movilidad</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.configuracion_parametros"><i class="icon-puzzle"></i> Parametros</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <ul class="mega-menu-submenu">
+                                                    <li>
+                                                        <h3>BASICA</h3>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_marcas"><i class="icon-puzzle"></i> Marcas Vehiculos</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_modelos"><i class="icon-puzzle"></i> Modelos Vehiculos</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_roles"><i class="icon-puzzle"></i> Roles</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_sedes"><i class="icon-puzzle"></i> Sedes</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_sucursales"><i class="icon-puzzle"></i> Sucursales de proveedor</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_tarjetas_combustible"><i class="icon-puzzle"></i> Tarjetas combustible</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_usuarios"><i class="icon-puzzle"></i> Usuarios</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <ul class="mega-menu-submenu">
+                                                    <li>
+                                                        <h3>VEHICULAR</h3>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_choferes"><i class="icon-puzzle"></i> Choferes</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_mantenimiento_componentes"><i class="icon-puzzle"></i> Componentes de sistemas vehiculares</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_proveedores"><i class="icon-puzzle"></i> Proveedores</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_mantenimiento_servicios"><i class="icon-puzzle"></i> Servicios de sistemas vehiculares</a>
+                                                    </li>  
+                                                    <li>
+                                                        <a ui-sref="private.listar_mantenimiento_sistemas"><i class="icon-puzzle"></i> Sistemas vehiculares</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_talleres"><i class="icon-puzzle"></i> Talleres</a>
+                                                    </li>
+                                                    
+                                                    <li>
+                                                        <a ui-sref="private.listar_vehiculos"><i class="icon-puzzle"></i>Vehiculos</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="col-md-3">
+                                            	<ul class="mega-menu-submenu">
+                                                    <li>
+                                                        <h3>TIPOS</h3>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_tipos_vehiculos"><i class="icon-puzzle"></i> Carrocerias</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_tipos_combustibles"><i class="icon-puzzle"></i> Octanajes</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_tipos_identificacion"><i class="icon-puzzle"></i> Identificaciones</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_tipos_licencias"><i class="icon-puzzle"></i> Licencias</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_medidas_uso"><i class="icon-puzzle"></i> Medida Uso</a>
+                                                    </li>
+                                                    <li>
+                                                        <a ui-sref="private.listar_medidas_combustible"><i class="icon-puzzle"></i> Medida Combustible</a>
+                                                    </li>
+                                                </ul>
+                                            
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                            
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <!-- END HEADER SEARCH BOX -->
+        <!-- BEGIN MEGA MENU -->
+        <!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
+        <!-- DOC: Remove dropdown-menu-hover and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
+        
+        <!-- END MEGA MENU -->
+    </div>
+</div>
+<!-- END HEADER MENU -->

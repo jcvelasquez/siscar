@@ -1,0 +1,559 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+
+
+<!-- BEGIN PAGE BREADCRUMB -->
+<div class="row">
+    <div class="col-md-8">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <a ui-sref="dashboard">Inicio</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <a ui-sref="private.listar_contratos">Contratos</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="active"> Registrar contrato</li>
+        </ul>
+    </div>
+	<div class="col-md-2 pull-right text-right">
+    
+        <div class="btn-group">
+            <a class="btn yellow btn-xs" href="javascript:;" data-toggle="dropdown">
+                <i class="fa fa-question-circle"></i>
+                <span class="hidden-xs"> AYUDA </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="ayuda/REGISTRAR_CONTRATO.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Registrar contrato ?</a>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> REGISTRO DE CONTRATO DE SUMINISTRO DE COMBUSTIBLE</div>
+                    <!--<div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_contratos" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>-->
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                    
+                        <div class="form-body">
+                        
+                        	<div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar y que el formato de los campos sea correcto. 
+                           </div>
+                        
+                            <h3 class="form-section font-lg sbold">Información general</h3>
+                            
+                            
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">N° Contrato</label>
+                                        <div class="col-md-6">
+                                            <input name="nro_contrato" type="text" class="form-control" id="nro_contrato">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Monto Contrato</label>
+                                        <div class="col-md-6">
+                                            <input name="monto_contrato" type="text" class="form-control" id="monto_contrato">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Fecha Contrato</label>
+                                        <div class="col-md-6">
+                                            <div class="input-group date date-picker">
+                                                <input name="fecha_contrato" type="text" class="form-control"  data-date-format="dd/mm/yyyy" id="fecha_contrato" readonly>
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                             <div class="row">
+    
+                                <div class="col-md-12">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-2">Nombre del contrato</label>
+                                        <div class="col-md-10">
+                                            <input name="nombre_contrato" type="text" class="form-control" id="nombre_contrato">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                                                         
+                            
+                            <div class="row">
+    
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-4">Sede</label>
+                                        <div class="col-md-8">
+                                            <select name="sedes_idsedes" class="bs-select form-control" id="sedes_idsedes" data-style="btn-info" data-live-search="true" data-size="8">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Proveedor</label>
+                                        <div class="col-md-9">
+                                            <select name="proveedores_idproveedores" class="bs-select form-control" id="proveedores_idproveedores" data-style="btn-info" data-live-search="true" data-size="8">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <h3 class="form-section font-lg sbold">Plazo de la ejecución</h3>
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-6">
+                                
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Fecha de inicio</label>
+                                        <div class="col-md-8">
+                                            
+                                            <div class="input-group input-daterange">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text"  data-date-format="dd/mm/yyyy" class="form-control btn-info" name="plazo_desde" id="plazo_desde">
+                                                    <span class="input-group-addon"> hasta </span>
+                                                    <input type="text"  data-date-format="dd/mm/yyyy" class="form-control btn-info" name="plazo_hasta" id="plazo_hasta"> 
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                        
+                                </div>
+                            
+                            </div>
+
+                            <!-- END: ROW UPLOAD --> 
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-12  text-right">
+                                    <button type="submit" id="grabar" class="btn green"><i class="fa fa-check"></i> Grabar</button>
+                                    <a ui-sref="private.listar_contratos" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Regresar </a>
+                                    <input type="hidden" name="usuarios_idusuarios" id="usuarios_idusuarios" value="1"/>
+                                    <input type="hidden" name="usuario_creacion" id="usuario_creacion" value="{{settings.usuario}}"/>
+                                    <input type="hidden" name="usuario_modificacion" id="usuario_modificacion" value="{{settings.usuario}}"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+
+                <div class="portlet box blue" id="items_adjudicados">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-gift"></i>TIPOS DE COMBUSTIBLE ADJUDICADOS</div>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse"> </a>
+<!--                                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                                <a href="javascript:;" class="reload"> </a>
+                                <a href="javascript:;" class="remove"> </a>-->
+                            </div>
+                        </div>
+                        <div class="portlet-body form">
+                        
+                        	<form action="#" class="form-horizontal" id="form_items">
+                            	<div class="form-body">
+                                
+                                	<div class="alert alert-danger items display-hide">
+                                     <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                               </div>
+                                    
+                                	<div class="row margin-bottom-20">
+                                    	<div class="col-md-12">
+                                            <table class="table table-striped table-bordered table-hover" id="datatable_items_adjudicados">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tipo de combustible</th>
+                                                        <th>Cantidad</th>
+                                                        <th>Medida</th>
+                                                        <th>Precio Und</th>
+                                                        <th>Precio Total</th>
+                                                        <th>Ficha Técnica</th>
+                                                        <th>  </th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th colspan="1" style="text-align:right">TOTALES DE TIPOS DE COMBUSTIBLES ADJUDICADOS:&nbsp;&nbsp;</th>
+                                                        <th colspan="1"></th>
+                                                        <th colspan="1"></th>
+                                                        <th colspan="1"></th>
+                                                        <th colspan="1"></th>
+                                                        <th colspan="2"></th>
+                                                    </tr>
+                                                  </tfoot>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                    
+                                            <div class="col-md-4">
+                                            
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-5">Tipo combustible</label>
+                                                    <div class="col-md-7">
+                                                        <select name="idtipo_combustible" id="idtipo_combustible" class="bs-select form-control" data-style="btn-info">
+                                                         </select>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                            
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-6">Cantidad combustible</label>
+                                                    <div class="col-md-6">
+                                                        <input name="cantidad" type="text" class="form-control" id="cantidad" placeholder="" />    
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                        
+                                            <div class="col-md-4">
+                                            
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-5">Medida</label>
+                                                    <div class="col-md-7">
+                                                        <select name="idmedida_combustible" class="bs-select form-control" id="idmedida_combustible" data-style="btn-info">
+                                                        </select> 
+                                                    </div>
+                                                </div>
+                                                                                    
+                                            </div>  		
+                                   
+                                   </div>
+                                   
+                                   <div class="row">
+                                   
+                                   			<div class="col-md-4">
+                                        
+                                        		<div class="form-group">
+                                                    <label class="control-label col-md-5">Precio Unitario</label>
+                                                    <div class="col-md-7">
+                                                        <input name="precio_unitario" type="text" class="form-control" id="precio_unitario" placeholder="" />
+                                                    </div>
+                                                 </div>
+                                        
+                                        	</div>
+                                            
+                                            <div class="col-md-4">
+                                        
+                                        		<div class="form-group">
+                                                    <label class="control-label col-md-6">Precio Total</label>
+                                                    <div class="col-md-6">
+                                                        <input readonly="readonly" name="precio_total" type="text" class="form-control" id="precio_total" placeholder="" />
+                                                    </div>
+                                                 </div>
+                                        
+                                        	</div>
+                                            
+                                            <div class="col-md-4">
+                                        
+                                        		<div class="form-group">
+                                                    <label class="control-label col-md-5">Ficha técnica</label>
+                                                    <div class="col-md-7">
+                                                        <input name="ficha_tecnica" type="text" class="form-control" id="ficha_tecnica" placeholder="Ficha técnica" />
+                                                    </div>
+                                                 </div>
+                                        
+                                        	</div>
+                                    
+                                    </div>
+                                
+                                    <!--<form action="#" class="mt-repeater form-horizontal" id="form_items">
+                                        <div data-repeater-list="group-a">
+                                            <div data-repeater-item class="mt-repeater-item">
+                                                <div class="mt-repeater-input tipo_combustible">
+                                                    <label class="control-label">Tipo de combustible</label>
+                                                    <br/>
+                                               		<select name="idtipo_combustible" class="bs-select form-control" data-style="btn-info">
+                                                    </select>      
+                                                </div>
+                                                <div class="mt-repeater-input cantidad_combustible">
+                                                    <label class="control-label">Cantidad</label>
+                                                    <br/>
+                                                	<input type="text" placeholder="Cantidad" class="form-control" name="cantidad" />    
+                                                </div>
+                                                <div class="mt-repeater-input medida_combustible">
+                                                    <label class="control-label">Medida de combustible</label>
+                                                    <br/>
+                                                    <select name="idmedida_combustible" class="bs-select form-control" data-style="btn-info">
+                                                    </select> 
+                                                </div>
+                                                <div class="mt-repeater-input precio_unit_combustible">
+                                                    <label class="control-label">Precio Unitario</label>
+                                                    <br/>
+                                                    <input type="text" placeholder="Precio Und" class="form-control" name="precio_unitario" />
+                                                </div>
+                                                <div class="mt-repeater-input precio_total_combustible">
+                                                    <label class="control-label">Precio Total</label>
+                                                    <br/>
+                                                    <input type="text" placeholder="Precio Total S/" class="form-control" />
+                                                </div>
+                                                <div class="mt-repeater-input">
+                                                    <label class="control-label">Ficha técnica</label>
+                                                    <br/>
+                                                    <input type="text" placeholder="F.T. del bien común" class="form-control" />
+                                                </div>
+                                                <div class="mt-repeater-input">
+                                                    <a href="javascript:;" data-repeater-delete class="btn btn-danger mt-repeater-delete">
+                                                        <i class="fa fa-close"></i> Eliminar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="javascript:;" data-repeater-create class="btn btn-success mt-repeater-add">
+                                            <i class="fa fa-plus"></i> Agregar</a>
+                                    </form>-->
+
+                            </div>
+                           
+                            <div class="form-actions">
+                                <div class="row">
+                                    <div class="col-md-12  text-right">
+                                        <button type="button" id="grabar_items" class="btn green"><i class="fa fa-check"></i> Agregar y Grabar</button>
+                                        <input type="hidden" name="usuario_creacion" value="{{settings.usuario}}"/>
+                                    </div>
+                                </div>
+                            </div>
+                           </form>          
+                        </div>
+                    </div>
+ 		</div>
+ </div>
+ 
+
+
+<div class="row">
+    <div class="col-md-12">
+                <div class="portlet box blue" id="documentos_adjuntos">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-gift"></i>DOCUMENTOS ADJUNTOS AL CONTRATO</div>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse"> </a>
+       <!--                         <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                                <a href="javascript:;" class="reload"> </a>
+                                <a href="javascript:;" class="remove"> </a>-->
+                            </div>
+                        </div>
+                        
+                        <div class="portlet-body form">
+                        
+                                <div class="form-body">
+                                
+                                	<div class="row margin-bottom-20">
+                                    	<div class="col-md-12">
+                                            <table class="table table-striped table-bordered table-hover" id="datatable_adjuntos">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nombre archivo</th>
+                                                        <th>Tamaño de archivo</th>
+                                                        <th width="80"></th>
+                                                        <th width="80">  </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                                                    
+                                    <div class="row" ng-controller="FileUploadCtrl" nv-file-drop="" uploader="uploader" filters="queueLimit">
+            
+                                        <div class="col-md-12">
+                                                    
+                                                    <div ng-show="uploader.isHTML5">
+        
+                                                        <div class="file-drop-zone margin-bottom-20" nv-file-over="" uploader="uploader" over-class="file-drop-zone-over"> Puede arrastrar y soltar archivos en esta zona para adjuntar a la recarga... o presione el boton "Elegir archivos" de la parte inferior.</div>
+                                                       
+                                                        <input type="file" nv-file-select="" uploader="uploader" multiple />
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="table-scrollable table-scrollable-borderless">
+                                                        <table class="table table-hover table-light">
+                                                            <thead>
+                                                                <tr class="uppercase">
+                                                                    <th width="50%">Archivo</th>
+                                                                    <th ng-show="uploader.isHTML5">Tamaño</th>
+                                                                    <th ng-show="uploader.isHTML5">Progreso</th>
+                                                                    <th>Estado</th>
+                                                                    <th>Acciones</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr ng-repeat="item in uploader.queue">
+                                                                    <td>
+                                                                        <strong>{{ item.file.name }}</strong>
+                                                                    </td>
+                                                                    <td ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                                                                    <td ng-show="uploader.isHTML5">
+                                                                        <div class="progress progress-sm" style="margin-bottom: 0;">
+                                                                            <div class="progress-bar progress-bar-info" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span ng-show="item.isSuccess" class="text-success">
+                                                                            <i class="glyphicon glyphicon-ok"></i>
+                                                                        </span>
+                                                                        <span ng-show="item.isCancel" class="text-info">
+                                                                            <i class="glyphicon glyphicon-ban-circle"></i>
+                                                                        </span>
+                                                                        <span ng-show="item.isError" class="text-danger">
+                                                                            <i class="glyphicon glyphicon-remove"></i>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td nowrap>
+                                                                        <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                                                            <span class="glyphicon glyphicon-upload"></span> Subir y grabar </button>
+                                                                        <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+                                                                            <span class="glyphicon glyphicon-ban-circle"></span> Cancelar </button>
+                                                                        <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                                                                            <span class="glyphicon glyphicon-trash"></span> Borrar </button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div>
+                                                        <p>Progreso de cola:</p>
+                                                        <div class="progress progress-sm" style="">
+                                                            <div class="progress-bar progress-bar-info" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-success btn-s" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">
+                                                        <span class="glyphicon glyphicon-upload"></span> Subir y grabar todos</button>
+                                                    <button type="button" class="btn btn-warning btn-s" ng-click="uploader.cancelAll()" ng-disabled="!uploader.isUploading">
+                                                        <span class="glyphicon glyphicon-ban-circle"></span> Cancelar todos </button>
+                                                    <button type="button" class="btn btn-danger btn-s" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length">
+                                                        <span class="glyphicon glyphicon-trash"></span> Borrar todos</button>
+                                                
+        
+                                        </div>
+                                    </div>
+                                    
+                                   </div> 
+                                   
+                                   <div class="form-actions hide">
+                                        <div class="row">
+                                            <div class="col-md-12  text-right">
+                                                <button type="submit" id="grabar_adjuntos" class="btn green"><i class="fa fa-check"></i> Grabar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+ 		</div>
+ </div>
+ 
+
+<script>
+	
+	
+    function FileUploadCtrl($scope, FileUploader, $rootScope)
+    {
+				
+        var uploader = $scope.uploader = new FileUploader(
+        {
+            url: 'database/UploadContratosService.php',
+			removeAfterUpload : true
+        }); 
+		
+		uploader.filters.push({
+			name: 'fileFilter',
+			fn: function(item /*{File|FileLikeObject}*/, options) {
+				var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
+				return '|jpg|png|jpeg|pdf|'.indexOf(type) !== -1;
+			}
+		});
+		
+        uploader.onBeforeUploadItem = function(fileItem)
+        {
+            console.info('onBeforeUploadItem', fileItem);
+			fileItem.formData.push({ 
+				contratos_idcontratos: $rootScope.$state.params.id , 
+				usuario_creacion : $('#usuario_creacion').val(),
+				upload_path : $rootScope.settings.uploadPathContratos
+			});
+        };
+		
+		uploader.onCompleteAll = function()
+        {
+			$( "#datatable_adjuntos" ).DataTable().ajax.reload()
+        };
+		
+    };
+	
+</script>

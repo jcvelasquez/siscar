@@ -1,0 +1,1190 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BREADCRUMB -->
+
+<style>
+
+	.mt-actions .mt-action .mt-action-body .mt-action-row .mt-action-buttons {
+		width: 260px !important;
+	}
+	.progress {
+		height: 20px !important;
+	}
+
+</style>
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_mantenimientos">Mantenimientos</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Calidad</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+
+
+
+  <!--  <div class="row widget-row">
+        <div class="col-md-3">
+
+            <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                <h4 class="widget-thumb-heading">Current Balance</h4>
+                <div class="widget-thumb-wrap">
+                    <i class="widget-thumb-icon bg-green icon-bulb"></i>
+                    <div class="widget-thumb-body">
+                        <span class="widget-thumb-subtitle">USD</span>
+                        <span class="widget-thumb-body-stat" data-counter="counterup" data-value="7,644">0</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+
+            <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                <h4 class="widget-thumb-heading">Weekly Sales</h4>
+                <div class="widget-thumb-wrap">
+                    <i class="widget-thumb-icon bg-red icon-layers"></i>
+                    <div class="widget-thumb-body">
+                        <span class="widget-thumb-subtitle">USD</span>
+                        <span class="widget-thumb-body-stat" data-counter="counterup" data-value="1,293">0</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+
+            <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                <h4 class="widget-thumb-heading">Biggest Purchase</h4>
+                <div class="widget-thumb-wrap">
+                    <i class="widget-thumb-icon bg-purple icon-screen-desktop"></i>
+                    <div class="widget-thumb-body">
+                        <span class="widget-thumb-subtitle">USD</span>
+                        <span class="widget-thumb-body-stat" data-counter="counterup" data-value="815">0</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+
+            <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                <h4 class="widget-thumb-heading">Average Monthly</h4>
+                <div class="widget-thumb-wrap">
+                    <i class="widget-thumb-icon bg-blue icon-bar-chart"></i>
+                    <div class="widget-thumb-body">
+                        <span class="widget-thumb-subtitle">USD</span>
+                        <span class="widget-thumb-body-stat" data-counter="counterup" data-value="5,071">0</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>-->
+
+                                        
+
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue-hoki ">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-list"></i> LISTADO CALIDAD</div>
+                </div>
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-6">
+<!--                                <a ui-sref="private/registrar_vehiculo" class="btn btn-primary"><i class="fa fa-plus"></i> Registrar vehiculo </a>
+-->                            </div>
+                            <div class="col-md-6">
+                                <div class="btn-group pull-right">
+                                    <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Exportar
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-print"></i> Imprimir </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-pdf-o"></i> Exportar a PDF </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-excel-o"></i> Exportar a Excel </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                        <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
+                                        <span></span>
+                                    </label>
+                                </th>
+                                <th> Descripcion vehiculo </th>
+                                <th> Placa </th>
+                                
+                                <th> Marca</th>
+                                <th> Modelo</th>
+                                <th> Año </th>
+                                
+                                <th> Kilometraje </th>
+                                <th>  </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- FILAS -->
+                            <tr class="odd gradeX">
+                                <td>
+                                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                        <input type="checkbox" class="checkboxes" value="1" />
+                                        <span></span>
+                                    </label>
+                                </td>
+                                <td>Vehiculo presidencia</td>
+                                <td>PCV-234</td>
+                                <td>NISSAN </td>
+                                <td>FRONTIER</td>
+                                <td>2010</td>
+                                <td>320,200</td>
+                                <td width="2%">
+                                	<a href="#/ficha_tecnica/4" class="btn btn-sm btn-default"><i class="fa fa-search"></i> Ver ficha técnica</a>
+                                </td>
+                            </tr>
+                            <!-- FIN FILAS -->
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+ </div>
+
+									
+                                    
+
+										
+<!-- END MAIN CONTENT -->
+<script>
+    /**
+     * @param {Object} $scope
+     * @return {undefined}
+     */
+    function AccordionDemoCtrl($scope)
+    {
+        /** @type {boolean} */
+        $scope.oneAtATime = true;
+        /** @type {Array} */
+        $scope.groups = [
+        {
+            title: "Dynamic Group Header - 1",
+            content: "Dynamic Group Body - 1"
+        },
+        {
+            title: "Dynamic Group Header - 2",
+            content: "Dynamic Group Body - 2"
+        }];
+        /** @type {Array} */
+        $scope.items = ["Item 1", "Item 2", "Item 3"];
+        /**
+         * @return {undefined}
+         */
+        $scope.addItem = function()
+        {
+            var vvar = $scope.items.length + 1;
+            $scope.items.push("Item " + vvar);
+        };
+        $scope.status = {
+            isCustomHeaderOpen: false,
+            isFirstOpen: true,
+            isFirstDisabled: false
+        };
+    }
+    /**
+     * @param {?} $scope
+     * @return {undefined}
+     */
+    function AlertDemoCtrl($scope)
+    {
+        /** @type {Array} */
+        $scope.alerts = [
+        {
+            type: "danger",
+            msg: "Oh snap! Change a few things up and try submitting again."
+        },
+        {
+            type: "success",
+            msg: "Well done! You successfully read this important alert message."
+        }];
+        /**
+         * @return {undefined}
+         */
+        $scope.addAlert = function()
+        {
+            $scope.alerts.push(
+            {
+                msg: "Another alert!"
+            });
+        };
+        /**
+         * @param {?} index
+         * @return {undefined}
+         */
+        $scope.closeAlert = function(index)
+        {
+            $scope.alerts.splice(index, 1);
+        };
+    }
+    /**
+     * @param {?} $scope
+     * @return {undefined}
+     */
+    function ButtonsCtrl($scope)
+    {
+        /** @type {number} */
+        $scope.singleModel = 1;
+        /** @type {string} */
+        $scope.radioModel = "Middle";
+        $scope.checkModel = {
+            left: false,
+            middle: true,
+            right: false
+        };
+        /** @type {Array} */
+        $scope.checkResults = [];
+        $scope.$watchCollection("checkModel", function()
+        {
+            /** @type {Array} */
+            $scope.checkResults = [];
+            angular.forEach($scope.checkModel, function(dataAndEvents, spaceName)
+            {
+                if (dataAndEvents)
+                {
+                    $scope.checkResults.push(spaceName);
+                }
+            });
+        });
+    }
+    /**
+     * @param {Object} $scope
+     * @return {undefined}
+     */
+    function TabsDemoCtrl($scope)
+    {
+        /** @type {Array} */
+        $scope.tabs = [
+        {
+            title: "Dynamic Title 1",
+            content: "Dynamic content 1"
+        },
+        {
+            title: "Dynamic Title 2",
+            content: "Dynamic content 2",
+            disabled: true
+        }];
+    }
+    /**
+     * @param {Object} $scope
+     * @return {undefined}
+     */
+    function CarouselDemoCtrl($scope)
+    {
+        /**
+         * @param {Array} args
+         * @return {undefined}
+         */
+        function render(args)
+        {
+            /** @type {number} */
+            var i = 0;
+            /** @type {number} */
+            var valuesLen = values.length;
+            for (; i < valuesLen; i++)
+            {
+                values[i].id = args.pop();
+            }
+        }
+        /**
+         * @return {?}
+         */
+        function compiler()
+        {
+            /** @type {Array} */
+            var e = [];
+            /** @type {number} */
+            var n = 0;
+            for (; n < l; ++n)
+            {
+                /** @type {number} */
+                e[n] = n;
+            }
+            return next(e);
+        }
+        /**
+         * @param {Array} result
+         * @return {?}
+         */
+        function next(result)
+        {
+            var value;
+            var key;
+            var index = result.length;
+            if (index)
+            {
+                for (; --index;)
+                {
+                    /** @type {number} */
+                    key = Math.floor(Math.random() * (index + 1));
+                    value = result[key];
+                    result[key] = result[index];
+                    result[index] = value;
+                }
+            }
+            return result;
+        }
+        /** @type {number} */
+        $scope.myInterval = 5E3;
+        /** @type {boolean} */
+        $scope.noWrapSlides = false;
+        /** @type {number} */
+        $scope.active = 0;
+        /** @type {Array} */
+        var values = $scope.slides = [];
+        /** @type {number} */
+        var l = 0;
+        /**
+         * @return {undefined}
+         */
+        $scope.addSlide = function()
+        {
+            /** @type {number} */
+            var newWidth = 600 + values.length + 1;
+            values.push(
+            {
+                image: "http://lorempixel.com/" + newWidth + "/300",
+                text: ["Nice image", "Awesome photograph", "That is so cool", "I love that"][values.length % 4],
+                id: l++
+            });
+        };
+        /**
+         * @return {undefined}
+         */
+        $scope.randomize = function()
+        {
+            var typePattern = compiler();
+            render(typePattern);
+        };
+        /** @type {number} */
+        var i = 0;
+        for (; i < 4; i++)
+        {
+            $scope.addSlide();
+        }
+    }
+    /**
+     * @param {?} $scope
+     * @return {undefined}
+     */
+    function CollapseDemoCtrl($scope)
+    {
+        $scope.isCollapsed = false;
+    }
+    /**
+     * @param {Object} $scope
+     * @return {undefined}
+     */
+    function DatepickerDemoCtrl($scope)
+    {
+        /**
+         * @param {Object} settings
+         * @return {?}
+         */
+        function process(settings)
+        {
+            var d = settings.date;
+            var mode = settings.mode;
+            return mode === "day" && (d.getDay() === 0 || d.getDay() === 6);
+        }
+        /**
+         * @param {Object} options
+         * @return {?}
+         */
+        function remove(options)
+        {
+            var date = options.date;
+            var mode = options.mode;
+            if (mode === "day")
+            {
+                var value = (new Date(date)).setHours(0, 0, 0, 0);
+                /** @type {number} */
+                var i = 0;
+                for (; i < $scope.events.length; i++)
+                {
+                    var radio = (new Date($scope.events[i].date)).setHours(0, 0, 0, 0);
+                    if (value === radio)
+                    {
+                        return $scope.events[i].status;
+                    }
+                }
+            }
+            return "";
+        }
+        /**
+         * @return {undefined}
+         */
+        $scope.today = function()
+        {
+            /** @type {Date} */
+            $scope.dt = new Date;
+        };
+        $scope.today();
+        /**
+         * @return {undefined}
+         */
+        $scope.clear = function()
+        {
+            /** @type {null} */
+            $scope.dt = null;
+        };
+        $scope.options = {
+            /** @type {function (Object): ?} */
+            customClass: remove,
+            minDate: new Date,
+            showWeeks: true
+        };
+        /**
+         * @return {undefined}
+         */
+        $scope.toggleMin = function()
+        {
+            /** @type {(Date|null)} */
+            $scope.options.minDate = $scope.options.minDate ? null : new Date;
+        };
+        $scope.toggleMin();
+        /**
+         * @param {number} dt
+         * @param {number} month
+         * @param {string} d
+         * @return {undefined}
+         */
+        $scope.setDate = function(dt, month, d)
+        {
+            /** @type {Date} */
+            $scope.dt = new Date(dt, month, d);
+        };
+        /** @type {Date} */
+        var newDate = new Date;
+        newDate.setDate(newDate.getDate() + 1);
+        /** @type {Date} */
+        var now = new Date(newDate);
+        now.setDate(newDate.getDate() + 1);
+        /** @type {Array} */
+        $scope.events = [
+        {
+            date: newDate,
+            status: "full"
+        },
+        {
+            date: now,
+            status: "partially"
+        }];
+    }
+
+    function DatepickerPopupDemoCtrl($scope)
+    {
+        $scope.today = function()
+        {
+            $scope.dt = new Date();
+        };
+        $scope.today();
+        $scope.clear = function()
+        {
+            $scope.dt = null;
+        };
+        $scope.inlineOptions = {
+            customClass: getDayClass,
+            minDate: new Date(),
+            showWeeks: true
+        };
+        $scope.dateOptions = {
+            dateDisabled: disabled,
+            formatYear: 'yy',
+            maxDate: new Date(2020, 5, 22),
+            minDate: new Date(),
+            startingDay: 1
+        };
+        // Disable weekend selection
+        function disabled(data)
+        {
+            var date = data.date,
+                mode = data.mode;
+            return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+        }
+        $scope.toggleMin = function()
+        {
+            $scope.inlineOptions.minDate = $scope.inlineOptions.minDate ? null : new Date();
+            $scope.dateOptions.minDate = $scope.inlineOptions.minDate;
+        };
+        $scope.toggleMin();
+        $scope.open1 = function()
+        {
+            $scope.popup1.opened = true;
+        };
+        $scope.open2 = function()
+        {
+            $scope.popup2.opened = true;
+        };
+        $scope.setDate = function(year, month, day)
+        {
+            $scope.dt = new Date(year, month, day);
+        };
+        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+        $scope.format = $scope.formats[0];
+        $scope.altInputFormats = ['M!/d!/yyyy'];
+        $scope.popup1 = {
+            opened: false
+        };
+        $scope.popup2 = {
+            opened: false
+        };
+        var tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        var afterTomorrow = new Date();
+        afterTomorrow.setDate(tomorrow.getDate() + 1);
+        $scope.events = [
+        {
+            date: tomorrow,
+            status: 'full'
+        },
+        {
+            date: afterTomorrow,
+            status: 'partially'
+        }];
+
+        function getDayClass(data)
+        {
+            var date = data.date,
+                mode = data.mode;
+            if (mode === 'day')
+            {
+                var dayToCheck = new Date(date).setHours(0, 0, 0, 0);
+                for (var i = 0; i < $scope.events.length; i++)
+                {
+                    var currentDay = new Date($scope.events[i].date).setHours(0, 0, 0, 0);
+                    if (dayToCheck === currentDay)
+                    {
+                        return $scope.events[i].status;
+                    }
+                }
+            }
+            return '';
+        }
+    }
+    /**
+     * @param {Object} $scope
+     * @return {undefined}
+     */
+    function TimepickerDemoCtrl($scope)
+    {
+        /** @type {Date} */
+        $scope.mytime = new Date;
+        /** @type {number} */
+        $scope.hstep = 1;
+        /** @type {number} */
+        $scope.mstep = 15;
+        $scope.options = {
+            hstep: [1, 2, 3],
+            mstep: [1, 5, 10, 15, 25, 30]
+        };
+        /** @type {boolean} */
+        $scope.ismeridian = true;
+        /**
+         * @return {undefined}
+         */
+        $scope.toggleMode = function()
+        {
+            /** @type {boolean} */
+            $scope.ismeridian = !$scope.ismeridian;
+        };
+        /**
+         * @return {undefined}
+         */
+        $scope.update = function()
+        {
+            /** @type {Date} */
+            var d = new Date;
+            d.setHours(14);
+            d.setMinutes(0);
+            /** @type {Date} */
+            $scope.mytime = d;
+        };
+        /**
+         * @return {undefined}
+         */
+        $scope.changed = function()
+        {
+            $log.log("Time changed to: " + $scope.mytime);
+        };
+        /**
+         * @return {undefined}
+         */
+        $scope.clear = function()
+        {
+            /** @type {null} */
+            $scope.mytime = null;
+        };
+    }
+    /**
+     * @param {Object} settings
+     * @return {undefined}
+     */
+    function DropdownCtrl($scope, $log)
+    {
+        $scope.items = ['The first choice!', 'And another choice for you.', 'but wait! A third!'];
+        $scope.status = {
+            isopen: false
+        };
+        $scope.toggled = function(open)
+        {
+            $log.log('Dropdown is now: ', open);
+        };
+        $scope.toggleDropdown = function($event)
+        {
+            $event.preventDefault();
+            $event.stopPropagation();
+            $scope.status.isopen = !$scope.status.isopen;
+        };
+        $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
+    }
+    /**
+     * @param {Object} $scope
+     * @param {?} dataAndEvents
+     * @param {?} $log
+     * @return {undefined}
+     */
+    function ModalDemoCtrl($scope, $uibModal, $log)
+    {
+        /** @type {Array} */
+        $scope.items = ["item1", "item2", "item3"];
+        /** @type {boolean} */
+        $scope.animationsEnabled = true;
+        /**
+         * @param {number} opt_attributes
+         * @return {undefined}
+         */
+        $scope.open = function(opt_attributes)
+        {
+            var out = $uibModal.open(
+            {
+                animation: $scope.animationsEnabled,
+                templateUrl: "myModalContent.html",
+                controller: "ModalInstanceCtrl",
+                size: opt_attributes,
+                resolve:
+                {
+                    /**
+                     * @return {?}
+                     */
+                    items: function()
+                    {
+                        return $scope.items;
+                    }
+                }
+            });
+            out.result.then(function(value)
+            {
+                $scope.selected = value;
+            }, function()
+            {
+                $log.info("Modal dismissed at: " + new Date);
+            });
+        };
+        /**
+         * @return {undefined}
+         */
+        $scope.toggleAnimation = function()
+        {
+            /** @type {boolean} */
+            $scope.animationsEnabled = !$scope.animationsEnabled;
+        };
+    }
+    /**
+     * @param {Object} $scope
+     * @param {?} dataAndEvents
+     * @param {Array} items
+     * @return {undefined}
+     */
+    function ModalInstanceCtrl($scope, $uibModalInstance, items)
+    {
+        $scope.items = items;
+        $scope.selected = {
+            item: $scope.items[0]
+        };
+        $scope.ok = function()
+        {
+            $uibModalInstance.close($scope.selected.item);
+        };
+        $scope.cancel = function()
+        {
+            $uibModalInstance.dismiss('cancel');
+        };
+    }
+    /**
+     * @param {string} $scope
+     * @return {undefined}
+     */
+    function PaginationDemoCtrl($scope, $log)
+    {
+        /** @type {number} */
+        $scope.totalItems = 64;
+        /** @type {number} */
+        $scope.currentPage = 4;
+        /**
+         * @param {number} pageNo
+         * @return {undefined}
+         */
+        $scope.setPage = function(pageNo)
+        {
+            /** @type {number} */
+            $scope.currentPage = pageNo;
+        };
+        /**
+         * @return {undefined}
+         */
+        $scope.pageChanged = function()
+        {
+            $log.log("Page changed to: " + $scope.currentPage);
+        };
+        /** @type {number} */
+        $scope.maxSize = 5;
+        /** @type {number} */
+        $scope.bigTotalItems = 175;
+        /** @type {number} */
+        $scope.bigCurrentPage = 1;
+    }
+    /**
+     * @param {Object} $scope
+     * @return {undefined}
+     */
+    function PopoverDemoCtrl($scope, $sce)
+    {
+        $scope.dynamicPopover = {
+            content: "Hello, World!",
+            templateUrl: "myPopoverTemplate.html",
+            title: "Title"
+        };
+        $scope.placement = {
+            options: ["top", "top-left", "top-right", "bottom", "bottom-left", "bottom-right", "left", "left-top", "left-bottom", "right", "right-top", "right-bottom"],
+            selected: "top"
+        };
+        $scope.htmlPopover = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
+    }
+    /**
+     * @param {Object} $scope
+     * @return {undefined}
+     */
+    function TooltipDemoCtrl($scope, $sce)
+    {
+        /** @type {string} */
+        $scope.dynamicTooltip = "Hello, World!";
+        /** @type {string} */
+        $scope.dynamicTooltipText = "dynamic";
+        $scope.htmlTooltip = $sce.trustAsHtml("I've been made <b>bold</b>!");
+        $scope.placement = {
+            options: ["top", "top-left", "top-right", "bottom", "bottom-left", "bottom-right", "left", "left-top", "left-bottom", "right", "right-top", "right-bottom"],
+            selected: "top"
+        };
+    }
+    /**
+     * @param {Object} $scope
+     * @return {undefined}
+     */
+    function ProgressDemoCtrl($scope)
+    {
+        /** @type {number} */
+        $scope.max = 200;
+        /**
+         * @return {undefined}
+         */
+        $scope.random = function()
+        {
+            /** @type {number} */
+            var dynamic = Math.floor(Math.random() * 100 + 1);
+            var type;
+            if (dynamic < 25)
+            {
+                /** @type {string} */
+                type="info";
+            }
+            else
+            {
+                if (dynamic < 50)
+                {
+                    /** @type {string} */
+                    type = "info";
+                }
+                else
+                {
+                    if (dynamic < 75)
+                    {
+                        /** @type {string} */
+                        type="info";
+                    }
+                    else
+                    {
+                        /** @type {string} */
+                        type="info";
+                    }
+                }
+            }
+            /** @type {boolean} */
+            $scope.showWarning = type === "danger" || type === "warning";
+            /** @type {number} */
+            $scope.dynamic = dynamic;
+            /** @type {string} */
+            $scope.type = type;
+        };
+        $scope.random();
+        /**
+         * @return {undefined}
+         */
+        $scope.randomStacked = function()
+        {
+            /** @type {Array} */
+            $scope.stacked = [];
+            /** @type {Array} */
+            var types = ["success", "info", "warning", "danger"];
+            /** @type {number} */
+            var i = 0;
+            /** @type {number} */
+            var padLength = Math.floor(Math.random() * 4 + 1);
+            for (; i < padLength; i++)
+            {
+                /** @type {number} */
+                var type = Math.floor(Math.random() * 4);
+                $scope.stacked.push(
+                {
+                    value: Math.floor(Math.random() * 30 + 1),
+                    type: types[type]
+                });
+            }
+        };
+        $scope.randomStacked();
+    }
+    /**
+     * @param {Node} $scope
+     * @return {undefined}
+     */
+    function TypeaheadCtrl($scope, $http)
+    {
+        var text;
+        $scope.selected = undefined;
+        /** @type {Array} */
+        $scope.states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Dakota", "North Carolina", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
+        /**
+         * @param {string} url
+         * @return {?}
+         */
+        $scope.getLocation = function(url)
+        {
+            return $http.get("//maps.googleapis.com/maps/api/geocode/json",
+            {
+                params:
+                {
+                    address: url,
+                    sensor: false
+                }
+            }).then(function(e)
+            {
+                return e.data.results.map(function(item)
+                {
+                    return item.formatted_address;
+                });
+            });
+        };
+        /**
+         * @param {?} textAlt
+         * @return {?}
+         */
+        $scope.ngModelOptionsSelected = function(textAlt)
+        {
+            if (arguments.length)
+            {
+                text = textAlt;
+            }
+            else
+            {
+                return text;
+            }
+        };
+        $scope.modelOptions = {
+            debounce:
+            {
+                default: 500,
+                blur: 250
+            },
+            getterSetter: true
+        };
+        /** @type {Array} */
+        $scope.statesWithFlags = [
+        {
+            "name": "Alabama",
+            "flag": "5/5c/Flag_of_Alabama.svg/45px-Flag_of_Alabama.svg.png"
+        },
+        {
+            "name": "Alaska",
+            "flag": "e/e6/Flag_of_Alaska.svg/43px-Flag_of_Alaska.svg.png"
+        },
+        {
+            "name": "Arizona",
+            "flag": "9/9d/Flag_of_Arizona.svg/45px-Flag_of_Arizona.svg.png"
+        },
+        {
+            "name": "Arkansas",
+            "flag": "9/9d/Flag_of_Arkansas.svg/45px-Flag_of_Arkansas.svg.png"
+        },
+        {
+            "name": "California",
+            "flag": "0/01/Flag_of_California.svg/45px-Flag_of_California.svg.png"
+        },
+        {
+            "name": "Colorado",
+            "flag": "4/46/Flag_of_Colorado.svg/45px-Flag_of_Colorado.svg.png"
+        },
+        {
+            "name": "Connecticut",
+            "flag": "9/96/Flag_of_Connecticut.svg/39px-Flag_of_Connecticut.svg.png"
+        },
+        {
+            "name": "Delaware",
+            "flag": "c/c6/Flag_of_Delaware.svg/45px-Flag_of_Delaware.svg.png"
+        },
+        {
+            "name": "Florida",
+            "flag": "f/f7/Flag_of_Florida.svg/45px-Flag_of_Florida.svg.png"
+        },
+        {
+            "name": "Georgia",
+            "flag": "5/54/Flag_of_Georgia_%28U.S._state%29.svg/46px-Flag_of_Georgia_%28U.S._state%29.svg.png"
+        },
+        {
+            "name": "Hawaii",
+            "flag": "e/ef/Flag_of_Hawaii.svg/46px-Flag_of_Hawaii.svg.png"
+        },
+        {
+            "name": "Idaho",
+            "flag": "a/a4/Flag_of_Idaho.svg/38px-Flag_of_Idaho.svg.png"
+        },
+        {
+            "name": "Illinois",
+            "flag": "0/01/Flag_of_Illinois.svg/46px-Flag_of_Illinois.svg.png"
+        },
+        {
+            "name": "Indiana",
+            "flag": "a/ac/Flag_of_Indiana.svg/45px-Flag_of_Indiana.svg.png"
+        },
+        {
+            "name": "Iowa",
+            "flag": "a/aa/Flag_of_Iowa.svg/44px-Flag_of_Iowa.svg.png"
+        },
+        {
+            "name": "Kansas",
+            "flag": "d/da/Flag_of_Kansas.svg/46px-Flag_of_Kansas.svg.png"
+        },
+        {
+            "name": "Kentucky",
+            "flag": "8/8d/Flag_of_Kentucky.svg/46px-Flag_of_Kentucky.svg.png"
+        },
+        {
+            "name": "Louisiana",
+            "flag": "e/e0/Flag_of_Louisiana.svg/46px-Flag_of_Louisiana.svg.png"
+        },
+        {
+            "name": "Maine",
+            "flag": "3/35/Flag_of_Maine.svg/45px-Flag_of_Maine.svg.png"
+        },
+        {
+            "name": "Maryland",
+            "flag": "a/a0/Flag_of_Maryland.svg/45px-Flag_of_Maryland.svg.png"
+        },
+        {
+            "name": "Massachusetts",
+            "flag": "f/f2/Flag_of_Massachusetts.svg/46px-Flag_of_Massachusetts.svg.png"
+        },
+        {
+            "name": "Michigan",
+            "flag": "b/b5/Flag_of_Michigan.svg/45px-Flag_of_Michigan.svg.png"
+        },
+        {
+            "name": "Minnesota",
+            "flag": "b/b9/Flag_of_Minnesota.svg/46px-Flag_of_Minnesota.svg.png"
+        },
+        {
+            "name": "Mississippi",
+            "flag": "4/42/Flag_of_Mississippi.svg/45px-Flag_of_Mississippi.svg.png"
+        },
+        {
+            "name": "Missouri",
+            "flag": "5/5a/Flag_of_Missouri.svg/46px-Flag_of_Missouri.svg.png"
+        },
+        {
+            "name": "Montana",
+            "flag": "c/cb/Flag_of_Montana.svg/45px-Flag_of_Montana.svg.png"
+        },
+        {
+            "name": "Nebraska",
+            "flag": "4/4d/Flag_of_Nebraska.svg/46px-Flag_of_Nebraska.svg.png"
+        },
+        {
+            "name": "Nevada",
+            "flag": "f/f1/Flag_of_Nevada.svg/45px-Flag_of_Nevada.svg.png"
+        },
+        {
+            "name": "New Hampshire",
+            "flag": "2/28/Flag_of_New_Hampshire.svg/45px-Flag_of_New_Hampshire.svg.png"
+        },
+        {
+            "name": "New Jersey",
+            "flag": "9/92/Flag_of_New_Jersey.svg/45px-Flag_of_New_Jersey.svg.png"
+        },
+        {
+            "name": "New Mexico",
+            "flag": "c/c3/Flag_of_New_Mexico.svg/45px-Flag_of_New_Mexico.svg.png"
+        },
+        {
+            "name": "New York",
+            "flag": "1/1a/Flag_of_New_York.svg/46px-Flag_of_New_York.svg.png"
+        },
+        {
+            "name": "North Carolina",
+            "flag": "b/bb/Flag_of_North_Carolina.svg/45px-Flag_of_North_Carolina.svg.png"
+        },
+        {
+            "name": "North Dakota",
+            "flag": "e/ee/Flag_of_North_Dakota.svg/38px-Flag_of_North_Dakota.svg.png"
+        },
+        {
+            "name": "Ohio",
+            "flag": "4/4c/Flag_of_Ohio.svg/46px-Flag_of_Ohio.svg.png"
+        },
+        {
+            "name": "Oklahoma",
+            "flag": "6/6e/Flag_of_Oklahoma.svg/45px-Flag_of_Oklahoma.svg.png"
+        },
+        {
+            "name": "Oregon",
+            "flag": "b/b9/Flag_of_Oregon.svg/46px-Flag_of_Oregon.svg.png"
+        },
+        {
+            "name": "Pennsylvania",
+            "flag": "f/f7/Flag_of_Pennsylvania.svg/45px-Flag_of_Pennsylvania.svg.png"
+        },
+        {
+            "name": "Rhode Island",
+            "flag": "f/f3/Flag_of_Rhode_Island.svg/32px-Flag_of_Rhode_Island.svg.png"
+        },
+        {
+            "name": "South Carolina",
+            "flag": "6/69/Flag_of_South_Carolina.svg/45px-Flag_of_South_Carolina.svg.png"
+        },
+        {
+            "name": "South Dakota",
+            "flag": "1/1a/Flag_of_South_Dakota.svg/46px-Flag_of_South_Dakota.svg.png"
+        },
+        {
+            "name": "Tennessee",
+            "flag": "9/9e/Flag_of_Tennessee.svg/46px-Flag_of_Tennessee.svg.png"
+        },
+        {
+            "name": "Texas",
+            "flag": "f/f7/Flag_of_Texas.svg/45px-Flag_of_Texas.svg.png"
+        },
+        {
+            "name": "Utah",
+            "flag": "f/f6/Flag_of_Utah.svg/45px-Flag_of_Utah.svg.png"
+        },
+        {
+            "name": "Vermont",
+            "flag": "4/49/Flag_of_Vermont.svg/46px-Flag_of_Vermont.svg.png"
+        },
+        {
+            "name": "Virginia",
+            "flag": "4/47/Flag_of_Virginia.svg/44px-Flag_of_Virginia.svg.png"
+        },
+        {
+            "name": "Washington",
+            "flag": "5/54/Flag_of_Washington.svg/46px-Flag_of_Washington.svg.png"
+        },
+        {
+            "name": "West Virginia",
+            "flag": "2/22/Flag_of_West_Virginia.svg/46px-Flag_of_West_Virginia.svg.png"
+        },
+        {
+            "name": "Wisconsin",
+            "flag": "2/22/Flag_of_Wisconsin.svg/45px-Flag_of_Wisconsin.svg.png"
+        },
+        {
+            "name": "Wyoming",
+            "flag": "b/bc/Flag_of_Wyoming.svg/43px-Flag_of_Wyoming.svg.png"
+        }];
+    }
+    /**
+     * @param {Object} $scope
+     * @return {undefined}
+     */
+    function RatingDemoCtrl($scope)
+    {
+        /** @type {number} */
+        $scope.rate = 7;
+        /** @type {number} */
+        $scope.max = 10;
+        /** @type {boolean} */
+        $scope.isReadonly = false;
+        /**
+         * @param {?} value
+         * @return {undefined}
+         */
+        $scope.hoveringOver = function(value)
+        {
+            $scope.overStar = value;
+            /** @type {number} */
+            $scope.percent = 100 * (value / $scope.max);
+        };
+        /** @type {Array} */
+        $scope.ratingStates = [
+        {
+            stateOn: "glyphicon-ok-sign",
+            stateOff: "glyphicon-ok-circle"
+        },
+        {
+            stateOn: "glyphicon-star",
+            stateOff: "glyphicon-star-empty"
+        },
+        {
+            stateOn: "glyphicon-heart",
+            stateOff: "glyphicon-ban-circle"
+        },
+        {
+            stateOn: "glyphicon-heart"
+        },
+        {
+            stateOff: "glyphicon-off"
+        }];
+    }
+</script>

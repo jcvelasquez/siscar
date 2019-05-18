@@ -1,0 +1,122 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_servicios">Servicios</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active">Reanudar servicio </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+     
+     <div class="row margin-bottom-20">
+        <div class="col-md-12">
+        	<a ui-sref="private.listar_servicios" class="btn btn-primary btn-success sbold"><i class="fa fa-mail-reply"></i> REGRESAR </a>
+        </div>                       
+	 </div>
+	
+	<div class="row" id="cabecera_servicio">
+        <div class="col-md-12 col-sm-12">
+            <div class="portlet solid blue-hoki">
+                <div class="portlet-title" style="padding:10px 20px 0 20px;">
+                    <div class="caption bold">
+                        <i class="fa fa-info-circle"></i> DETALLES DEL SERVICIO</div>
+                    <div class="actions">
+                        
+                    </div>
+                </div>
+                <div class="portlet-body" style="padding:10px 20px;">
+                	<div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Estado de asignacion</div>
+                        <div class="col-md-4 value"><span class="label label-success" data-display="es_asignado"> </span></div>
+                    </div>
+                	<div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Area solicitante</div>
+                        <div class="col-md-4 value" data-display="nombre_area"> </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Usuario que solicita </div>
+                        <div class="col-md-3 value" data-display="usuario_solicita"> </div>
+                    </div>  
+                    <div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Motivo del servicio </div>
+                        <div class="col-md-4 value" data-display="motivo_comision"> </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Lugar del servicio </div>
+                        <div class="col-md-3 value" data-display="lugar_destino"> </div>
+                    </div>
+                    <div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Fecha / Hora Inicio <br />programada</div>
+                        <div class="col-md-4 value" data-display="fecha_inicio">  </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Fecha / Hora - Fin <br />programada </div>
+                        <div class="col-md-3 value" data-display="fecha_fin"> </div>
+                    </div>   
+                      
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    
+    
+    
+    <div class="row">
+          <div class="col-md-12"> 
+                <!-- BEGIN PORTLET-->
+                <div class="portlet box blue">
+              <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-info-circle"></i> INFORMACION ADICIONAL</div>
+                  </div>
+              <div class="portlet-body form"> 
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form_reanudar_servicio">
+                  <div class="form-body">
+                        <div class="alert alert-danger display-hide">
+                      <button class="close" data-close="alert"></button>
+                      Compruebe que todos los campos esten completos para poder grabar. </div>
+                        <div class="row">
+                      <div class="col-md-6">
+                            <div class="form-group">
+                          <label class="control-label col-md-4">Estado servicio </label>
+                          <div class="col-md-8">
+                                <select class="bs-select form-control" data-style="btn-info" id="estado_servicio" name="estado_servicio">
+                              <option value="REANUDADO" selected="selected">REANUDADO</option>
+                            </select>
+                              </div>
+                        </div>
+                          </div>
+                    </div>
+                        <div class="row">
+                      <div class="col-md-12">
+                            <div class="form-group">
+                          <label class="control-label col-md-2">Motivo de reanudacion <br />
+                                de ejecucion del servicio</label>
+                          <div class="col-md-10">
+                                <textarea class="form-control" name="observaciones_estado" id="observaciones_estado" rows="4"></textarea>
+                              </div>
+                        </div>
+                          </div>
+                    </div>
+                      </div>
+                  <div class="form-actions">
+                        <div class="row">
+                      <div class="col-md-12 text-right">
+                            <button type="submit" id="grabar_reanudar_servicio" class="btn green"><i class="fa fa-check"></i> Registrar reanudación</button>
+                            <a ui-sref="private.listar_servicios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                            <input type="hidden" name="usuario_creacion" value="{{settings.sesion.usuario}}"/>
+                            <input type="hidden" name="usuario_modificacion" value="{{settings.sesion.usuario}}"/>
+                          </div>
+                    </div>
+                      </div>
+                </form>
+                    <!-- END FORM--> 
+                  </div>
+            </div>
+           <!-- END PORTLET--> 
+      </div>
+</div>
+
+

@@ -1,0 +1,262 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_tickets">Tickets</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Registrar ticket - Chofer</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption"> <i class="fa fa-gift"></i> REGISTRO VALE DE COMBUSTIBLE</div>
+                    <div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_servicios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal">
+                        <div class="form-body">
+                        
+                        	
+                            <h3 class="form-section font-lg sbold">Información estación de servicio</h3>
+                            
+                       		 <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Proveedor</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-success">
+                                                <option value="Aba Singer S.A.C.">Aba Singer S.A.C.</option>
+                                                <option value="REPSOL">REPSOL</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Estacion servicio</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-success">
+                                                <option value="Grifo Caceres">Grifo Caceres</option>
+                                                <option value="Grifo Lupita">Grifo Lupita</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+              
+                            </div>
+                            
+                            <h3 class="form-section font-lg sbold">Información del ticket</h3>
+                            
+  							<div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Fecha recarga</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group input-small date date-picker" data-date-format="dd/mm/yyyy">
+                                                <input type="text" class="form-control" readonly>
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Hora recarga</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control timepicker timepicker-no-seconds">
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-clock-o"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Kilometraje</label>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            	 <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">N&deg; Ticket</label>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                            
+                            <div class="row">
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Vehiculo</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-success">
+                                                <option value="NISSAN FRONTIER | SDF-2345">NISSAN FRONTIER | SDF-763</option>
+                                                <option value="NISSAN FRONTIER | SDF-2341">NISSAN FRONTIER | DFG-341</option>
+                                                <option value="NISSAN FRONTIER | SDF-2342">NISSAN FRONTIER | HSA-524<option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Saldo gal.</label>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+              
+                            </div>
+                              
+                            <!-- ticket -->
+                            
+                            
+                            <h3 class="form-section font-lg sbold">Información adicional</h3>
+                            
+                            <div class="row">
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Tarjeta</label>
+                                        <div class="col-md-9">
+                                            <label class="control-label"><strong>4563</strong></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Chofer</label>
+                                        <div class="col-md-9">
+                                            <label class="control-label"><strong>SEBASTIAN SALVADOR ORTIZ CACERES</strong></label>
+                                        </div>
+                                	</div>
+              					</div>
+                            </div>                            
+                            
+                            
+                            <h3 class="form-section font-lg sbold">Información del producto</h3>
+                            
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-5">Combustible</label>
+                                        <div class="col-md-7">
+                                            <select class="bs-select form-control" data-style="btn-success">
+                                                <option value="GASOHOL 95">GASOHOL 95</option>
+                                                <option value="GASOHOL 95">GASOHOL 97</option>
+                                                <option value="GASOHOL 95">DB5 PETROLEO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-5">Cantidad gal.</label>
+                                        <div class="col-md-7">
+                                            <input type="text" class="form-control" placeholder="1.8521">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Precio/gal.</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" placeholder="12.34">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Importe Total</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" placeholder="22.854">
+                                        </div>
+                                    </div>
+                                </div>
+
+              
+                            </div>
+                                                           
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        			<a ui-sref="private.listar_vales" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+
+
+
+
+
+<!-- END MAIN CONTENT -->
+<script>
+   
+	ComponentsBootstrapSelect.init(); // init todo page
+	ComponentsDateTimePickers.init(); 
+		
+</script>

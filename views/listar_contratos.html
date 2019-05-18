@@ -1,0 +1,268 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_contratos">Contratos</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Listar contratos</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<div class="row">
+
+    <div class="col-md-12">
+		<div class="portlet solid grey-cascade">
+            
+                    <div class="portlet-title">
+                        <div class="caption"><i class="fa fa-database"></i> FILTRAR CONTRATOS</div>
+                        <div class="tools"><a href="javascript:;" class="expand" data-original-title="" title=""> </a>  </div>
+                        
+                    </div>
+                    <div class="portlet-body form portlet-collapsed"> 
+                    
+                    <form action="#" class="form-horizontal" id="form_search">
+                        <div class="form-body">
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Por Sede</label>
+                                        <div class="col-md-8">
+                                            <select name="sedes_idsedes" class="bs-select form-control" id="sedes_idsedes" data-style="btn-warning"
+                                            data-live-search="true" data-size="8">
+                                                </select>
+                                        </div>
+                                    </div>
+                                 </div>
+                    
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Fechas</label>
+                                        <div class="col-md-9">
+                                            
+            								<div class="input-group date-picker input-daterange">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input  data-date-format="dd/mm/yyyy" type="text" class="form-control btn-warning" name="desde" id="desde">
+                                                    <span class="input-group-addon"> hasta </span>
+                                                    <input  data-date-format="dd/mm/yyyy" type="text" class="form-control btn-warning" name="hasta" id="hasta"> 
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 text-right">
+                                    
+                                    <button type="button" id="filtrar" class="btn btn-success"><i class="fa fa-check"></i> Filtrar</button>
+                                    <button type="button" id="limpiar" class="btn btn-danger"><i class="fa fa-times"></i> Limpiar</button>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                               
+                            
+                        </div>                        
+                        
+                    </form>
+                    
+                    </div>
+                    
+                </div>    
+    </div>
+
+</div>
+
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-list"></i> LISTADO DE CONTRATOS</div> 
+                	</div>
+                    
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-6">                                
+                                <a href="#/private/registrar_contrato/nuevo" class="btn btn-primary"><i class="fa fa-plus"></i> Registrar contrato </a>
+                            </div>
+                            <div class="col-md-6 text-right">
+                            
+                            	<div class="btn-group">
+                                    <a class="btn red " href="javascript:;" data-toggle="dropdown">
+                                        <i class="fa fa-share"></i>
+                                        <span class="hidden-xs"> Opciones de exportación </span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right" id="datatable_ajax_tools">
+                                        <li>
+                                            <a href="javascript:;" data-action="0" class="tool-action">
+                                                <i class="icon-printer"></i> Imprimir</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="1" class="tool-action">
+                                                <i class="icon-check"></i> Copiar</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="2" class="tool-action">
+                                                <i class="icon-doc"></i> Exportar PDF</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="3" class="tool-action">
+                                                <i class="icon-paper-clip"></i> Exportar Excel</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="4" class="tool-action">
+                                                <i class="icon-cloud-upload"></i> Exportar CSV</a>
+                                        </li>
+                                        <li class="divider"> </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="5" class="tool-action">
+                                                <i class="icon-refresh"></i> Actualizar lista</a>
+                                        </li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                        <table class="table table-striped table-bordered table-hover" id="datatable_contratos">
+                            <thead>
+                                <tr> 
+	                                <th># Contrato</th>                                  
+                                    <th>Descripcion del contrato</th>
+                                    <th>Fecha contrato </th>
+                                    <th>Sede </th>
+                                    <th>Monto </th>
+                                    <th>Plazo desde</th>
+                                    <th>Plazo hasta</th>
+                                    <th> </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+     </div>
+
+                              
+
+<div id="oc_asociadas" class="modal container fade" tabindex="-1" data-focus-on="input:first">
+    <div class="modal-header bg-blue-hoki bg-font-blue-hoki">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title sbold"><i class="fa fa-tasks"></i> ORDENES DE COMPRA ASIGNADOS A CONTRATO:</h4>
+    </div>
+    <div class="modal-body bg-grey-cararra">
+    	<form class="form-horizontal" action="#" id="form">
+        
+        		<div class="form-body">
+                        
+                     <div class="row static-info">
+                     
+                             <div class="col-md-12">
+                                <div class="form-group">
+                                  <label class="control-label col-md-2">Descripcion Contrato:</label>
+                                    <div class="col-md-10">
+                                        <input name="descripcion_contrato" type="text" class="form-control" id="descripcion_contrato" readonly="readonly">
+                                    </div>
+                                </div>
+                             </div>
+                             
+                     </div>
+                     
+                     <div class="row static-info">
+                     
+                     		<div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">N&deg; Contrato:</label>
+                                    <div class="col-md-6">
+                                        <input name="nro_contrato" type="text" class="form-control text-right" id="nro_contrato" readonly="readonly">
+                                    </div>
+                                </div>
+                             </div>
+                     
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">Monto Contrato:</label>
+                                    <div class="col-md-6">
+                                        <input name="monto_contrato" type="text" class="form-control text-right" id="monto_contrato" readonly="readonly">
+                                    </div>
+                                </div>
+                             </div>
+                             
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">Fecha Contrato:</label>
+                                    <div class="col-md-6">
+                                        <input name="fecha_contrato" type="text" class="form-control text-right" id="fecha_contrato" readonly="readonly">
+                                    </div>
+                                </div>
+                             </div>
+                             
+                     </div>
+                     
+                     <div class="row static-info hide">
+                     
+                             <div class="col-md-12">
+                                <div class="form-group">
+                                  <label class="control-label col-md-2">Cuadre O/C:</label>
+                                    <div class="col-md-2">
+                                        <span class="label label-sm" id="estado_contrato"></span>
+                                    </div>
+                                </div>
+                             </div>
+                             
+                     </div>
+                    
+                                                
+                </div>
+                                
+                <table class="table table-striped table-hover" id="datatable_oc">
+                    <thead>
+                        <tr>
+                        	<th width="45"># ID </th>
+                            <th># O/C </th>
+                            <th>DESCRIPCION O/C</th>
+                            <th width="110">MONTO O/C</th>
+                            <th width="110">FECHA O/C</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3" style="text-align:right">TOTAL EJECUTADO:&nbsp;&nbsp;</th>
+                            <th colspan="2"></th>
+                        </tr>
+                      </tfoot>
+                    <tbody>
+                    </tbody>
+                </table>
+                    
+
+      </form>
+    </div>
+    
+    <div class="modal-footer bg-grey bg-font-grey">
+        <button type="button" data-dismiss="modal" class="btn btn-info"><i class="fa fa-times"></i> Cerrar</button>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+.page-header .page-header-top .page-logo .logo-default {
+    margin: 3.5px 0 0;
+}
+
+
+.dashboard-stat2 {
+    padding: 15px 15px 1px 15px;
+}
+
+
+.portlet.solid {
+    padding: 0 10px 1px 10px !important;
+}
+
+.portlet.solid>.portlet-title {
+    border-bottom: 0;
+    margin-bottom: 5px !important;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    color: #fff;
+}
+
+.multiselect-container>li>a>label {
+    padding: 3px 20px 3px 40px !important;
+}
+
+.custom_col_sistemas .col-md-1 { width:14%; }
+
+/*.blockOverlay { opacity:0.2 !important; }*/
+
+.loading-message.loading-message-boxed {
+    background-color: #ed6b75;
+	border:1px solid #ea5460 !important;
+	color:#fff !important;
+}
+
+.bootstrap-select .dropdown-menu {
+    z-index: 9999999!important;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret { color:#fff; }
+
+table.dataTable.no-footer {
+    border-bottom-color: #e7ecf1 !important;
+}

@@ -1,0 +1,230 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BREADCRUMB -->
+
+<style>
+
+	.mt-actions .mt-action .mt-action-body .mt-action-row .mt-action-buttons {
+		width: 260px !important;
+	}
+	.progress {
+		height: 20px !important;
+	}
+
+</style>
+
+<div class="row">
+    <div class="col-md-8">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <a ui-sref="dashboard">Inicio</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <a ui-sref="private.listar_aprobaciones_evaluaciones">Aprobaciones</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="active"> Listar aprobaciones</li>
+        </ul>
+    </div>
+	<div class="col-md-2 pull-right text-right">
+    
+        <div class="btn-group">
+            <a class="btn yellow btn-xs" href="javascript:;" data-toggle="dropdown">
+                <i class="fa fa-question-circle"></i>
+                <span class="hidden-xs"> AYUDA </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="ayuda/APROBAR_EVALUACIONES.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Aprobar evaluaciones?</a>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+
+<!-- END PAGE BREADCRUMB -->
+
+
+
+<div class="portlet solid grey-cascade">
+
+        <div class="portlet-title">
+            <div class="caption"><i class="fa fa-database"></i> FILTRAR BÚSQUEDA DE APROBACIONES</div>
+            <div class="tools"><a href="javascript:;" class="expand" data-original-title="" title=""> </a>  </div>
+            
+        </div>
+        
+        <div class="portlet-body form  portlet-collapsed"> 
+        
+        <form action="#" class="form-horizontal" id="form_search">
+            <div class="form-body">
+                
+                    <div class="row">
+                
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Por sedes</label>
+                                    <div class="col-md-8">
+                                        <select name="idsedes" class="bs-select form-control" id="idsedes" data-style="btn-warning"
+                                            data-live-search="true" data-size="8">
+                                            </select>
+                                    </div>
+                                </div>
+                             </div>
+                
+                            <div class="col-md-5">
+                            
+                                <div class="form-group">
+                                    <label class="control-label col-md-6">Por vehiculos</label>
+                                    <div class="col-md-6">
+                                        <select name="idvehiculos" class="bs-select form-control" id="idvehiculos" data-style="btn-warning"
+                                            data-live-search="true" data-size="8">
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="col-md-2 text-right">
+                                
+                                <button type="button" id="filtrar" class="btn btn-success"><i class="fa fa-search"></i> Filtrar</button>
+                                <button type="button" id="limpiar" class="btn btn-danger"><i class="fa fa-times"></i> Limpiar</button>
+                                
+                            </div>
+                    
+                    </div>
+                    
+                    <div class="row">
+                    
+                            <div class="col-md-5">
+                    
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Por fecha evaluacion</label>
+                                    <div class="col-md-8">
+
+                                        <div class="input-group date-picker input-daterange">
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                </span>
+                                                <input type="text" class="form-control btn-warning" data-date-format="dd/mm/yyyy" name="desde" id="desde">
+                                                <span class="input-group-addon"> hasta </span>
+                                                <input type="text" class="form-control btn-warning" data-date-format="dd/mm/yyyy" name="hasta" data-date-end-date="0d" id="hasta"> 
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                </span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                    
+                            </div>
+                            
+
+                                                            
+                            
+                            
+                    </div>
+                                            
+            </div>                        
+            
+        </form>
+        
+
+        
+        </div>
+        
+    </div>
+                                    
+
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue ">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-list"></i> LISTADO DE EVALUACIONES</div>
+                </div>
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-6">
+                              <!-- <a href="#/private/registrar_evaluacion_mantenimiento/nuevo/nuevo" class="btn btn-primary"><i class="fa fa-plus"></i> Registrar evaluacion </a>-->
+                            </div>
+                            <div class="col-md-6 text-right">
+                            
+                            	<div class="btn-group">
+                                    <a class="btn red " href="javascript:;" data-toggle="dropdown">
+                                        <i class="fa fa-share"></i>
+                                        <span class="hidden-xs"> Opciones de exportación </span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right" id="datatable_ajax_tools">
+                                        <li>
+                                            <a href="javascript:;" data-action="0" class="tool-action">
+                                                <i class="icon-printer"></i> Imprimir</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="1" class="tool-action">
+                                                <i class="icon-check"></i> Copiar</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="2" class="tool-action">
+                                                <i class="icon-doc"></i> Exportar PDF</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="3" class="tool-action">
+                                                <i class="icon-paper-clip"></i> Exportar Excel</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="4" class="tool-action">
+                                                <i class="icon-cloud-upload"></i> Exportar CSV</a>
+                                        </li>
+                                        <li class="divider"> </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="5" class="tool-action">
+                                                <i class="icon-refresh"></i> Actualizar lista</a>
+                                        </li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="datatable_evaluaciones">
+                        <thead>
+                            <tr>
+                                <th> # ID </th>
+                                <th> Descripcion de evaluacion </th>
+                                <th width="10%"> Vehiculo</th>
+                                <th> Sede </th>
+                                <th> Fecha evaluacion</th>
+                                <th width="120"># Evaluaciones aprobadas</th>
+<!--                            <th> Estado Evaluacion</th>
+-->                             <th width="100"> # Solicitud </th>
+                                <th> Fecha solicitud</th>
+                                <th width="80">  </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+ </div>
+
+									
+                                    
+
+										

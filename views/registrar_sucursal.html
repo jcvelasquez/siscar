@@ -1,0 +1,133 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_sucursales">Sucursales</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Registrar sucursal</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> REGISTRAR SURCURSAL</div>
+                    <!--<div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_marcas" class="btn btn-primary btn-danger grabar"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>-->
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                           
+                           <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Proveedor</label>
+                                        <div class="col-md-10">                                                   
+                                            <select name="proveedores_idproveedores" class="bs-select form-control" id="proveedores_idproveedores" 
+                                                    data-style="btn-info" data-live-search="true" data-size="8">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                                                  
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Nombre sucursal</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" id="nombre_sucursal" name="nombre_sucursal">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                     
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Direccion </label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" id="direccion_sucursal" name="direccion_sucursal">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Encargado </label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="encargado_sucursal" name="encargado_sucursal">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Telefono </label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="telefono_sucursal" name="telefono_sucursal">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Estado </label>
+                                        <div class="col-md-6">
+                                            <select class="bs-select form-control" data-style="btn-info" id="estado_sucursal" name="estado_sucursal">
+                                            	<option value="">Seleccione</option>
+                                                <option value="1">ACTIVA</option>
+                                                <option value="0">INACTIVA</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                  <!--  <a class="btn btn-primary btn-success grabar"><i class="fa fa-check"></i> Grabar </a>-->
+
+                                    <button type="submit" class="btn green grabar"><i class="fa fa-check"></i> Grabar</button>
+                                    <input type="hidden" value="{{settings.usuario}}" name="usuario_creacion" />
+									<input type="hidden" value="{{settings.usuario}}" name="usuario_modificacion" />
+                        			<a ui-sref="private.listar_sucursales" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>

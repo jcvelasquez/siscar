@@ -1,0 +1,250 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BREADCRUMB -->
+
+<!-- BEGIN PAGE BREADCRUMB -->
+<div class="row">
+    <div class="col-md-8">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <a ui-sref="private.listar_servicios">Inicio</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <a ui-sref="private.reporte_combustible">Reportes</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="active"> Reporte de consumo</li>
+        </ul>
+    </div>
+	<div class="col-md-2 pull-right text-right">
+    
+        <div class="btn-group">
+            <a class="btn yellow btn-xs" href="javascript:;" data-toggle="dropdown">
+                <i class="fa fa-question-circle"></i>
+                <span class="hidden-xs"> AYUDA </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="ayuda/GENERAR_REPORTES.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Generar un reporte?</a>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption"><i class="fa fa-list"></i> REPORTE DE GASTOS EN COMBUSTIBLES</div>
+                <div class="actions"> </div>
+            </div>
+            
+            <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form_combustible">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos de fechas esten completos para poder generar el reporte de combustible. 
+                           </div>
+                                                    
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Rango de fechas</label>
+                                        <div class="col-md-6">
+                                            
+            								<div class="input-group date-picker input-daterange">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text"  data-date-format="dd/mm/yyyy" class="form-control btn-warning" name="desde_combustible" id="desde_combustible">
+                                                    <span class="input-group-addon"> hasta </span>
+                                                    <input type="text"  data-date-format="dd/mm/yyyy" class="form-control btn-warning" name="hasta_combustible" data-date-end-date="0d" id="hasta_combustible"> 
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                               
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" id="generar_reporte_combustible" class="btn green"><i class="fa fa-check"></i> Generar reporte</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            
+            
+        </div>
+                  
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption"><i class="fa fa-list"></i> REPORTE DE GASTOS EN MANTENIMIENTOS</div>
+                <div class="actions"> </div>
+            </div>
+            
+            <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form_mantenimiento">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos de fechas esten completos para poder generar el reporte de mantenimiento. 
+                           </div>
+                                                    
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Rango de fechas</label>
+                                        <div class="col-md-6">
+                                            
+            								<div class="input-group date-picker input-daterange">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text"  data-date-format="dd/mm/yyyy" class="form-control btn-warning" name="desde_mantenimiento" id="desde_mantenimiento">
+                                                    <span class="input-group-addon"> hasta </span>
+                                                    <input type="text"  data-date-format="dd/mm/yyyy" class="form-control btn-warning" name="hasta_mantenimiento" data-date-end-date="0d" id="hasta_mantenimiento"> 
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                               
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" id="generar_reporte_mantenimiento" class="btn green"><i class="fa fa-check"></i> Generar reporte</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            
+            
+        </div>
+                  
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption"><i class="fa fa-list"></i> REPORTE DE TRANSPARENCIA</div>
+                <div class="actions"> </div>
+            </div>
+            
+            <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form_transparencia">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos de fechas esten completos para poder generar el reporte de transparencia. 
+                           </div>
+                                                    
+                            <div class="row">
+                                        
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Mes a exportar</label>
+                                        <div class="col-md-4">
+                                        
+                                        	<div class="input-group">
+                                                <input name="periodo_transparencia" type="text" class="form-control btn-warning"  data-date-format="dd/mm/yyyy" id="periodo_transparencia">
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                               
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" id="generar_reporte_transparencia" class="btn green"><i class="fa fa-check"></i> Descargar archivo</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            
+            
+        </div>
+                  
+    </div>
+</div>

@@ -1,0 +1,295 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+
+<div class="row">
+    <div class="col-md-8">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <a ui-sref="dashboard">Inicio</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <a ui-sref="private.listar_ordenes_trabajo">Ordenes de Trabajo</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="active"> Registrar orden</li>
+        </ul>
+    </div>
+	<div class="col-md-2 pull-right text-right">
+    
+        <div class="btn-group">
+            <a class="btn yellow btn-xs" href="javascript:;" data-toggle="dropdown">
+                <i class="fa fa-question-circle"></i>
+                <span class="hidden-xs"> AYUDA </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="ayuda/REGISTRAR_ORDEN_TRABAJO.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Registrar orden trabajo?</a>
+                </li>
+                <li>
+                    <a href="ayuda/EJECUTAR_ORDEN_TRABAJO.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Ejecutar orden trabajo?</a>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-info-circle"></i> INFORMACION GENERAL DE ORDEN DE TRABAJO</div>
+                    <!--<div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_marcas" class="btn btn-primary btn-danger grabar"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>-->
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                                                    
+                            <div class="row">
+                            
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">De la sede</label>
+                                        <div class="col-md-8">
+                                            <select class="bs-select form-control" tabindex="1" data-style="btn-info" id="sedes_idsedes" name="sedes_idsedes"
+                                            data-live-search="true" data-size="8">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Al Vehiculo</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" tabindex="1" data-style="btn-info" id="vehiculos_idvehiculos" name="vehiculos_idvehiculos"
+                                            data-live-search="true" data-size="8" disabled="disabled">
+                                            	<option value="">Seleccione una sede</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            
+                            <div class="row">
+                                
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Con N° de evaluacion</label>
+                                        <div class="col-md-10">
+                                            <select class="bs-select form-control" tabindex="1" data-style="btn-info" id="idmantenimiento_evaluaciones" name="idmantenimiento_evaluaciones" 
+                                            data-live-search="true" data-size="8" disabled="disabled">												
+                                            	<option value="">Seleccione un vehiculo primero</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                             </div>
+                             
+                            <div class="row"> 
+                               
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Descripcion de orden de trabajo</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" tabindex="2" id="descripcion_orden_trabajo" name="descripcion_orden_trabajo">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                
+                                		<div class="col-md-6">
+                                
+                                			<div class="form-group">
+                                                <label class="control-label col-md-4">Fecha estimada de inicio</label>
+                                                <div class="col-md-8">
+                                                    
+                                                    <div class="input-group date-picker input-daterange" data-date-format="dd/mm/yyyy">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn default" type="button">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </button>
+                                                            </span>
+                                                            <input type="text" class="form-control btn-info" name="fecha_estimada_inicio" id="fecha_estimada_inicio">
+                                                            <span class="input-group-addon"> hasta </span>
+                                                            <input type="text" class="form-control btn-info" name="fecha_estimada_fin" id="fecha_estimada_fin"> 
+                                                            <span class="input-group-btn">
+                                                                <button class="btn default" type="button">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </button>
+                                                            </span>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                
+                                		</div>
+                                        
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">Fecha orden trabajo</label>
+                                                <div class="col-md-4">
+                                                    <div class="input-group date date-picker">
+                                                        <input name="fecha_orden_trabajo" type="text" data-date-format="dd/mm/yyyy" class="form-control" id="fecha_orden_trabajo">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn default" type="button">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                
+                            </div>
+                            
+                            <div class="row">
+                            
+                            	 <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4"># ORDEN SIGAP</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" tabindex="2" id="nro_orden_sigap" name="nro_orden_sigap">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">KM (internamiento)</label>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" tabindex="2" id="kilometraje_internamiento" name="kilometraje_internamiento">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" id="grabar_ot" class="btn green"><i class="fa fa-check"></i> Grabar</button>
+                        			<a ui-sref="private.listar_ordenes_trabajo" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Regresar </a>
+                                    <input type="hidden" name="usuario_creacion" value="{{settings.usuario}}"/>
+                                    <input type="hidden" name="usuario_modificacion" value="{{settings.usuario}}"/>
+                                    <input type="hidden" value="1" name="estado_orden_trabajo">
+                                    <input type="hidden" value="1" name="usuarios_idusuarios">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+
+                <div class="portlet box blue" id="items_diagnostico">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-info-circle"></i> ASIGNAR TAREAS A LA ORDEN DE TRABAJO</div>
+                        </div>
+                        <div class="portlet-body form">
+                        
+                        	<form action="#" class="form-horizontal" id="form_evaluacion">
+                            	<div class="form-body">
+                                
+                                	<div class="alert alert-danger items display-hide">
+                                         <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                                   </div>
+                                    
+                                	<div class="row margin-bottom-20">
+                                    	<div class="col-md-12">
+                                            <table width="100%" class="table table-striped table-hover table-checkable order-column" id="datatable_trabajos">
+                                                <thead>
+                                                    <tr>   
+                                                    	<th width="50" class="table-checkbox">
+                                                            <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                                                <input type="checkbox" class="group-checkable" data-set="#datatable_trabajos .checkboxes" />
+                                                                <span></span>
+                                                            </label>
+                                                        </th>                                    
+                                                        <th>Taller</th>
+                                                        <th>Problema</th>
+                                                        <th>Evaluacion</th>
+                                                        <th>Accion</th>
+                                                        <th>Costo</th>
+                                                        <th width="100">¿Se cambia componente?</th>
+                                                        <th>Motivo cambio</th>
+                                                        <th width="100">¿Taller seleccionado?</th>
+                                                        <th>Motivo seleccion</th>
+                                                        <th width="70">  </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                  
+
+                            </div>
+                           
+                            <div class="form-actions" id="actions_ot">
+                                <div class="row">
+                                    <div class="col-md-12  text-right">
+                                        <button type="button" id="grabar_ejecucion" class="btn green"><i class="fa fa-check"></i> Asignar a O/T</button>
+                                        <input type="hidden" name="usuario_creacion" value="{{settings.usuario}}"/>   
+                                                                             
+                           <!--             <input type="hidden" name="idmantenimiento_evaluaciones" id="idmantenimiento_evaluaciones" value=""/>
+                                        <input type="hidden" name="idservicios_x_solicitudes" id="idservicios_x_solicitudes" value=""/>
+                                        <input type="hidden" name="idevaluaciones_x_servicios" id="idevaluaciones_x_servicios" value=""/>
+                                        <input type="hidden" name="estado_evaluacion_x_servicio" id="estado_evaluacion_x_servicio" value="0"/>-->
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                           </form>          
+                        </div>
+                    </div>
+ 		</div>
+ </div>

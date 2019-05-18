@@ -1,0 +1,499 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_usuarios">Usuarios</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Registrar usuario</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> Registrar usuario</div>
+                    <div class="actions">
+                        
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                    
+                        <div class="form-body">
+                        
+                        	<div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                        
+                            <h3 class="form-section font-lg sbold">Información general del usuario</h3>
+                            
+                            
+                            <div class="row">
+    
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Nombres</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" id="nombres" name="nombres">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Apellidos</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" id="apellidos" name="apellidos">
+                                        </div>
+                                    </div>
+                                </div> 
+                                
+                            </div>
+                            
+                            
+                            <div class="row">
+    
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Direccion</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" id="direccion_uno" name="direccion_uno">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Correo electronico</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" id="email" name="email">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            
+                            <div class="row">
+                                
+                                     <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Sexo</label>
+                                            <div class="col-md-9">
+                                                <select class="bs-select form-control" data-style="btn-info" id="sexo" name="sexo">
+                                                    <option value="">Seleccione</option>
+                                                    <option value="M">MASCULINO</option>
+                                                    <option value="F">FEMENINO</option>
+                                                </select>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                
+                                     <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Teléfono</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="telefono" id="telefono">
+                                            </div>
+                                        </div>
+                                    </div>
+                             
+							</div>
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Estado</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-info" id="estado_usuario" name="estado_usuario">
+                                                <option value="">Seleccione</option>
+                                                <option value="1">ACTIVADO</option>
+                                                <option value="0">DESACTIVADO</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Rol de usuario</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-info" id="roles_idroles" name="roles_idroles">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                            <h3 class="form-section font-lg sbold">Información de ubicación del usuario</h3>
+                            
+                            <div class="row">
+    
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Sede</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-info" id="sedes_idsedes" name="sedes_idsedes"
+                                            data-live-search="true" data-size="8">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Area</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-info" id="areas_idareas" name="areas_idareas"
+                                            data-live-search="true" data-size="8">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+
+                            
+         
+                            
+                            <h3 class="form-section font-lg sbold">Información de identificaciones</h3>
+                            
+                            
+                            <div class="row">
+    
+                                    <div class="col-md-6">
+                                    
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Tipo ID</label>
+                                            <div class="col-md-9">
+                                                <select class="bs-select form-control" data-style="btn-info" id="idtipo_identificacion" name="idtipo_identificacion">
+                                                </select> 
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                    
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3"># ID</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" id="nro_identificacion" name="nro_identificacion">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                
+                            </div> 
+                            
+                            <div class="row">
+    
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Licencia</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-info" id="idtipo_licencia" name="idtipo_licencia">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">N&deg; Licencia</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" name="nro_licencia" id="nro_licencia">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                             
+                            
+                            <h3 class="form-section font-lg sbold">Información de datos de acceso</h3>
+                             
+                            <div class="row">
+                            
+                            	<div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Usuario</label>
+                                        <div class="col-md-6">
+                                        	<div class="input-icon right">
+                                            	<i class="fa"></i>
+                                    			<input type="text" class="form-control" name="usuario" id="usuario"> 
+                                                <span class="help-block text-danger" id="helper_usuario"><h6></h6></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Codigo SIGAP</label>
+                                        <div class="col-md-6">
+                                    		<input type="text" class="form-control" name="codigo" id="codigo" readonly="readonly"> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 hide">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Clave</label>
+                                        <div class="col-md-5">
+                                            <input type="password" class="form-control" placeholder="" name="clave" id="clave">
+                                            <span class="help-block text-danger" id="helper_clave"><h6></h6></span>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                
+                            </div>
+                            
+                            <div class="row">
+                            
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Prioridad</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-info" id="prioridad" name="prioridad">
+                                                <option value="">Seleccione una prioridad</option>
+                                                <option value="1">MUY ALTA</option>
+                                                <option value="2">ALTA</option>
+                                                <option value="3">BAJA</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" id="grabar_usuario" class="btn green"><i class="fa fa-check"></i> Grabar</button>
+                        			<a ui-sref="private.listar_usuarios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                    <input type="hidden" name="usuarios_idusuarios" id="usuarios_idusuarios" value="{{settings.idusuario}}"/>
+                                    <input type="hidden" name="usuario_creacion" id="usuario_creacion" value="{{settings.usuario}}"/>
+                                    <input type="hidden" name="usuario_modificacion" id="usuario_modificacion" value="{{settings.usuario}}"/>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                    </form>
+                    <!-- END FORM-->
+                    
+                    </div>
+                    
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+  
+  
+  
+  
+  <div class="row hide">
+    <div class="col-md-12">
+                <div class="portlet box blue-hoki" id="documentos_adjuntos">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-gift"></i>Documentos adjuntos de usuario</div>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse"> </a>
+                                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                                <a href="javascript:;" class="reload"> </a>
+                                <a href="javascript:;" class="remove"> </a>
+                            </div>
+                        </div>
+                        
+                        <div class="portlet-body form">
+                        
+                                <div class="form-body">
+                                                                    
+                                    <div class="row" ng-controller="FileUploadCtrl" nv-file-drop="" uploader="uploader" filters="queueLimit, customFilter">
+            
+                                        <div class="col-md-12">
+                                                    
+                                                    <div ng-show="uploader.isHTML5">
+        
+                                                        <div class="file-drop-zone margin-bottom-20" nv-file-over="" uploader="uploader" over-class="file-drop-zone-over"> Puede arrastrar y soltar archivos en esta zona para adjuntar a la recarga... o presione el boton "Elegir archivos" de la parte inferior.</div>
+                                                       
+                                                        <input type="file" nv-file-select="" uploader="uploader" multiple />
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="table-scrollable table-scrollable-borderless">
+                                                        <table class="table table-hover table-light">
+                                                            <thead>
+                                                                <tr class="uppercase">
+                                                                    <th width="50%">Archivo</th>
+                                                                    <th ng-show="uploader.isHTML5">Tamaño</th>
+                                                                    <th ng-show="uploader.isHTML5">Progreso</th>
+                                                                    <th>Estado</th>
+                                                                    <th>Acciones</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr ng-repeat="item in uploader.queue">
+                                                                    <td>
+                                                                        <strong>{{ item.file.name }}</strong>
+                                                                    </td>
+                                                                    <td ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                                                                    <td ng-show="uploader.isHTML5">
+                                                                        <div class="progress progress-sm" style="margin-bottom: 0;">
+                                                                            <div class="progress-bar progress-bar-info" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span ng-show="item.isSuccess" class="text-success">
+                                                                            <i class="glyphicon glyphicon-ok"></i>
+                                                                        </span>
+                                                                        <span ng-show="item.isCancel" class="text-info">
+                                                                            <i class="glyphicon glyphicon-ban-circle"></i>
+                                                                        </span>
+                                                                        <span ng-show="item.isError" class="text-danger">
+                                                                            <i class="glyphicon glyphicon-remove"></i>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td nowrap>
+                                                                        <button type="button" class="btn btn-info btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                                                            <span class="glyphicon glyphicon-upload"></span> Subir y grabar </button>
+                                                                        <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+                                                                            <span class="glyphicon glyphicon-ban-circle"></span> Cancelar </button>
+                                                                        <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                                                                            <span class="glyphicon glyphicon-trash"></span> Borrar </button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div>
+                                                        <p>Progreso de cola:</p>
+                                                        <div class="progress progress-sm" style="">
+                                                            <div class="progress-bar progress-bar-info" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-info btn-s" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">
+                                                        <span class="glyphicon glyphicon-upload"></span> Subir y grabar todos</button>
+                                                    <button type="button" class="btn btn-warning btn-s" ng-click="uploader.cancelAll()" ng-disabled="!uploader.isUploading">
+                                                        <span class="glyphicon glyphicon-ban-circle"></span> Cancelar todos </button>
+                                                    <button type="button" class="btn btn-danger btn-s" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length">
+                                                        <span class="glyphicon glyphicon-trash"></span> Borrar todos</button>
+                                                
+        
+                                        </div>
+                                    </div>
+                                    
+                                   </div> 
+                                   
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+ 		</div>
+ </div>
+
+
+
+
+
+<script>
+	
+	
+    function FileUploadCtrl($scope, FileUploader)
+    {
+		
+        var uploader = $scope.uploader = new FileUploader(
+        {
+            url: 'database/UploadUsuarioService.php'
+			//formData : {contratos_idcontratos : , usuario_creacion : $('#usuario_creacion').val() }
+        }); 
+        // FILTERS
+        uploader.filters.push(
+        {
+            name: 'customFilter',
+            fn: function(item /*{File|FileLikeObject}*/ , options)
+            {
+                return this.queue.length < 10;
+            }
+        });
+		// CALLBACKS
+        uploader.onWhenAddingFileFailed = function(item /*{File|FileLikeObject}*/ , filter, options)
+        {
+            console.info('onWhenAddingFileFailed', item, filter, options);
+        };
+        uploader.onAfterAddingFile = function(fileItem)
+        {
+           // console.info('onAfterAddingFile', fileItem);
+        };
+        uploader.onAfterAddingAll = function(addedFileItems)
+        {
+            console.info('onAfterAddingAll', addedFileItems);
+        };
+        uploader.onBeforeUploadItem = function(item)
+        {
+            console.info('onBeforeUploadItem', item);
+        };
+        uploader.onProgressItem = function(fileItem, progress)
+        {
+            console.info('onProgressItem', fileItem, progress);
+        };
+        uploader.onProgressAll = function(progress)
+        {
+            //console.info('onProgressAll', progress);
+        };
+        uploader.onSuccessItem = function(fileItem, response, status, headers)
+        {
+			//console.log(fileItem.isUploaded);
+			
+			//console.log(fileItem.file.name);
+			
+            console.info('onSuccessItem', fileItem, response, status, headers);
+        };
+        uploader.onErrorItem = function(fileItem, response, status, headers)
+        {
+            console.info('onErrorItem', fileItem, response, status, headers);
+        };
+        uploader.onCancelItem = function(fileItem, response, status, headers)
+        {
+			//console.log(fileItem);
+            console.info('onCancelItem', fileItem, response, status, headers);
+        };
+        uploader.onCompleteItem = function(fileItem, response, status, headers)
+        {
+            console.info('onCompleteItem', fileItem, response, status, headers);
+        };
+        uploader.onCompleteAll = function()
+        {
+            console.info('onCompleteAll');
+        };
+        //console.info('uploader', uploader);
+		
+    };
+	
+</script>

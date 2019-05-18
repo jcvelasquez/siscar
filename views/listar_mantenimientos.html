@@ -1,0 +1,196 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_mantenimientos">Servicios</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Servicios solicitados </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat2 ">
+            <div class="display">
+                <div class="number">
+                    <h3 class="font-red-haze bold">
+                        <span data-counter="counterup" data-value="7800">2</span>
+                    </h3>
+                    <small>SERVICIOS EN EJECUCION</small>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-pie-chart"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat2 ">
+            <div class="display">
+                <div class="number">
+                    <h3 class="font-green-sharp bold">
+                        <span data-counter="counterup" data-value="1349">4</span>
+                    </h3>
+                    <small>SERVICIOS FINALIZADOS</small>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-pie-chart"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat2 ">
+            <div class="display">
+                <div class="number">
+                    <h3 class="font-blue-sharp bold">
+                        <span data-counter="counterup" data-value="567">2</span>
+                    </h3>
+                    <small>VEHICULOS DISPONIBLES</small>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-bus"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat2 ">
+            <div class="display">
+                <div class="number">
+                    <h3 class="font-purple-soft bold">
+                        <span data-counter="counterup" data-value="276">5.0</span>
+                    </h3>
+                    <small>CALIFICACION PROMEDIO</small>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-list"></i>Servicios solicitados</div>
+                    <div class="tools">
+                        <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                        <a href="javascript:;" class="reload"> </a>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="btn-group">
+                                    <button id="sample_editable_1_new" class="btn sbold green"> <i class="fa fa-plus"></i> Solicitar servicio
+                                        
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="btn-group pull-right">
+                                    <button class="btn blue dropdown-toggle" data-toggle="dropdown">Opciones
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-print"></i> Imprimir </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-pdf-o"></i> Exportar a PDF </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-excel-o"></i> Exportar a Excel </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                        <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
+                                        <span></span>
+                                    </label>
+                                </th>
+                                <th> Motivo del servicio </th>
+                                <th> Lugar / Entidad </th>
+                                <th> Fecha servicio</th>
+                                <th> Hora servicio</th>
+                                <th> Estado servicio</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd gradeX">
+                                <td>
+                                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                        <input type="checkbox" class="checkboxes" value="1" />
+                                        <span></span>
+                                    </label>
+                                </td>
+                                <td> Traslado de presidente, al congreso de la republica </td>
+                                <td>
+                                    asdasd
+                                </td>
+                                <td>
+                                    12/02/2017
+                                </td>
+                                <td class="center"> 10:30 AM </td>
+                                <td class="center"> <span class="label label-sm label-success"> En ejecucion </span> </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button class="btn btn-xs red dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones
+                                            <i class="fa fa-angle-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu pull-left" role="menu">
+                                            <li>
+                                                <a ui-sref="asignar_servicio">
+                                                    <i class="icon-docs"></i> Ver disponibilidad </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="icon-tag"></i> Finalizar servicio </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="icon-user"></i> Calificar servicio </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+                                        </div>
+
+
+
+<!-- END MAIN CONTENT -->
+<script>
+    //ComponentsFormTools.init(); // init todo page
+</script>

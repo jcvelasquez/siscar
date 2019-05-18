@@ -1,0 +1,79 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_modelos">Modelos</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Listar modelos</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue-hoki ">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-list"></i> MODELOS DE VEHICULOS</div>
+                </div>
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-6">
+								<a href="#/private/registrar_modelo/nuevo" class="btn btn-primary"><i class="fa fa-plus"></i> Registrar modelo </a>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="btn-group pull-right hide">
+                                    <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Exportar
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-print"></i> Imprimir </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-pdf-o"></i> Exportar a PDF </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-excel-o"></i> Exportar a Excel </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <table class="table table-striped table-bordered table-hover" id="datatable_modelos">
+                        <thead>
+                            <tr>
+                                <th># ID</th>
+                                <th > Modelo de vehiculo </th>
+                                <th > Marca vehiculo </th>
+                                <th> Estado</th>
+                                <th> Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody> </tbody>
+                    </table>
+                    
+                    
+                        
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+    </div>
+
+
+
+<!-- END MAIN CONTENT -->
+<script>
+    //DatatableMarcasVehiculos.init();
+</script>

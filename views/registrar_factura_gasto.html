@@ -1,0 +1,270 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<div class="row">
+    <div class="col-md-8">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <a ui-sref="dashboard">Inicio</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <a ui-sref="private.listar_facturas_gastos">Facturas de gastos de combustibles</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="active"> Registrar factura gasto </li>
+        </ul>
+    </div>
+	<div class="col-md-2 pull-right text-right">
+    
+        <div class="btn-group">
+            <a class="btn yellow btn-xs" href="javascript:;" data-toggle="dropdown">
+                <i class="fa fa-question-circle"></i>
+                <span class="hidden-xs"> AYUDA </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="ayuda/REGISTRAR_FACTURA_GASTO.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Registrar factura gasto ?</a>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+<!-- BEGIN PAGE BREADCRUMB -->
+
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"> <i class="fa fa-gift"></i> REGISTRO FACTURA DE GASTOS DE COMBUSTIBLE</div>
+                    <!--<div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_tickets" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>-->
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                    
+                        <div class="form-body">
+                        
+                        	<div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                            
+                            <h3 class="form-section font-lg sbold">Información de tarjeta y estacion de servicio</h3>
+                            
+                            
+                            <div class="row">
+                                
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Ruc proveedor</label>
+                                        <div class="col-md-4">
+                                        	<div class="input-icon right">
+                                            	<i class="fa"></i>
+                                    			<input type="text" class="form-control" name="ruc_factura" id="ruc_factura"> 
+                                                <span class="help-block text-danger" id="helper_ruc"><h6></h6></span>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Nombre de proveedor</label>
+                                        <div class="col-md-10">
+                                            <input name="nombre_proveedor" type="text" class="form-control" id="nombre_proveedor" placeholder="[Ingresa un numero de ruc]" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+	                        </div>
+                            
+                             <div class="row">
+                                
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Fecha factura</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group" >
+                                                <input name="fecha_factura" type="text" data-date-format="dd/mm/yyyy" class="form-control" id="fecha_factura" readonly>
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8">
+                                
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Direccion de proveedor</label>
+                                        <div class="col-md-10">
+                                            <input name="direccion_proveedor" type="text" class="form-control" id="direccion_proveedor" placeholder="[Ingresa un numero de ruc]" readonly="readonly">
+                                        </div>
+                                    </div>
+                                                                        
+                                </div>
+                                
+                                
+                                
+	                        </div>
+                                                        
+                            <div class="row">
+                            
+                            	 <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6"># Factura</label>
+                                        <div class="col-md-4">
+                                           <input name="nro_factura" type="text" class="form-control" id="nro_factura" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                
+								<div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Vehiculo</label>
+                                        <div class="col-md-8">
+                                            <select name="idvehiculos" class="bs-select form-control" id="idvehiculos" data-style="btn-info"
+                                                data-live-search="true" data-size="8">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Chofer</label>
+                                        <div class="col-md-9">
+                                            <select name="chofer_idchofer" class="bs-select form-control" id="chofer_idchofer" data-style="btn-info"
+                                            	data-live-search="true" data-size="8">
+                                            </select>
+                                        </div>
+                                	</div>
+              					</div>
+                                
+                            </div>
+                            
+    
+                            <h3 class="form-section font-lg sbold">Información del producto suministrado</h3>
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Combustible</label>
+                                        <div class="col-md-6">
+                                            <select name="idtipo_combustible" class="bs-select form-control" id="idtipo_combustible" data-style="btn-info"
+                                            data-live-search="true" data-size="8">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-7">Kilometraje al dia de factura</label>
+                                        <div class="col-md-5">
+                                            <input name="kilometraje_factura" type="text" class="form-control mask-kilometraje" id="kilometraje_factura">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">N&deg; Meta / Centro costo</label>
+                                        <div class="col-md-6">
+                                            <input name="nro_meta" type="text" class="form-control mask-kilometraje" id="nro_meta">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            	
+                                
+                            </div>    
+                            <div class="row">
+                            
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Cantidad galones</label>
+                                        <div class="col-md-6">
+                                            <input name="cantidad_combustible" type="text" class="form-control mask-combustible" id="cantidad_combustible" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-7">Precio unitario</label>
+                                        <div class="col-md-5">
+                                            <input name="precio_unitario_combustible" type="text" class="form-control mask-currency" id="precio_unitario_combustible" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Importe Total</label>
+                                        <div class="col-md-6">
+                                            <input name="importe_total_combustible" readonly="readonly" type="text" class="form-control mask-currency" id="importe_total_combustible" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+
+              
+                            </div>
+                            
+                            <h3 class="form-section font-lg sbold">Marcador del ticket</h3>
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Tanque lleno?</label>
+                                        <div class="col-md-4">
+                                            <select name="es_tanque_lleno" class="bs-select form-control" id="es_tanque_lleno" data-style="btn-info">
+                                                <option value="">Seleccione</option>
+                                                <option value="1">SI</option>
+                                                <option value="0">NO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+              
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" class="btn green grabar"><i class="fa fa-check"></i> Grabar ticket</button>
+                                    <a ui-sref="private.listar_facturas_gastos" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                    <input type="hidden" name="usuarios_idusuarios" id="usuarios_idusuarios" value="1"/>
+                                    <input type="hidden" name="usuario_creacion" id="usuario_creacion" value="{{settings.usuario}}"/>
+                                    <input type="hidden" name="usuario_modificacion" id="usuario_modificacion" value="{{settings.usuario}}"/>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>

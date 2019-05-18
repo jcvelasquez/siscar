@@ -1,0 +1,832 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="dashboard">Servicios</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Solicitar servicio </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="external-events">
+            <div id="event_box" class="margin-bottom-10"></div>
+            <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline" for="drop-remove"> remove after drop
+                <input type="checkbox" class="group-checkable" id="drop-remove" />
+                <span></span>
+            </label>
+            <hr class="visible-xs" /> 
+        </div>
+  	</div>
+</div>                                      
+                                        
+<div class="row">
+    <div class="col-md-12">
+    
+    		<!-- BEGIN PORTLET-->
+            <div class="portlet light">
+                    <div class="portlet-title">
+                        <div class="caption"> <i class="fa fa-gift"></i>DISPONIBILIDAD DE DE MOVILIDAD</div>
+                        <div class="actions">
+                            <!--<a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                            <a ui-sref="private.listar_servicios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>-->
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                    
+                    <div id='loading'>loading...</div>
+
+					<div id="calendar" class="has-toolbar"> </div>
+                    
+                    </div>
+                
+               
+                        
+                        
+      		</div>
+     		<!-- END PORTLET-->
+
+	</div>
+</div>
+
+<!--<div class="row hide">
+    <div class="col-md-12">
+        <div class="portlet box blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption"> <i class="fa fa-gift"></i>PEDIDO DE MOVILIDAD DE USO OFICIAL</div>
+                    <div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_servicios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <form action="#" class="form-horizontal">
+                        <div class="form-body">
+                            <h3 class="form-section font-lg sbold">Información principal del servicio</h3>
+
+                            <div class="row">
+                            
+                            	<div class="col-md-6 col-sm-12">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Tipo comision</label>
+                                        <div class="col-md-9">
+                                        	<input type="checkbox" class="make-switch" 
+                                            	data-on-text="Solo ida" data-off-text="Ida y vuelta" 
+                                                data-on-color="danger" data-off-color="warning">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Area solicitante</label>
+                                        <div class="col-md-9">
+                                        	<div class="margin-bottom-10">
+                                                <select class="bs-select form-control" data-style="btn-success">
+                                                    <option value="Direccion de promocion y negocio">Direccion de promocion y negocio</option>
+                                                    <option value="Presidencia">Presidencia</option>
+                                                    <option value="Asesoria legal">Asesoria legal</option>
+                                                    <option value="Gerencia">Gerencia</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
+                                </div>
+                                
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Tipo de vehiculo</label>
+                                        <div class="col-md-9">
+                                        	<select class="bs-select form-control" data-style="btn-success">
+                                                <option value="Camioneta SUV">Camioneta SUV</option>
+                                                <option value="Camioneta Pick-up">Camioneta Pick-up</option>
+                                                <option value="Moto">Moto</option>
+                                                <option value="Auto sedán">Auto sedán</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+              
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">¿Quien solicita?</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-success">
+                                                <option value="Nombre de usuario 1">Nombre de usuario 1</option>
+                                                <option value="Nombre de usuario 2">Nombre de usuario 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Motivo servicio</label>
+                                        <div class="col-md-9">
+                                        	<input type="text" name="text-input" class="form-control" placeholder="Ej: Visita al congreso" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                               
+                                
+
+                            </div>
+                            
+                            <h3 class="form-section font-lg sbold">Fechas del servicio</h3>
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-4">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-5">Fecha servicio</label>
+                                        <div class="col-md-1">
+                                            <div class="input-group input-small date date-picker" data-date-format="dd/mm/yyyy">
+                                                <input type="text" class="form-control">
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            		
+                            
+                            	 <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-5">Hora salida</label>
+                                        <div class="col-md-5">
+                                        
+                                            <div class="input-group">
+                                                <input type="text" class="form-control timepicker timepicker-no-seconds">
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-clock-o"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-5">Hora retorno</label>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control timepicker timepicker-no-seconds">
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-clock-o"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           
+                           </div>
+
+                            
+                            <h3 class="form-section font-lg sbold">Ubicacion del servicio</h3>
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Departamento</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-success">
+                                                <option value="Departamento 1">Departamento 1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Provincia</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-success">
+                                                <option value="Provincia 1">Provincia 1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Distrito</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-success">
+                                                <option value="Distrito 1">Distrito 1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                
+                                <div class="col-md-6">
+                                
+                                    
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Lugar o entidad</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="Ej: Ministerio de Agricultura y Riego">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Direccion</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                            
+                            <h3 class="form-section font-lg sbold">Comisionados para este servicio</h3>
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-12">
+                                
+                                            <div class="mt-repeater">
+                                                    <div data-repeater-list="group-c">
+                                                    	<div class="mt-repeater-item">
+                                                        
+                                                                <div class="row mt-repeater-row">
+                                                                    <div class="col-md-2"><label class="control-label">Comisionado principal</label> </div>
+                                                                    <div class="col-md-10"> <input type="text" placeholder="Ej: Alfonso Velasquez" class="form-control" /> </div>
+                                                                    
+                                                                </div>
+                                                                
+                                                        </div>
+                                                                        
+                                                        <div data-repeater-item class="mt-repeater-item">
+                                                            <div class="row mt-repeater-row">
+                                                            	<div class="col-md-2"><label class="control-label">Comisionado adicional</label> </div>
+                                                                <div class="col-md-9"> <input type="text" placeholder="Ingrese un comisionado adicional (opcional)" class="form-control" /> </div>
+                                                                <div class="col-md-1">
+                                                                    <a href="javascript:;" data-repeater-delete class="btn btn-danger">
+                                                                        <i class="fa fa-close"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="javascript:;" data-repeater-create class="btn col-md-offset-2 btn-info mt-repeater-add">
+                                                        <i class="fa fa-plus"></i> Agregar comisionado</a>
+                                                </div>
+
+                                            </div>
+
+                            </div>
+    
+                               
+                        </div>
+                        
+                         <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                    <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                                    <a ui-sref="private.listar_servicios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </form>
+                </div>          
+                        
+      </div>
+                                                            
+  </div>
+</div>-->
+
+<!-- END MAIN CONTENT -->
+
+
+    <div id="agregar_evento" class="modal container fade" tabindex="-1" data-focus-on="input:first">
+        <form class="form-horizontal" action="#" id="form_solicitar_servicio" method="POST">
+        <div class="modal-header bg-blue-hoki bg-font-blue-hoki">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title sbold"><i class="fa fa-cab"></i> SOLICITAR UN SERVICIO</h4>
+        </div>
+        <div class="modal-body bg-grey-cararra">
+        
+                <div class="form-wizard">
+                    <div class="form-body">
+                        <ul class="nav nav-pills nav-justified steps">
+                            <li>
+                                <a href="#tab1" data-toggle="tab" class="step">
+                                    <span class="number"> 1 </span>
+                                    <span class="desc">
+                                        <i class="fa fa-check"></i> Fechas </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab2" data-toggle="tab" class="step">
+                                    <span class="number"> 2 </span>
+                                    <span class="desc">
+                                        <i class="fa fa-check"></i> Tipo servicio </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab3" data-toggle="tab" class="step active">
+                                    <span class="number"> 3 </span>
+                                    <span class="desc">
+                                        <i class="fa fa-check"></i> Ubicación</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab4" data-toggle="tab" class="step">
+                                    <span class="number"> 4 </span>
+                                    <span class="desc">
+                                        <i class="fa fa-check"></i> Comisionados </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab5" data-toggle="tab" class="step">
+                                    <span class="number"> 5 </span>
+                                    <span class="desc">
+                                        <i class="fa fa-check"></i> Confirmación </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div id="bar" class="progress progress-striped" role="progressbar">
+                            <div class="progress-bar progress-bar-info"> </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="alert alert-danger display-none">
+                                <button class="close" data-dismiss="alert"></button>Verifique que toda la información este completa para poder continuar. </div>
+                            <div class="alert alert-success display-none">
+                                <button class="close" data-dismiss="alert"></button> Your form validation is successful! </div>
+                            <div class="tab-pane active" id="tab1">
+                                                
+                                <div class="row">
+                                
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4">Fecha inicio</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group date date-picker">
+                                                    <input id="fecha_inicio" name="fecha_inicio" readonly="readonly" type="text" class="form-control" data-date-format="dd/mm/yyyy">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4">Hora salida</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group">
+                                                    <input type="text" id="hora_inicio" name="hora_inicio" readonly="readonly" class="form-control timepicker timepicker-no-seconds">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-clock-o"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                               
+                               </div>
+                               
+                                <div class="row">         
+
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4">Fecha fin</label>
+                                                <div class="col-md-8">
+                                                    <div class="input-group date date-picker">
+                                                        <input id="fecha_fin" name="fecha_fin" readonly="readonly" type="text" class="form-control" data-date-format="dd/mm/yyyy">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn default" type="button">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4">Hora llegada</label>
+                                                <div class="col-md-8">
+                                                    <div class="input-group">
+                                                        <input type="text" id="hora_fin" name="hora_fin" readonly="readonly" class="form-control timepicker timepicker-no-seconds">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn default" type="button">
+                                                                <i class="fa fa-clock-o"></i>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                               
+                               </div>
+                               
+                            </div>
+                            
+                            
+                            <div class="tab-pane" id="tab2">
+
+                                <div class="row">
+                                
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4">¿Es ida y vuelta?</label>
+                                            <div class="col-md-8">
+                                                <input type="checkbox" class="make-switch" id="es_ida_vuelta" name="es_ida_vuelta" 
+                                                    data-on-text="SI" data-off-text="NO" 
+                                                    data-on-color="info" data-off-color="warning">
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+            
+                                <div class="row">
+                                
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4">¿Quien solicita?</label>
+                                            <div class="col-md-8">
+                                                <select class="bs-select form-control" data-style="btn-info" id="usuarios_idusuarios" name="usuarios_idusuarios"
+                                                data-live-search="true" data-size="3">
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+            
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Tipo de vehiculo</label>
+                                            <div class="col-md-9">
+                                                <select class="bs-select form-control" data-style="btn-info" name="idtipos_vehiculo" id="idtipos_vehiculo"
+                                                data-size="3">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                  
+                                </div>
+                                
+                                <div class="row">
+                                    
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2">Motivo servicio</label>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" id="motivo_comision" name="motivo_comision" />
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="tab-pane" id="tab3">
+
+                                    <div class="row">
+                                    
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">Departamento</label>
+                                                <div class="col-md-9">
+                                                    <select class="bs-select form-control" data-style="btn-info" id="departamento" name="departamento"
+                                                    	data-live-search="true" data-size="4">
+                                                        
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">Provincia</label>
+                                                <div class="col-md-9">
+                                                    <select class="bs-select form-control" data-style="btn-info"
+                                                    	data-live-search="true" data-size="4" id="provincia" name="provincia">
+                                                        <option value="">Seleccione un departamento</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">Distrito</label>
+                                                <div class="col-md-9">
+                                                    <select class="bs-select form-control" data-style="btn-info"
+                                                    	data-live-search="true" data-size="4" name="distrito" id="distrito">
+                                                        <option value="">Seleccione una provincia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                        
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">Lugar o destino</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" class="form-control" id="lugar_destino" name="lugar_destino" 
+                                                    	placeholder="Ej: Ministerio de Agricultura y Riego">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">Direccion destino</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" class="form-control" id="direccion_destino" name="direccion_destino">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                
+                                    </div>
+
+
+                            </div>
+                            
+                            <div class="tab-pane" id="tab4">
+                    
+                                <div class="row">
+                                
+                                    <div class="col-md-12">
+                                    
+                                   		<div class="mt-repeater">
+                                            <div data-repeater-list="group-c">
+                                                   
+                                                <div data-repeater-item class="mt-repeater-item">
+                                                    <div class="row mt-repeater-row">
+                                                        <div class="col-md-2"><label class="control-label">Comisionado</label> </div>
+                                                        <div class="col-md-9"> <input type="text" name="usuarios_idusuarios" placeholder="Ingrese un comisionado adicional (opcional)" class="form-control" /> </div>
+                                                        <div class="col-md-1">
+                                                            <a href="javascript:;" data-repeater-delete class="btn btn-danger">
+                                                                <i class="fa fa-close"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="javascript:;" data-repeater-create class="btn col-md-offset-2 btn-info mt-repeater-add">
+                                                <i class="fa fa-plus"></i> Agregar comisionado</a>
+                                        </div>
+
+                                    </div>
+            
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            
+                            <div class="tab-pane" id="tab5">
+                            		
+                                    <h4 class="form-section sbold"><i class="fa fa-calendar"></i> Fechas de servicio</h4>
+                                    
+                                    <div class="row static-info">
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">Fecha de Inicio:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="fecha_inicio"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">Fecha de Fin:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="fecha_fin"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row static-info">
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">Hora Salida:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="hora_inicio"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">Hora Retorno:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="hora_fin"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <h4 class="form-section sbold"><i class="fa fa-car"></i> Tipo de servicio</h4>
+                                    
+                                    <div class="row static-info">
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">¿Es ida y vuelta?:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="es_ida_vuelta"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">¿Quien solicita?:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="usuario_solicita"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row static-info">
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">Tipo de vehiculo:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="idtipos_vehiculo"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">Motivo comision:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="motivo_comision"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h4 class="form-section sbold"><i class="fa fa-map-marker"></i> Ubicacion del servicio</h4>
+                                    
+                                    <div class="row static-info">
+                                    
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">Departamento:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="departamento"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">Provincia:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="provincia"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   
+                                   </div>
+                                   
+                                   <div class="row static-info">
+                                        
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">Distrito:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="distrito"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">Lugar destino:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="lugar_destino"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row static-info">     
+                                        
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                                <label class="control-label col-md-5 sbold">Direccion destino:</label>
+                                                <div class="col-md-7">
+                                                    <p class="form-control-static" data-display="direccion_destino"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                               
+                                    <h4 class="form-section sbold"><i class="fa fa-users"></i> Comisionados</h4>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Expiration:</label>
+                                        <div class="col-md-4">
+                                            <p class="form-control-static" data-display="card_expiry_date"> </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Payment Options:</label>
+                                        <div class="col-md-4">
+                                            <p class="form-control-static" data-display="group-c[]"> </p>
+                                        </div>
+                                    </div>
+                                
+                            
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <!--<div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-9">
+                                
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            
+            
+             <!--<div class="form-actions">
+                <div class="row">
+                
+                    <div class="col-md-12 text-right">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_servicios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>
+                    
+                </div>
+            </div>-->
+
+                    
+        </div>
+        <div class="modal-footer bg-grey bg-font-grey">
+                
+
+                <a href="javascript:;" class="btn default button-previous">
+                    <i class="fa fa-arrow-left"></i> Regresar </a>
+                <a href="javascript:;" class="btn btn-warning button-next">  Continuar
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+                <a href="javascript:;" class="btn green button-submit"> <i class="fa fa-check"></i> Confirmar solicitud
+                    
+                </a>
+                <button type="button" id="cancelar_solicitud" class="btn btn-danger"><i class="fa fa-times"></i> Cancelar</button>
+                <input type="hidden" id="usuario_creacion" name="usuario_creacion" value="" />
+                                
+        </div>
+        
+        
+        </form>
+        
+        
+    </div>

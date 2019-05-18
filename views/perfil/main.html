@@ -1,0 +1,95 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="#/perfil/dashboard">Resumen</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Mi Perfil </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row" ng-controller="UserProfileController">
+    <div class="col-md-12">
+        <!-- BEGIN PROFILE SIDEBAR -->
+        <div class="profile-sidebar">
+            <!-- PORTLET MAIN -->
+            <div class="portlet light profile-sidebar-portlet">
+                <!-- SIDEBAR USERPIC -->
+                <div class="profile-userpic">
+                    <img src="{{settings.assetsPath}}/pages/media/profile/profile_user.jpg" class="img-responsive" alt=""> </div>
+                <!-- END SIDEBAR USERPIC -->
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name"> Omar Trevejo</div>
+                    <div class="profile-usertitle-job"> Chofer </div>
+                </div>
+                <!-- END SIDEBAR USER TITLE -->
+                <!-- SIDEBAR BUTTONS -->
+                <!-- END SIDEBAR BUTTONS -->
+                <!-- SIDEBAR MENU -->
+                <div class="profile-usermenu">
+                    <ul class="nav">
+                        <li ng-class="{active: $state.includes('perfil.dashboard')}">
+                            <a ui-sref="perfil.dashboard">
+                                <i class="icon-home"></i> Resumen</a>
+                        </li>
+                        <li ng-class="{active: $state.includes('perfil.cuenta')}">
+                            <a ui-sref="perfil.cuenta">
+                                <i class="icon-settings"></i> Mis datos</a>
+                        </li>
+                        <li ng-class="{active: $state.includes('perfil.historico')}">
+                            <a ui-sref="perfil.historico">
+                                <i class="icon-bar-chart"></i> Reportes </a>
+                        </li>
+                        <!--<li ng-class="{active: $state.includes('perfil.ayuda')}">
+                            <a ui-sref="perfil.ayuda">
+                                <i class="icon-info"></i> Ayuda </a>
+                        </li>-->
+                    </ul>
+                </div>
+                <!-- END MENU -->
+            </div>
+            <!-- END PORTLET MAIN -->
+
+            <!--<div class="portlet light">
+                <div class="row list-separated profile-stat">
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <div class="uppercase profile-stat-title"> 37 </div>
+                        <div class="uppercase profile-stat-text"> Projects </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <div class="uppercase profile-stat-title"> 51 </div>
+                        <div class="uppercase profile-stat-text"> Tasks </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <div class="uppercase profile-stat-title"> 61 </div>
+                        <div class="uppercase profile-stat-text"> Uploads </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="profile-desc-title">About Marcus Doe</h4>
+                    <span class="profile-desc-text"> Lorem ipsum dolor sit amet diam nonummy nibh dolore. </span>
+                    <div class="margin-top-20 profile-desc-link">
+                        <i class="fa fa-globe"></i>
+                        <a href="http://www.keenthemes.com">www.keenthemes.com</a>
+                    </div>
+                    <div class="margin-top-20 profile-desc-link">
+                        <i class="fa fa-twitter"></i>
+                        <a href="http://www.twitter.com/keenthemes/">@keenthemes</a>
+                    </div>
+                    <div class="margin-top-20 profile-desc-link">
+                        <i class="fa fa-facebook"></i>
+                        <a href="http://www.facebook.com/keenthemes/">keenthemes</a>
+                    </div>
+                </div>
+            </div>-->
+
+        </div>
+        <!-- END BEGIN PROFILE SIDEBAR -->
+        <!-- BEGIN PROFILE CONTENT -->
+        <div ui-view class="profile-content fade-in-up"> </div>
+        <!-- END PROFILE CONTENT -->
+    </div>
+</div>
+<!-- END PAGE CONTENT-->

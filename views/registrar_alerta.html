@@ -1,0 +1,241 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_alertas">Alertas</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Registrar alerta</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> REGISTRAR ALERTA DE VEHICULO</div>
+                    <!--<div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_marcas" class="btn btn-primary btn-danger grabar"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>-->
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                        
+                            <h3 class="form-section font-lg sbold">Información general de alerta</h3>
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Alerta para el vehiculo</label>
+                                        <div class="col-md-8">
+                                            <select class="bs-select form-control" tabindex="1" data-style="btn-info" id="vehiculos_idvehiculos" name="vehiculos_idvehiculos"
+                                            	data-live-search="true" data-size="8">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Informar al usuario</label>
+                                        <div class="col-md-9">
+                                        	<select class="bs-select form-control" tabindex="1" data-style="btn-info" id="usuarios_idusuarios" name="usuarios_idusuarios"
+                                            	data-live-search="true" data-size="8">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                             </div>
+                             
+                            <div class="row"> 
+                               
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Descripcion de alerta</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" tabindex="2" id="descripcion_alerta" name="descripcion_alerta">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row"> 
+                            
+                            	<div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Estado de alerta</label>
+                                        <div class="col-md-5">
+                                            <select class="bs-select form-control" data-style="btn-info" tabindex="6" id="estado_alerta" name="estado_alerta">
+                                            	<option value="">Seleccione</option>
+                                                <option value="1">ACTIVADA</option>
+                                                <option value="0">DESACTIVADA</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                             
+                             <h3 class="form-section font-lg sbold">Informacion de servicios y componentes relacionados a alerta:</h3>
+                             
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Sistemas de vehiculo</label>
+                                        <div class="col-md-8">
+                                            <select class="bs-select form-control" tabindex="1" data-style="btn-info" id="idmantenimiento_sistemas" 
+                                            	name="idmantenimiento_sistemas" data-live-search="true" data-size="8">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            	
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Servicios de vehiculo</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" tabindex="1" data-style="btn-info" id="idmantenimiento_servicios" name="idmantenimiento_servicios" data-live-search="true" data-size="8">
+                                            	<option value="">Seleccione un sistema primero</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>    
+                           
+                           </div>
+                           <!--<div class="row">
+                             
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2">Componentes de vehiculo</label>
+                                            <div class="col-md-10">
+                                                <select class="bs-select form-control" tabindex="1" data-style="btn-info" id="idmantenimiento_componentes" name="idmantenimiento_componentes" data-live-search="true" data-size="8">
+                                                    <option value="">Seleccione un sistema primero</option>
+                                                </select> 
+                                            </div>
+                                        </div>
+                                    </div>
+
+                            </div>-->
+                            
+                            <h3 class="form-section font-lg sbold">Configuracion de ejecución de alerta </h3>
+                             
+                            <div class="row">
+                            
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Cargar configuracion:</label>
+                                        <div class="col-md-3">
+                                            <input type="checkbox" id="is_custom_alerta" name="is_custom_alerta" class="make-switch" 
+                                            	data-on-text="Personalizada" data-off-text="Global" 
+                                                data-on-color="success" data-off-color="warning">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-8">Kilometraje (último mantenimiento):</label>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" tabindex="2" id="kilometraje_ultimo_mantenimiento" name="kilometraje_ultimo_mantenimiento">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div id="alerta_personalizada" class="hide">
+                                               
+                                    <div class="row">
+                                    
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4">Ciclo de alerta:</label>
+                                                <div class="col-md-8">
+                                                    <input id="ciclo_alerta" class="col-md-3" type="text" value="0" name="ciclo_alerta"> 
+                                                    <span class="help-block text-danger helper hide"><h6>El ciclo de alerta debe ser mayor a 0.</h6></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row">
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4">Unidad de ciclo:</label>
+                                                <div class="col-md-8">
+                                                    <select class="bs-select form-control" tabindex="1" data-style="btn-info" id="id_medida_uso" name="id_medida_uso"> 
+                                                    </select>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                   </div>
+                                   
+                                   <div class="row">     
+                                   
+                                     <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4">Ejecución de alerta en:</label>
+                                            <div class="col-md-8">
+                                                 <input id="ejecucion_alerta" name="ejecucion_alerta" type="text" /> 
+                                                 <span class="help-block text-danger helper hide"><h6>La ejecución de alerta debe ser mayor a 10.</h6></span>
+                                             </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                            </div>
+                            
+
+                            </div>
+
+                            
+                            <!-- END: ROW UPLOAD -->
+                               
+                        
+                        </div>
+                        	
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" id="grabar" class="btn green grabar"><i class="fa fa-check"></i> Grabar servicio</button>
+                        			<a ui-sref="private.listar_alertas" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                    <input type="hidden" name="usuario_creacion" value="{{settings.sesion.usuario}}"/>
+                                    <input type="hidden" name="usuario_modificacion" value="{{settings.sesion.usuario}}"/>
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                       
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+

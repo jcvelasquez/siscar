@@ -1,0 +1,135 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+
+<ul class="page-breadcrumb breadcrumb">
+  <li> <a ui-sref="dashboard">Inicio</a> <i class="fa fa-circle"></i> </li>
+  <li> <a ui-sref="private.listar_vales">Vales</a> <i class="fa fa-circle"></i> </li>
+  <li class="active">Registrar vale</li>
+</ul>
+<!-- END PAGE BREADCRUMB --> 
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row hide" id="cabecera_servicio">
+  <div class="col-md-12 col-sm-12">
+    <div class="portlet solid blue-hoki">
+      <div class="portlet-title" style="padding:10px 20px 0 20px;">
+        <div class="caption bold"> <i class="fa fa-info-circle"></i> DETALLES DEL SERVICIO</div>
+        <div class="actions"> </div>
+      </div>
+      <div class="portlet-body" style="padding:10px 20px;">
+        <div class="row static-info">
+          <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Estado de asignacion</div>
+          <div class="col-md-4 value"><span class="label label-success" data-display="es_asignado"> </span></div>
+        </div>
+        <div class="row static-info">
+          <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Area solicitante</div>
+          <div class="col-md-4 value" data-display="nombre_area"> </div>
+          <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Usuario que solicita </div>
+          <div class="col-md-3 value" data-display="usuario_solicita"> </div>
+        </div>
+        <div class="row static-info">
+          <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Motivo del servicio </div>
+          <div class="col-md-4 value" data-display="motivo_comision"> </div>
+          <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Lugar del servicio </div>
+          <div class="col-md-3 value" data-display="lugar_destino"> </div>
+        </div>
+        <div class="row static-info">
+          <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Fecha / Hora Inicio <br />
+            programada</div>
+          <div class="col-md-4 value" data-display="fecha_inicio"> </div>
+          <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Fecha / Hora - Fin <br />
+            programada </div>
+          <div class="col-md-3 value" data-display="fecha_fin"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12"> 
+    <!-- BEGIN PORTLET-->
+    <div class="portlet box blue">
+      <div class="portlet-title">
+        <div class="caption"><i class="fa fa-info-circle"></i> INFORMACION DEL VALE</div>
+      </div>
+      <div class="portlet-body form"> 
+        <!-- BEGIN FORM-->
+        <form action="#" class="form-horizontal" id="form_vale">
+          <div class="form-body">
+            <div class="alert alert-danger display-hide">
+              <button class="close" data-close="alert"></button>  Compruebe que todos los campos esten completos para poder grabar. </div>
+                
+              <div class="row">
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      <label class="control-label col-md-3">RECIBI DE:</label>
+                      <div class="col-md-8">
+                       <input name="nombre_proveedor" type="text" class="form-control" id="nombre_proveedor" value="SIERRA Y SELVA EXPORTADORA">
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="control-label col-md-2">META</label>
+                      <div class="col-md-10">
+                       <input name="nro_meta" type="text" class="form-control" id="nro_meta">
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+            
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label class="control-label col-md-3">DESTINO:</label>
+                  <div class="col-md-8">
+                    <select class="bs-select form-control" data-style="btn-info" id="idservicios_escala_movilidades" name="idservicios_escala_movilidades" data-live-search="true" data-size="7">
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+               <div class="col-md-4 hide">
+                    <div class="form-group">
+                      <label class="control-label col-md-2">S/</label>
+                      <div class="col-md-10">
+                       <input name="monto_vale" readonly="readonly" type="text" class="form-control" id="monto_vale">
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+
+            
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="control-label col-md-2">POR CONCEPTO DE:</label>
+                  <div class="col-md-10">
+                    <textarea class="form-control" name="concepto_vale" id="concepto_vale" rows="4"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <div class="row">
+              <div class="col-md-12 text-right">
+                <button type="submit" id="grabar_vale_servicio" class="btn green"><i class="fa fa-check"></i> Generar vale</button>
+                <a ui-sref="private.listar_servicios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                <input type="hidden" name="usuario_creacion" value="{{settings.sesion.usuario}}"/>
+                <input type="hidden" name="usuario_modificacion" value="{{settings.sesion.usuario}}"/>
+                <input type="hidden" name="idservicio_solicitud" id="idservicio_solicitud" value=""/>
+                
+                
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- END FORM--> 
+      </div>
+    </div>
+    <!-- END PORTLET--> 
+  </div>
+</div>

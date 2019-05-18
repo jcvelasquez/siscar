@@ -1,0 +1,146 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_talleres">Talleres</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Registrar taller</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> REGISTRAR TALLER</div>
+                    <!--<div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_marcas" class="btn btn-primary btn-danger grabar"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>-->
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                        
+                            <h3 class="form-section font-lg sbold">Información general</h3>
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Ruc del taller</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="ruc_taller" name="ruc_taller">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Telefono del taller</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="telefono_taller" name="telefono_taller">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Email</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" id="email_taller" name="email_taller">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Razon social</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" id="nombre_taller" name="nombre_taller">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Direccion</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" id="direccion_taller" name="direccion_taller">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Descripcion del taller</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" id="descripcion_taller" name="descripcion_taller">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                                               
+                            <div class="row">
+                            
+                            	<div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Estado taller </label>
+                                        <div class="col-md-2">
+                                            <select class="bs-select form-control" data-style="btn-info" id="estado_taller" name="estado_taller">
+                                            	<option value="">Seleccione</option>
+                                                <option value="1">ACTIVO</option>
+                                                <option value="0">INACTIVO</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+
+                                    <button type="submit" class="btn green grabar"><i class="fa fa-check"></i> Grabar</button>
+                                    <input type="hidden" value="{{settings.sesion.usuario}}" name="usuario_creacion" />
+                                    <input type="hidden" value="{{settings.sesion.usuario}}" name="usuario_modificacion" />
+
+                        			<a ui-sref="private.listar_talleres" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>

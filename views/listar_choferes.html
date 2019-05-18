@@ -1,0 +1,188 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+
+
+
+	<!-- BEGIN PAGE BREADCRUMB -->
+<div class="row">
+    <div class="col-md-8">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <a ui-sref="dashboard">Inicio</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <a ui-sref="private.listar_choferes">Choferes</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="active"> Listar choferes</li>
+        </ul>
+    </div>
+	<div class="col-md-2 pull-right text-right">
+    
+        <div class="btn-group">
+            <a class="btn yellow btn-xs" href="javascript:;" data-toggle="dropdown">
+                <i class="fa fa-question-circle"></i>
+                <span class="hidden-xs"> AYUDA </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="ayuda/REGISTRAR_CHOFER.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Registrar chofer ?</a>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+<!-- END PAGE BREADCRUMB -->
+<div class="row hide">
+
+    <div class="col-md-12">
+		<div class="portlet solid blue">
+            
+                    <div class="portlet-title">
+                        <div class="caption"><i class="fa fa-database"></i> Filtrar búsqueda </div>
+                        <div class="tools"><a href="javascript:;" class="expand" data-original-title="" title=""> </a>  </div>
+                        
+                    </div>
+                    <div class="portlet-body form portlet-collapsed"> 
+                    
+                    <form action="#" class="form-horizontal">
+                        <div class="form-body">
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Sede</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-info">
+                                                    <option value="TODAS">TODAS</option>
+                                                    <option value="LIMA">LIMA</option>
+                                                    <option value="ANCASH">ANCASH</option>
+                                                    <option value="PIURA">PIURA</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                 </div>
+                    
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Desde</label>
+                                        <div class="col-md-9">
+                                            <div class="input-group input-small date date-picker" data-date-format="dd/mm/yyyy">
+                                                <input type="text" class="form-control" readonly>
+                                                <span class="input-group-btn">
+                                                    <button class="btn default btn-info" type="button">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Hasta</label>
+                                        <div class="col-md-9">
+                                            <div class="input-group input-small date date-picker" data-date-format="dd/mm/yyyy">
+                                                <input type="text" class="form-control" readonly>
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                               <div class="row">
+                                    <div class="col-md-offset-1 col-md-12">
+                                    	<a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Filtrar </a>
+                       					<a class="btn btn-primary btn-danger" href="javascript;"><i class="fa fa-times"></i> Limpiar </a>
+                                    </div>
+                                </div>
+                            
+                        </div>                        
+                        
+                    </form>
+                    
+                    </div>
+                    
+                </div>    
+    </div>
+
+</div>
+
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-list"></i> LISTADO DE CHOFERES</div>
+                </div>
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <a href="#/private/registrar_chofer/nuevo" class="btn btn-primary"><i class="fa fa-plus"></i> Registrar chofer </a>
+                            </div>
+                            <div class="col-md-2">
+                            
+                            	
+                                
+                            </div>
+                            <div class="col-md-2">
+                            
+                                <!--<div class="btn-group pull-right">
+                                    <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Exportar
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-print"></i> Imprimir </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-pdf-o"></i> Exportar a PDF </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-excel-o"></i> Exportar a Excel </a>
+                                        </li>
+                                    </ul>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="datatable_choferes">
+                        <thead>
+                            <tr>
+                                <th width="60"># ID</th>
+                                <th>Chofer </th>
+                                <th>Sede </th>
+                                <th>Vehiculo asignado</th>
+                                <th>Tipo licencia</th>
+                                <th># licencia</th>
+                                <th>Estado chofer</th>
+                                <th width="80">  </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+</div>
+

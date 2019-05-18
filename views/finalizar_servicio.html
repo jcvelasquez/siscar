@@ -1,0 +1,206 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_servicios">Servicios</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Ver disponibilidad </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+	<div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-info-circle"></i> DETALLES DEL SERVICIO</div>
+                    <div class="actions">
+                        <a ui-sref="private.listar_servicios" class="btn btn-primary btn-success">
+                            <i class="fa fa-mail-reply"></i> Regresar </a>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                	<div class="row static-info">
+                        <div class="col-md-2 name"> Estado del servicio</div>
+                        <div class="col-md-4 value"><span class="label label-warning"> En espera </span></div>
+                    </div>
+                	<div class="row static-info">
+                        <div class="col-md-2 name"> Area solicitante</div>
+                        <div class="col-md-4 value"> Presidencia</div>
+                        <div class="col-md-3 name"> Usuario que solicita </div>
+                        <div class="col-md-3 value"> Vanessa Gonzales </div>
+                    </div>  
+                    <div class="row static-info">
+                        <div class="col-md-2 name"> Motivo del servicio </div>
+                        <div class="col-md-4 value"> Traslado de presidente Alfonso Velasquez y Vanessa Gonzales </div>
+                        <div class="col-md-3 name"> Fecha del servicio </div>
+                        <div class="col-md-3 value"> 27, Marzo 2017 </div>
+                    </div>
+                    <div class="row static-info">
+                        <div class="col-md-2 name"> Hora de salida </div>
+                        <div class="col-md-4 value"> 10:20 AM </div>
+                        <div class="col-md-3 name"> Hora de retorno </div>
+                        <div class="col-md-3 value"> 12:20 PM </div>
+                    </div>
+                   	<hr />
+                    <div class="row static-info">
+                        <div class="col-md-2 name"> Vehiculo asignado</div>
+                        <div class="col-md-4 value"> NISSAN FRONTIER | DFG-345 </div>
+                        <div class="col-md-3 name"> Chofer asignado</div>
+                        <div class="col-md-3 value"> Jose Claudio Velasquez Boyer </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet box blue-hoki alendar">
+                <div class="portlet-title">
+                    <div class="caption"> <i class=" icon-layers"></i> FINALIZACION Y Y CALIFICACION DE SERVICIO </div>
+                    <div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_servicios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>
+                    
+                </div>
+                <div class="portlet-body form">
+                	<form action="#" class="form-horizontal">
+                        <div class="form-body">
+                        
+                        	<h3 class="form-section font-lg sbold">Datos de finalización de servicio</h3>
+                            
+                            <div class="row">
+                            
+                            	 <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-5">Hora salida (real)</label>
+                                        <div class="col-md-5">
+                                            <div class="input-icon">
+                                                <i class="fa fa-clock-o"></i>
+                                                <input type="text" class="form-control timepicker timepicker-default"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-5">Hora retorno (real)</label>
+                                        <div class="col-md-5">
+                                            <div class="input-icon">
+                                                <i class="fa fa-clock-o"></i>
+                                                <input type="text" class="form-control timepicker timepicker-default"> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-6">Kilometraje retorno</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                           </div>
+                           
+                           <h3 class="form-section font-lg sbold">Calificación y Comentarios</h3>
+                           
+                           <div class="row">
+                           
+                           		<div class="col-md-12 col-sm-12">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-1">Calificacion</label>
+                                        <div class="col-md-11">
+                                        	<div class="md-radio-inline">
+                                                <div class="md-radio">
+                                                    <input type="radio" id="radio1" name="radio2" class="md-radiobtn">
+                                                    <label for="radio1">
+                                                        <span class="inc"></span>
+                                                        <span class="check"></span>
+                                                        <span class="box"></span> <i class="fa fa-star"></i> </label>
+                                                </div>
+                                                <div class="md-radio">
+                                                    <input type="radio" id="radio2" name="radio2" class="md-radiobtn" value="">
+                                                    <label for="radio2">
+                                                        <span class="inc"></span>
+                                                        <span class="check"></span>
+                                                        <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                </div>
+                                                <div class="md-radio">
+                                                    <input type="radio" id="radio3" name="radio2" class="md-radiobtn">
+                                                    <label for="radio3">
+                                                        <span class="inc"></span>
+                                                        <span class="check"></span>
+                                                        <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                </div>
+                                                <div class="md-radio">
+                                                    <input type="radio" id="radio4" name="radio2" class="md-radiobtn">
+                                                    <label for="radio4">
+                                                        <span class="inc"></span>
+                                                        <span class="check"></span>
+                                                        <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                </div>
+                                                <div class="md-radio">
+                                                    <input type="radio" id="radio5" name="radio2" class="md-radiobtn">
+                                                    <label for="radio5">
+                                                        <span class="inc"></span>
+                                                        <span class="check"></span>
+                                                        <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                           </div>
+                           
+                           <div class="row">
+                           
+                           		<div class="col-md-12 col-sm-12">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-1">Comentarios</label>
+                                        <div class="col-md-11">
+                                        	<textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                           </div>
+                           
+                    
+                    	</div>
+                        	
+                    </form>
+                    
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-12">
+                                <button type="submit" class="btn green">
+                                    <i class="fa fa-check"></i> Grabar</button>
+                                <button type="button" class="btn default">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+<!-- END MAIN CONTENT -->
+<script>
+	ComponentsDateTimePickers.init(); 
+</script>

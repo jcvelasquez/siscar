@@ -1,0 +1,273 @@
+	<!-- BEGIN PAGE BREADCRUMB -->
+<div class="row">
+    <div class="col-md-8">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <a ui-sref="dashboard">Inicio</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <a ui-sref="private.listar_choferes">Choferes</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="active"> Registrar chofer</li>
+        </ul>
+    </div>
+	<div class="col-md-2 pull-right text-right">
+    
+        <div class="btn-group">
+            <a class="btn yellow btn-xs" href="javascript:;" data-toggle="dropdown">
+                <i class="fa fa-question-circle"></i>
+                <span class="hidden-xs"> AYUDA </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="ayuda/REGISTRAR_CHOFER.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Registrar chofer ?</a>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> REGISTRO DE CHOFER</div>
+                    <div class="actions">
+                       <!-- <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_contratos" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>-->
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+                        
+                        	 <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                        
+                        	<h3 class="form-section font-lg sbold">Información de sede</h3>
+                            
+                        	<div class="row">
+    
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                          <label class="control-label col-md-3">Sede</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-info" id="sedes_idsedes" name="sedes_idsedes"
+                                            data-live-search="true" data-size="8">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label class="control-label col-md-3">Al Vehiculo</label>
+                                      <div class="col-md-9">
+                                        <select class="bs-select form-control" tabindex="4" data-style="btn-info" id="vehiculos_idvehiculos" name="vehiculos_idvehiculos"
+                                                                data-live-search="true" data-size="8" disabled="disabled">
+                                          <option value="">Seleccione una sede</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                
+                            </div>
+                        
+                            <h3 class="form-section font-lg sbold">Información general del chofer</h3>
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Usuario (idem SIGAP)</label>
+                                        <div class="col-md-6">
+                                        	<div class="input-icon right">
+                                            	<i class="fa"></i>
+                                    			<input type="text" class="form-control" name="usuario_chofer" id="usuario_chofer"> 
+                                                <span class="help-block text-danger" id="helper_usuario"><h6></h6></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 hide">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Clave</label>
+                                        <div class="col-md-5">
+                                            <input type="password" class="form-control" placeholder="" name="clave_chofer" id="clave_chofer">
+                                            <span class="help-block text-danger" id="helper_clave"><h6></h6></span>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                
+                            </div>
+                            
+                             <div class="row">
+    
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Nombres</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="nombres_chofer" id="nombres_chofer">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Apellidos</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" id="apellidos_chofer" name="apellidos_chofer">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>  
+                            
+                            <div class="row">
+    
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Tipo de identificacion</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" data-style="btn-info" id="idtipo_identificacion" name="idtipo_identificacion">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3"># Identificacion</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" name="nro_identificacion" id="nro_identificacion">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div> 
+                            
+                            <div class="row">
+    
+    							<div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Tipo de licencia</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" id="idtipo_licencia" name="idtipo_licencia" data-style="btn-info">
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3"># Licencia</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" id="nro_licencia" name="nro_licencia">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+    
+    							<div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Correo electronico</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" id="email_chofer" name="email_chofer">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Estado chofer</label>
+                                        <div class="col-md-5">
+                                            <select class="bs-select form-control" id="estado_chofer" name="estado_chofer" data-style="btn-info">
+                                            	<option value="">Seleccione</option>
+                                                <option value="1">ACTIVO</option>
+                                                <option value="0">INACTIVO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                             
+                            
+                            
+                            <!--
+                            <h3 class="form-section font-lg sbold">Fotografia de Identificacion</h3>
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Imagen</label>
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                        
+                                                        <div class="fileinput-new thumbnail margin-bottom-10" style="width: 200px; height: 150px;">
+                                                            <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt=""> </div>
+                                                        <div class="fileinput-preview margin-bottom-10 fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
+                                                        
+                                                        <div>
+                                                            <span class="btn default btn-file">
+                                                                <span class="fileinput-new"> Seleccionar imagen</span>
+                                                                <span class="fileinput-exists"> Cambiar imagen</span>
+                                                                <input type="file" name="foto_chofer" id="foto_chofer"> </span>
+                                                            	<a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> Eliminar </a>
+                                                        </div>
+                                                    </div>
+                                                	<div class="clearfix margin-top-20"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>-->
+                            
+                           
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="text-right col-md-12">
+                                    <button type="submit" id="grabar_chofer" class="btn green"><i class="fa fa-check"></i> Grabar</button>
+                                    <a ui-sref="private.listar_choferes" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                    <input type="hidden" name="usuario_creacion" value="{{settings.usuario}}"/>
+                                    <input type="hidden" name="usuario_modificacion" value="{{settings.usuario}}"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+
+
+

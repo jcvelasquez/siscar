@@ -1,0 +1,373 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_contratos">Contratos</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Avance de contrato</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+
+<div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="portlet solid blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-info-circle"></i> INFORMACION DE CONTRATO</div>
+                    <div class="actions">
+                        <a ui-sref="private.listar_contratos" class="btn btn-primary btn-warning">
+                            <i class="fa fa-mail-reply"></i> Regresar </a>
+                    </div>
+                </div>
+                <div class="portlet-body">
+
+                	<!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+                                                   
+                            <div class="row">
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6">Proveedor</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" readonly="readonly" value="" tabindex="2" id="razon_social">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-5">Fecha Contrato</label>
+                                            <div class="col-md-7">
+                                                  <input type="text" readonly="readonly" class="form-control text-right" id="fecha_contrato" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-5">Plazo desde</label>
+                                            <div class="col-md-7">
+                                                  <input type="text" readonly="readonly" class="form-control text-right" id="plazo_desde">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-5">Plazo hasta</label>
+                                            <div class="col-md-7">
+                                                  <input type="text" readonly="readonly" class="form-control text-right" id="plazo_hasta">
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                
+
+                            </div>
+                            
+                            
+                            <div class="row">
+                            
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6">De la sede</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" readonly="readonly" tabindex="2" id="nombre_sede" name="nombre_sede">
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    
+                            
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-5">Monto contrato</label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control text-right" readonly="readonly" tabindex="2" id="monto_contrato">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-5"># Contrato</label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control text-right" readonly="readonly" tabindex="2" id="nro_contrato">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-3">
+                                        
+                                    </div>
+                                
+                            </div>
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+<!-- BEGIN MAIN CONTENT -->
+<div class="row hide">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+
+                <div class="portlet box yellow">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="icon-settings"></i>INFORMACION DE ITEMS ADJUDICADOS AL CONTRATO</div>
+                        </div>
+                        <div class="portlet-body form">
+                        
+                        	<form action="#" class="form-horizontal" id="form_tarea">
+                            	<div class="form-body">
+                                
+                                	<div class="row margin-bottom-20">
+                                    	<div class="col-md-12">
+                                            <table class="table table-striped table-bordered table-hover" id="datatable_items_adjudicados">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tipo de combustible</th>
+                                                        <th>Cantidad</th>
+                                                        <th>Medida</th>
+                                                        <th>Precio Und</th>
+                                                        <th>Precio Total</th>
+                                                        <th>Ficha Técnica</th>
+                                                        <th>  </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="registro_tareas" class="hide">    
+                                    
+                                    <h3 class="form-section font-lg sbold">Información de la evaluación, acción y costo de la solucion:</h3>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Descripcion del problema</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" readonly="readonly" class="form-control" value="" tabindex="2" id="descripcion_problema" name="descripcion_problema"> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Evaluacion del problema</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" readonly="readonly" class="form-control" value="" tabindex="2" id="descripcion_diagnostico" name="descripcion_diagnostico"> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Acción para solucionar</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" readonly="readonly" class="form-control" id="descripcion_accion" name="descripcion_accion"> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-6">Costo de acción</label>
+                                                    <div class="col-md-6">
+                                                        <input type="text" readonly="readonly" class="form-control mask-numeric" value="" tabindex="2" id="costo_accion" name="costo_accion"> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                   
+                                    
+                                    <h3 class="form-section font-lg sbold">Información de la ejecucion de la tarea, porcentaje y calificación:</h3>
+                                    
+                                    <div class="alert alert-danger items display-hide">
+                                         <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                                   </div>
+                                    
+                                    <div class="row">
+                               
+                                            <div class="col-md-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Calificacion de tarea</label>
+                                                    <div class="col-md-10">
+                                                        <div class="md-radio-inline">
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio1" name="calificacion_trabajo" class="md-radiobtn" value="1">
+                                                                <label for="radio1">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i> </label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio2" name="calificacion_trabajo" class="md-radiobtn" value="2">
+                                                                <label for="radio2">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio3" name="calificacion_trabajo" class="md-radiobtn" value="3">
+                                                                <label for="radio3">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio4" name="calificacion_trabajo" class="md-radiobtn" value="4">
+                                                                <label for="radio4">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                            </div>
+                                                            <div class="md-radio">
+                                                                <input type="radio" id="radio5" name="calificacion_trabajo" class="md-radiobtn" value="5">
+                                                                <label for="radio5">
+                                                                    <span class="inc"></span>
+                                                                    <span class="check"></span>
+                                                                    <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Resultados de la<br />ejecución de la tarea</label>
+                                                    <div class="col-md-10">
+                                                        <textarea class="form-control" name="comentarios_trabajo" id="comentarios_trabajo" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">% de ejecucion de la tarea</label>
+                                                    <div class="col-md-10">
+                                                         <input id="porcentaje_trabajo" name="porcentaje_trabajo" type="text" /> 
+                                                         <span class="help-block text-danger helper hide"><h6>La ejecución de alerta debe ser mayor a 10.</h6></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                    </div>
+                                    
+                                    <div class="row">   
+                                          
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">Estado de la ejecución</label>
+                                                    <div class="col-md-4">
+                                                          <select class="bs-select form-control" data-style="btn-info" tabindex="6" 
+                                                                id="estado_trabajo" name="estado_trabajo">
+                                                            <option value="">Seleccione</option>
+                                                            <option value="1">EJECUTADO</option>
+                                                            <option value="2">NO EJECUTADO</option>
+                                                        </select> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                  
+
+                            </div>
+                           
+                            <div class="form-actions hide" id="actions_tareas">
+                                <div class="row">
+                                    <div class="col-md-12  text-right">
+                                        <button type="submit" id="grabar_tarea" class="btn green"><i class="fa fa-check"></i> Grabar ejecucion</button>
+                                        <button type="button" id="cancelar_tarea" class="btn btn-danger"><i class="fa fa-times"></i> Cancelar</button>
+                                        <input type="hidden" name="usuario_creacion" value="{{settings.usuario}}"/>                                        
+                                        <input type="hidden" name="idtrabajos_x_evaluaciones" id="idtrabajos_x_evaluaciones"/>
+                                    </div>
+                                </div>
+                            </div>
+                           </form>          
+                        </div>
+                    </div>
+ 		</div>
+ </div>
+
+
+
+
+
+
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+            <div class="portlet light portlet-fit ">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class=" icon-layers font-green"></i>
+                        <span class="caption-subject font-green bold uppercase">Bar Chart</span>
+                    </div>
+                    <div class="actions">
+                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                            <i class="icon-cloud-upload"></i>
+                        </a>
+                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                            <i class="icon-wrench"></i>
+                        </a>
+                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                            <i class="icon-trash"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div id="echarts_bar" style="height:500px;"></div>
+                </div>
+            </div>
+		<!-- END PORTLET-->
+	</div>
+</div>
+<!-- END MAIN CONTENT -->
+

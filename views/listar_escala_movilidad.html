@@ -1,0 +1,93 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_escala_movilidad">Escala de movilidad</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Listar escalas</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-list"></i> LISTADO DE ESCALAS DE MOVILIDADES</div>
+                </div>
+                <div class="portlet-body">
+                
+                
+                	<div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-6">                                
+                                <a href="#/private/registrar_escala_movilidad/nuevo" class="btn btn-primary"><i class="fa fa-plus"></i> Registrar escala </a>
+                            </div>
+                            <div class="col-md-6 text-right">
+                            
+                            	<div class="btn-group">
+                                    <a class="btn red " href="javascript:;" data-toggle="dropdown">
+                                        <i class="fa fa-share"></i>
+                                        <span class="hidden-xs"> Opciones </span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right" id="datatable_ajax_tools">
+                                        <li>
+                                            <a href="javascript:;" data-action="0" class="tool-action">
+                                                <i class="icon-printer"></i> Imprimir</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="1" class="tool-action">
+                                                <i class="icon-check"></i> Copiar</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="2" class="tool-action">
+                                                <i class="icon-doc"></i> Exportar PDF</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="3" class="tool-action">
+                                                <i class="icon-paper-clip"></i> Exportar Excel</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="4" class="tool-action">
+                                                <i class="icon-cloud-upload"></i> Exportar CSV</a>
+                                        </li>
+                                        <li class="divider"> </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="5" class="tool-action">
+                                                <i class="icon-refresh"></i> Actualizar lista</a>
+                                        </li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <table class="table table-striped table-bordered table-hover" id="datatable_escalas_movilidad">
+                        <thead>
+                            <tr>
+                                <th width="2%"># ID</th>
+                                <th width="40%"> Destino</th>
+                                <th width="30%"> Monto </th>
+                                <th> Estado</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody> </tbody>
+                    </table>
+                    
+                    
+                        
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+    </div>

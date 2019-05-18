@@ -1,0 +1,274 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_oc">Ordenes de Compra</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Listar Ordenes de Compra</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+		
+            <div class="portlet solid grey-cascade">
+            
+                    <div class="portlet-title">
+                        <div class="caption"><i class="fa fa-database"></i> FILTRAR ORDENES DE COMPRA</div>
+                        <div class="tools"><a href="javascript:;" class="expand" data-original-title="" title=""> </a>  </div>
+                    </div>
+                    
+                    <div class="portlet-body form portlet-collapsed"> 
+                    
+                    <form action="#" class="form-horizontal" id="form_search">
+                        <div class="form-body">
+                            
+								<div class="row">
+                            
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Por Sede</label>
+                                        <div class="col-md-8">
+                                            <select name="sedes_idsedes" class="bs-select form-control" id="sedes_idsedes" data-style="btn-warning"
+                                            data-live-search="true" data-size="8">
+                                                </select>
+                                        </div>
+                                    </div>
+                                 </div>
+                    
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Por contrato</label>
+                                        <div class="col-md-8">
+                                            <select name="contratos_idcontratos" class="bs-select form-control" id="contratos_idcontratos" data-style="btn-warning"
+                                            data-live-search="true" data-size="8">
+                                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Fechas</label>
+                                        <div class="col-md-9">
+                                            
+            								<div class="input-group date-picker input-daterange">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text"  data-date-format="dd/mm/yyyy" class="form-control btn-warning" name="desde" id="desde">
+                                                    <span class="input-group-addon"> hasta </span>
+                                                    <input type="text"  data-date-format="dd/mm/yyyy" class="form-control btn-warning" name="hasta" data-date-end-date="0d" id="hasta"> 
+                                                    <span class="input-group-btn">
+                                                        <button class="btn default" type="button">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2 text-right">
+                                    
+                                    <button type="button" id="filtrar" class="btn btn-success"><i class="fa fa-check"></i> Filtrar</button>
+                                    <button type="button" id="limpiar" class="btn btn-danger"><i class="fa fa-times"></i> Limpiar</button>
+                                    
+                                </div>
+                                
+                            </div>
+                                                        
+                        </div>                        
+                        
+                    </form>
+                    
+                    </div>
+                    
+                </div>
+
+
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-list"></i> LISTADO DE ORDENES DE COMPRA</div>
+                </div>
+                <div class="portlet-body">
+                
+                	<div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-6">                                
+                                <a href="#/private/registrar_oc/nuevo" class="btn btn-primary"><i class="fa fa-plus"></i> Registrar orden de compra</a>
+                            </div>
+                            <div class="col-md-6 text-right">
+                            
+                            	<div class="btn-group">
+                                    <a class="btn red " href="javascript:;" data-toggle="dropdown">
+                                        <i class="fa fa-share"></i>
+                                        <span class="hidden-xs"> Opciones de exportación </span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right" id="datatable_ajax_tools">
+                                        <li>
+                                            <a href="javascript:;" data-action="0" class="tool-action">
+                                                <i class="icon-printer"></i> Imprimir</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="1" class="tool-action">
+                                                <i class="icon-check"></i> Copiar</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="2" class="tool-action">
+                                                <i class="icon-doc"></i> Exportar PDF</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="3" class="tool-action">
+                                                <i class="icon-paper-clip"></i> Exportar Excel</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="4" class="tool-action">
+                                                <i class="icon-cloud-upload"></i> Exportar CSV</a>
+                                        </li>
+                                        <li class="divider"> </li>
+                                        <li>
+                                            <a href="javascript:;" data-action="5" class="tool-action">
+                                                <i class="icon-refresh"></i> Actualizar lista</a>
+                                        </li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <table class="table table-striped table-bordered table-hover" id="datatable_oc">
+                        <thead>
+                            <tr>
+                                <th> # O/C </th>
+                                <th> Descripcion de Orden de Compra</th>
+                                <th>Monto</th>
+                                <th width="100">Contrato</th>
+                                <th width="100">Sede</th>
+                                <th>Fecha O/C</th>
+                                <th width="80">  </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+ 
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+      </div>
+      
+
+<!-- END MAIN CONTENT -->
+
+<div id="facturas_asociadas" class="modal container fade" tabindex="-1" data-focus-on="input:first">
+    <div class="modal-header bg-blue-hoki bg-font-blue-hoki">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title sbold"><i class="fa fa-tasks"></i> FACTURAS ASOCIADAS A ORDEN DE COMPRA:</h4>
+    </div>
+    <div class="modal-body bg-grey-cararra">
+    	<form class="form-horizontal" action="#" id="form">
+        
+        		<div class="form-body">
+                     
+                     <div class="row static-info">
+                                                  
+                             <div class="col-md-12">
+                                <div class="form-group">
+                                  <label class="control-label col-md-2">Descripcion O/C:</label>
+                                    <div class="col-md-10">
+                                        <input name="descrip_oc" type="text" class="form-control" id="descrip_oc" readonly="readonly">
+                                    </div>
+                                </div>
+                             </div>
+                             
+                     </div>
+                     
+                     <div class="row static-info">
+                     
+                     		<div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">N&deg; O/C:</label>
+                                    <div class="col-md-6">
+                                        <input name="nro_oc" type="text" class="form-control" id="nro_oc" readonly="readonly">
+                                    </div>
+                                </div>
+                             </div>
+                     
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">Monto O/C:</label>
+                                    <div class="col-md-6">
+                                        <input name="monto_oc" type="text" class="form-control" id="monto_oc" readonly="readonly">
+                                    </div>
+                                </div>
+                             </div>
+                             
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">Fecha O/C:</label>
+                                    <div class="col-md-6">
+                                        <input name="fecha_oc" type="text" class="form-control" id="fecha_oc" readonly="readonly">
+                                    </div>
+                                </div>
+                             </div>
+                             
+                     </div>
+                     
+                     <div class="row static-info">
+                     
+                             <div class="col-md-12">
+                                <div class="form-group">
+                                  <label class="control-label col-md-2">Estado O/C:</label>
+                                    <div class="col-md-2">
+                                        <span class="label label-sm" id="estado_oc"></span>
+                                    </div>
+                                </div>
+                             </div>
+                             
+                     </div>
+                    
+                                                
+                </div>
+            
+                <table class="table table-striped table-hover" id="datatable_facturas" width="100%">
+                    <thead>
+                        <tr>
+                            <th> # Factura </th>
+                            <th width="40%">Descripcion</th>
+                            <th>Fecha</th>
+                            <th>Importe Total</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                    	<tr>
+                            <th colspan="3" style="text-align:right">TOTAL:&nbsp;&nbsp;</th>
+                            <th colspan="1"></th>
+                        </tr>
+                      </tfoot>
+                    <tbody>
+                    </tbody>
+                </table>
+
+      </form>
+    </div>
+    
+    <div class="modal-footer bg-grey bg-font-grey">
+    	
+        <button type="button" data-dismiss="modal" class="btn btn-info"><i class="fa fa-times"></i> Cerrar</button>
+    </div>
+</div>

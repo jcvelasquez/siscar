@@ -1,0 +1,176 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_proveedores">Proveedores</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Registrar proveedor</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> REGISTRAR PROVEEDOR</div>
+                    <!--<div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_marcas" class="btn btn-primary btn-danger grabar"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>-->
+                </div>
+                
+               
+								
+                
+                
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                        
+                            <h3 class="form-section font-lg sbold">Información general</h3>
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">RUC proveedor</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control mask-numeric" id="ruc_proveedor" name="ruc_proveedor">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Razon Social</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" id="razon_social" maxlength="250" name="razon_social">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Domicilio fiscal</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" id="domicilio_fiscal" name="domicilio_fiscal">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">    
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">Telefono fijo</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="telefono_proveedor" name="telefono_proveedor">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Celular</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="celular_proveedor" name="celular_proveedor">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Correo electrónico</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="correo_electronico" name="correo_electronico">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">                               
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">DNI Representante</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control mask-numeric" id="dni_representante_legal" name="dni_representante_legal">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Representante legal</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" id="representante_legal" name="representante_legal">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                                               
+                            <div class="row">
+                            
+                            	<div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Estado proveedor</label>
+                                        <div class="col-md-2">
+                                            <select class="bs-select form-control" data-style="btn-info" id="estado_proveedor" name="estado_proveedor">
+                                            	<option value="">Seleccione</option>
+                                                <option value="1">ACTIVO</option>
+                                                <option value="0">INACTIVO</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                  <!--  <a class="btn btn-primary btn-success grabar"><i class="fa fa-check"></i> Grabar </a>-->
+
+                                    <button type="submit" class="btn green grabar"><i class="fa fa-check"></i> Grabar</button>
+
+                        			<a ui-sref="private.listar_proveedores" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                    <input type="hidden" value="{{settings.usuario}}" name="usuario_creacion" id="usuario_creacion"/>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+

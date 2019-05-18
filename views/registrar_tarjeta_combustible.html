@@ -1,0 +1,152 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_tarjetas_combustible">Tarjetas</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Registrar tarjeta</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> REGISTRO DE TARJETA</div>
+                    <div class="actions">
+                       
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+                        
+                        	<h3 class="form-section font-lg sbold">Información de contrato asociado a tarjeta</h3>
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-4">Contrato</label>
+                                        <div class="col-md-8">
+                                            <select class="bs-select form-control" data-style="btn-info" id="idcontratos" name="idcontratos"
+                                            	data-live-search="true" data-size="8">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">Item adjudicado</label>
+                                        <div class="col-md-9">
+                                            <select class="bs-select form-control" disabled="disabled" data-style="btn-info" id="id_item_adjudicados" 
+                                            	name="id_item_adjudicados" data-live-search="true" data-size="8">
+                                            	<option value="">Seleccione un contrato</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Proveedor</label>
+                                        <div class="col-md-10">
+                                            <input name="razon_social" type="text" class="form-control" id="razon_social" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <h3 class="form-section font-lg sbold">Información de tarjeta asociada a vehículo</h3>
+                            
+                            <div class="row">
+                            
+                            	<div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-4">Vehiculo</label>
+                                        <div class="col-md-8">
+                                            <select class="bs-select form-control" data-style="btn-info" id="vehiculos_idvehiculos" name="vehiculos_idvehiculos"
+                                            	data-live-search="true" data-size="8">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                
+                                	<div class="form-group">
+                                        <label class="control-label col-md-3">N° Tarjeta</label>
+                                        <div class="col-md-3">
+                                            <input type="text" class="form-control" id="nro_tarjeta" name="nro_tarjeta">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                          
+                          	<h3 class="form-section font-lg sbold">Estado de tarjeta</h3>
+                          
+                            <div class="row">
+                            
+                            	<div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-4">Estado tarjeta</label>
+                                        <div class="col-md-4">
+                                            <select class="bs-select form-control" data-style="btn-info" id="estado_tarjeta" name="estado_tarjeta">
+                                            	<option value="">Seleccione</option>
+                                                <option value="1">ACTIVADA</option>
+                                                <option value="0">DESACTIVADA</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                	
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" class="btn green grabar"><i class="fa fa-check"></i> Grabar</button>
+                                    <a ui-sref="private.listar_tarjetas_combustible" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                    <input type="hidden" name="proveedores_idproveedores" id="proveedores_idproveedores" value=""/>
+                                    <input type="hidden" name="usuarios_idusuarios" id="usuarios_idusuarios" value="1"/>
+                                    <input type="hidden" name="usuario_creacion" id="usuario_creacion" value="{{settings.usuario}}"/>
+                                    <input type="hidden" name="usuario_modificacion" id="usuario_modificacion" value="{{settings.usuario}}"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+

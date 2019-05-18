@@ -1,0 +1,345 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<div class="row">
+    <div class="col-md-8">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <a ui-sref="dashboard">Inicio</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <a ui-sref="private.configuracion_parametros">Configuracion</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="active"> Listar parámetros</li>
+        </ul>
+    </div>
+	<div class="col-md-2 pull-right text-right">
+    
+        <div class="btn-group">
+            <a class="btn yellow btn-xs" href="javascript:;" data-toggle="dropdown">
+                <i class="fa fa-question-circle"></i>
+                <span class="hidden-xs"> AYUDA </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="ayuda/PARAMETROS_CONFIGURACION.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Configurar parámetros?</a>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+<!-- BEGIN PAGE BREADCRUMB -->
+
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue">
+                                            <div class="portlet-title">
+                                                <div class="caption">
+                                                    <i class="icon-settings"></i>
+                                                    <span class="caption-subject uppercase">LISTADO DE PARÁMETROS </span>
+                                                </div>
+                                                <div class="actions">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="portlet-body">
+                                            
+                                            	<h3 class="form-section font-lg sbold margin-bottom-20">Módulo de servicio</h3>
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <table id="user" class="table table-striped">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:15%"> Minimo horas de anticipación</td>
+                                                                    <td style="width:30%">
+                                                                        <a href="javascript:;" id="anticipacion_servicio" data-type="text" data-name="MINIMO_HORAS_ANTICIPACION" data-pk="3" data-original-title="Ingrese un número">  </a>&nbsp;&nbsp;hora(s)
+                                                                    </td>
+                                                                    <td style="width:35%">
+                                                                        <span class="text-muted"> Parámetro expresado en horas, con el que se regula la anticipación con que se puede solicitar un servicio.</span>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                                
+                                                                 <tr>
+                                                                    <td style="width:15%"> Duracion mínima servicio </td>
+                                                                    <td style="width:30%">
+                                                                        <a href="javascript:;" id="duracion_min_servicio" data-type="text" data-name="MINIMO_HORAS_DURACION" data-pk="2" data-original-title="Ingrese un número"> </a>&nbsp;&nbsp;hora(s)
+                                                                    </td>
+                                                                    <td style="width:35%">
+                                                                        <span class="text-muted"> Parámetro expresado en horas, con el que se regula la duracion mínima de un servicio.</span>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td style="width:15%"> Duracion máxima servicio </td>
+                                                                    <td style="width:30%">
+                                                                        <a href="javascript:;" id="duracion_max_servicio" data-type="text" data-name="MAXIMO_HORAS_DURACION" data-pk="1" data-original-title="Ingrese un número">  </a>&nbsp;&nbsp;hora(s)
+                                                                    </td>
+                                                                    <td style="width:35%">
+                                                                        <span class="text-muted"> Parámetro expresado en horas, con el que se regula la duracion máxima de un servicio.</span>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td style="width:15%"> Tiempo de tolerancia</td>
+                                                                    <td style="width:30%">
+                                                                        <a href="javascript:;" id="tiempo_tolerancia" data-type="text" data-name="MAXIMO_MINUTOS_TOLERANCIA" data-pk="4" data-original-title="Ingrese un número">  </a>&nbsp;&nbsp;minuto(s)
+                                                                    </td>
+                                                                    <td style="width:35%">
+                                                                        <span class="text-muted"> Parámetro expresado en minutos, con el que se regula la tolerancia de espera máxima para un servicio.</span>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                                <!-- <tr>
+                                                                    <td style="width:15%"> Tiempo entre servicios</td>
+                                                                    <td style="width:30%">
+                                                                        <a href="javascript:;" id="tiempo_margen" data-type="text" data-pk="1" data-original-title="Ingrese un número"> 30 </a>&nbsp;&nbsp;minuto(s)
+                                                                    </td>
+                                                                    <td style="width:35%">
+                                                                        <span class="text-muted"> Parámetro expresado en minutos, con el que se regula el tiempo entre servicio y servicio.</span>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td> Vehiculos disponibles</td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="vehiculos_pool" data-type="select2" data-pk="1" data-original-title="Ingrese un vehiculo"> Vehiculo1, Vehiculo2 </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Vehiculos del pool que están disponibles para atender los servicios.</span>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td> Servicios paralelos</td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="servicios_paralelos" data-type="text" data-pk="1" data-original-title="Ingrese un número"> 30 </a>&nbsp;&nbsp;minuto(s)
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Parámetro que permite realizar solicitar un servicio en la misma hora que otro.</span>
+                                                                    </td>
+                                                                </tr>-->
+                                                                
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                                <!--<h3 class="form-section font-lg sbold margin-bottom-20">Parámetros de módulo de mantenimiento</h3>
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    		<table id="user" class="table table-striped">
+                                                            <tbody>
+                                                                
+                                                                <tr>
+                                                                    <td style="width:15%"> Máximo dias de solicitud</td>
+                                                                    <td style="width:30%">
+                                                                        <a href="javascript:;" id="anticipacion_servicio" data-type="text" data-pk="1" data-original-title="Ingrese un número"> 2 </a>&nbsp;&nbsp;día(s)
+                                                                    </td>
+                                                                    <td style="width:35%">
+                                                                        <span class="text-muted"> Parámetro expresado en dias, con el que se regula la anticipación con que se puede solicitar un servicio.</span>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td> Sex </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="sex" data-type="select" data-pk="1" data-value="" data-original-title="Select sex"> </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Select, loaded from js array. Custom display </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Group </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="group" data-type="select" data-pk="1" data-value="5" data-source="/groups" data-original-title="Select group"> Admin </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Select, loaded from server.
+                                                                            <strong>No buttons</strong> mode </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Status </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="status" data-type="select" data-pk="1" data-value="0" data-source="/status" data-original-title="Select status"> Active </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Error when loading list items </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Plan vacation? </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="vacation" data-type="date" data-viewformat="dd.mm.yyyy" data-pk="1" data-placement="right" data-original-title="When you want vacation to start?"> 25.02.2013 </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Datepicker </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Date of birth </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="dob" data-type="combodate" data-value="1984-05-15" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1" data-original-title="Select Date of birth">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Date field (combodate) </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Setup event </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="event" data-type="combodate" data-template="D MMM YYYY HH:mm" data-format="YYYY-MM-DD HH:mm" data-viewformat="MMM D, YYYY, HH:mm" data-pk="1" data-original-title="Setup event date and time">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Datetime field (combodate) </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Meeting start </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="meeting_start" data-type="datetime" data-pk="1" data-url="/post" data-placement="right" title="Set date & time"> 15/03/2013 12:45 </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Bootstrap datetime </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Comments </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-original-title="Enter comments">awesome
+                                                                            <br> user!</a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Textarea. Buttons below. Submit by
+                                                                            <i>ctrl+enter</i>
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                                                                                                
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                                <h3 class="form-section font-lg sbold margin-bottom-20">Parámetros de módulo de combustible</h3>
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    		<table id="user" class="table table-striped">
+                                                            <tbody>
+                                                                
+                                                                <tr>
+                                                                    <td style="width:15%"> Máximo dias de solicitud</td>
+                                                                    <td style="width:30%">
+                                                                        <a href="javascript:;" id="anticipacion_servicio" data-type="text" data-pk="1" data-original-title="Ingrese un número"> 2 </a>&nbsp;&nbsp;día(s)
+                                                                    </td>
+                                                                    <td style="width:35%">
+                                                                        <span class="text-muted"> Parámetro expresado en dias, con el que se regula la anticipación con que se puede solicitar un servicio.</span>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td> Sex </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="sex" data-type="select" data-pk="1" data-value="" data-original-title="Select sex"> </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Select, loaded from js array. Custom display </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Group </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="group" data-type="select" data-pk="1" data-value="5" data-source="/groups" data-original-title="Select group"> Admin </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Select, loaded from server.
+                                                                            <strong>No buttons</strong> mode </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Status </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="status" data-type="select" data-pk="1" data-value="0" data-source="/status" data-original-title="Select status"> Active </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Error when loading list items </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Plan vacation? </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="vacation" data-type="date" data-viewformat="dd.mm.yyyy" data-pk="1" data-placement="right" data-original-title="When you want vacation to start?"> 25.02.2013 </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Datepicker </span>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td> Type State </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="state" data-type="typeahead" data-pk="1" data-placement="right" data-original-title="Start typing State.."> </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Bootstrap 2.x typeahead </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Fresh fruits </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="fruits" data-type="checklist" data-value="2,3" data-original-title="Select fruits"> </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Checklist </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> Tags </td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="tags" data-type="select2" data-pk="1" data-original-title="Enter tags"> html, javascript </a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="text-muted"> Select2 (tags mode) </span>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>-->
+                                                
+                                                
+                                                <div class="row hide">
+                                                    <div class="col-md-12">
+                                                        <h3>Console
+                                                            <small>(all ajax requests here are emulated)</small>
+                                                        </h3>
+                                                        <div>
+                                                            <textarea id="console" rows="8" style="width: 70%" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+</div>
+
+

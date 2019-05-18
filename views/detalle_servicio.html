@@ -1,0 +1,459 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+
+<ul class="page-breadcrumb breadcrumb">
+  <li> <a ui-sref="dashboard">Inicio</a> <i class="fa fa-circle"></i> </li>
+  <li> <a ui-sref="private.listar_servicios">Servicios</a> <i class="fa fa-circle"></i> </li>
+  <li class="active">Finalizar servicio </li>
+</ul>
+<!-- END PAGE BREADCRUMB --> 
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row margin-bottom-20">
+  <div class="col-md-12 text-right"> <a ui-sref="private.listar_servicios" class="btn btn-primary btn-warning sbold"><i class="fa fa-mail-reply"></i> REGRESAR </a> </div>
+</div>
+            
+            
+<div class="row" id="cabecera_servicio">
+  <div class="col-md-12 col-sm-12">
+    <div class="portlet solid blue-hoki">
+      <div class="portlet-title" style="padding:10px 20px 0 20px;">
+        <div class="caption bold"> <i class="fa fa-info-circle"></i> INFORMACION GENERAL</div>
+        <div class="actions"> </div>
+      </div>
+      <div class="portlet-body" style="padding:10px 20px;">
+       
+        <div class="row static-info">
+          <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Area solicitante</div>
+          <div class="col-md-4 value" data-display="nombre_area"> </div>
+          <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Usuario que solicita </div>
+          <div class="col-md-3 value" data-display="usuario_solicita"> </div>
+        </div>
+        
+        <div class="row static-info">
+          <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Fecha Inicio (programada)</div>
+          <div class="col-md-4 value" data-display="fecha_inicio"> </div>
+          <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Fecha Fin (programada)</div>
+          <div class="col-md-3 value" data-display="fecha_fin"> </div>
+        </div>
+        
+         <div class="row static-info">
+          <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Estado de asignacion</div>
+          <div class="col-md-4 value"><span class="label label-success" data-display="es_asignado"> </span></div>
+          <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Estado de finalizacion</div>
+          <div class="col-md-3 value"><span class="label label-success" data-display="es_finalizado"> </span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12"> 
+    <!-- BEGIN PORTLET-->
+    <div class="portlet box blue">
+      <div class="portlet-title">
+        <div class="caption"><i class="fa fa-info-circle"></i> INFORMACION DEL VEHICULO Y CHOFER</div>
+      </div>
+      <div class="portlet-body form"> 
+        <!-- BEGIN FORM-->
+        <form action="#" class="form-horizontal" id="form_ubicacion_servicio">
+          <div class="form-body">
+                        
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Tipo de vehiculo</label>
+                  <div class="col-md-8">
+                    <input id="tipo_vehiculo" name="tipo_vehiculo" readonly="readonly" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-3">Tipo de servicio</label>
+                  <div class="col-md-9">
+                    <input type="text" id="es_ida_vuelta" name="es_ida_vuelta" readonly="readonly" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Vehiculo asignado</label>
+                  <div class="col-md-8">
+                    <input id="placa_vehiculo" class="form-control" readonly="readonly" name="placa_vehiculo" type="text" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-3">Chofer asignado</label>
+                  <div class="col-md-9">
+                    <input id="nombre_chofer" class="form-control" readonly="readonly" name="nombre_chofer" type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+          
+        </form>
+        <!-- END FORM--> 
+      </div>
+    </div>
+    
+    <!-- END PORTLET--> 
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12"> 
+    <!-- BEGIN PORTLET-->
+    <div class="portlet box blue">
+      <div class="portlet-title">
+        <div class="caption"><i class="fa fa-map-marker"></i> INFORMACION DE UBICACION DEL SERVICIO</div>
+      </div>
+      <div class="portlet-body form"> 
+        <!-- BEGIN FORM-->
+        <form action="#" class="form-horizontal" id="form_ubicacion_servicio">
+          <div class="form-body">
+                        
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Departamento</label>
+                  <div class="col-md-8">
+                    <input id="departamento" name="departamento" readonly="readonly" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-3">Provincia</label>
+                  <div class="col-md-9">
+                    <input type="text" id="provincia" name="provincia" readonly="readonly" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Distrito</label>
+                  <div class="col-md-8">
+                    <input id="distrito" class="form-control" readonly="readonly" name="distrito" type="text" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-3">Lugar destino</label>
+                  <div class="col-md-9">
+                    <input id="lugar_destino" class="form-control" readonly="readonly" name="lugar_destino" type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Direccion</label>
+                  <div class="col-md-8">
+                    <input id="direccion_destino" class="form-control" readonly="readonly" name="direccion_destino" type="text" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-3">Motivo comision</label>
+                  <div class="col-md-9">
+                    <input id="motivo_comision" class="form-control" readonly="readonly" name="motivo_comision" type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+        </form>
+        <!-- END FORM--> 
+      </div>
+    </div>
+    
+    <!-- END PORTLET--> 
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-12"> 
+    <!-- BEGIN PORTLET-->
+    <div class="portlet box blue">
+      <div class="portlet-title">
+        <div class="caption"><i class="fa fa-users"></i> INFORMACION DE COMISIONADOS DEL SERVICIO</div>
+      </div>
+      <div class="portlet-body form"> 
+        
+        	<!-- BEGIN FORM-->
+            <form action="#" class="form-horizontal" id="form_ubicacion_servicio">
+              <div class="form-body">
+                            
+                <div class="row">
+                
+                      <div class="col-md-12">
+                            <table class="table table-striped table-hover" id="datatable_comisionados">
+                                <thead>
+                                    <tr>
+                                        <th width="35"># ID</th>
+                                        <th> Nombres y Apellidos</th>
+                                        <th> Correo electrónico</th>
+                                    </tr>
+                                </thead>
+                                <tbody> </tbody>
+                            </table>
+                      </div>
+                     
+                </div>
+                
+              </div>
+              
+            </form>
+            <!-- END FORM--> 
+        
+        
+      </div>
+    </div>
+    
+    <!-- END PORTLET--> 
+  </div>
+</div>
+
+
+
+
+
+
+<div class="row" id="section_cierre">
+  <div class="col-md-12"> 
+    <!-- BEGIN PORTLET-->
+    <div class="portlet box blue">
+      <div class="portlet-title">
+        <div class="caption"><i class="fa fa-info-circle"></i>INFORMACION DE CIERRE DE SERVICIO - CHOFER</div>
+      </div>
+      <div class="portlet-body form"> 
+        <!-- BEGIN FORM-->
+        <form action="#" class="form-horizontal" id="form_cierre_servicio">
+          <div class="form-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Fecha inicio (Real)</label>
+                  <div class="col-md-8">
+                    <input id="fecha_inicio_real" name="fecha_inicio_real" readonly="readonly" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Hora salida (Real)</label>
+                  <div class="col-md-8">
+                    <input type="text" id="hora_inicio_real" name="hora_inicio_real" readonly="readonly" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Fecha fin (Real)</label>
+                  <div class="col-md-8">
+                    <input id="fecha_fin_real" name="fecha_fin_real" readonly="readonly" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Hora llegada (Real)</label>
+                  <div class="col-md-8">
+                    <input type="text" id="hora_fin_real" name="hora_fin_real" readonly="readonly" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Kilometraje inicio</label>
+                  <div class="col-md-4">
+                    <input id="kilometraje_inicio" class="form-control" readonly="readonly" name="kilometraje_inicio" type="text" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Kilometraje fin</label>
+                  <div class="col-md-4">
+                    <input id="kilometraje_fin" class="form-control" readonly="readonly" name="kilometraje_fin" type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="control-label col-md-2">Observaciones del chofer sobre la<br />
+                    ejecucion del servicio</label>
+                  <div class="col-md-10">
+                    <textarea class="form-control" name="observaciones_chofer" readonly="readonly" id="observaciones_chofer" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </form>
+        <!-- END FORM--> 
+      </div>
+    </div>
+    
+    <!-- END PORTLET--> 
+  </div>
+</div>
+
+
+
+<div class="row" id="section_calificacion">
+  <div class="col-md-12"> 
+    <!-- BEGIN PORTLET-->
+    <div class="portlet box blue">
+      <div class="portlet-title">
+        <div class="caption"><i class="fa fa-info-circle"></i>INFORMACION DE CALIFICACION DE SERVICIO - USUARIO</div>
+      </div>
+      <div class="portlet-body form"> 
+        <!-- BEGIN FORM-->
+        <form action="#" class="form-horizontal" id="form_calificacion_servicio">
+          <div class="form-body">
+          
+            <div class="row">
+                               
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label class="control-label col-md-2">Calificacion de servicio</label>
+                            <div class="col-md-10">
+                                <div class="md-radio-inline">
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio1" name="calificacion_usuario" class="md-radiobtn" value="1" disabled="disabled">
+                                        <label for="radio1">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span> <i class="fa fa-star"></i> </label>
+                                    </div>
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio2" name="calificacion_usuario" class="md-radiobtn" value="2" disabled="disabled">
+                                        <label for="radio2">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                    </div>
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio3" name="calificacion_usuario" class="md-radiobtn" value="3" disabled="disabled">
+                                        <label for="radio3">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                    </div>
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio4" name="calificacion_usuario" class="md-radiobtn" value="4" disabled="disabled">
+                                        <label for="radio4">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                    </div>
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio5" name="calificacion_usuario" class="md-radiobtn" value="5" disabled="disabled">
+                                        <label for="radio5">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+            
+            
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="control-label col-md-2">Observaciones del usuario sobre la<br />
+                    ejecucion del servicio</label>
+                  <div class="col-md-10">
+                    <textarea class="form-control" name="observaciones_usuario" readonly="readonly" id="observaciones_usuario" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </form>
+        <!-- END FORM--> 
+      </div>
+    </div>
+    
+    <!-- END PORTLET--> 
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12"> 
+    <!-- BEGIN PORTLET-->
+    <div class="portlet box blue">
+      <div class="portlet-title">
+        <div class="caption"> <i class="fa fa-info-circle"></i> INFORMACION DE ESTADOS DEL SERVICIO</div>
+      </div>
+      <div class="portlet-body form"> 
+        
+        	<!-- BEGIN FORM-->
+            <form action="#" class="form-horizontal" id="form_estados">
+              <div class="form-body">
+                            
+                <div class="row">
+                
+                      <div class="col-md-12">
+                            <table class="table table-striped table-hover" id="datatable_servicios_estados">
+                                <thead>
+                                    <tr>
+                                        <th width="20"># ID</th>
+                                        <th>Estado</th>
+                                        <th>Observaciones</th>
+                                        <th>Fecha creacion</th>
+                                        <th>Usuario creacion</th>
+                                    </tr>
+                                </thead>
+                                <tbody> </tbody>
+                            </table>
+                      </div>
+                     
+                </div>
+                
+              </div>
+              
+            </form>
+            <!-- END FORM--> 
+        
+        
+      </div>
+    </div>
+    
+    <!-- END PORTLET--> 
+  </div>
+</div>

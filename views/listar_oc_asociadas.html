@@ -1,0 +1,130 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_tarjetas">Tarjetas</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Ordenes de Compra asociadas a contrato</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+
+<div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-info-circle"></i> DETALLES DEL CONTRATO</div>
+                    <div class="actions">
+                        <a ui-sref="private.listar_contratos" class="btn btn-primary btn-success">
+                            <i class="fa fa-mail-reply"></i> Regresar </a>
+                    </div>
+                </div>
+                <div class="portlet-body">
+
+                	<div class="row static-info">
+                        <div class="col-md-2 name"> Contrato</div>
+                        <div class="col-md-4 value"> #16-2016-SIEX</div>
+                        <div class="col-md-3 name"> Monto Total</div>
+                        <div class="col-md-3 value"> S/75,000</div>
+                    </div>  
+                    <div class="row static-info">
+                        <div class="col-md-2 name"> Fecha desde</div>
+                        <div class="col-md-4 value"> 12/08/2016</div>
+                        <div class="col-md-3 name"> Fecha hasta</div>
+                        <div class="col-md-3 value"> 13/07/2017 </div>
+                    </div>  
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue-hoki ">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-list"></i> ORDENES DE COMPRA ASOCIADAS</div>
+                </div>
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+                        <!--<div class="row">
+                            <div class="col-md-6">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="btn-group pull-right">
+                                    <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Opciones con seleccionados
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-times"></i> Quitar de contrato </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
+                        <thead>
+                            <tr>
+                                <th> # O/C </th>
+                                <th width="40%">Descripcion</th>
+                                <th>Fecha</th>
+                                <th>Monto Total</th>
+                                <th>  </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- FILAS -->
+                            <tr class="odd gradeX">
+                                <td>#000016</td>
+                                <td>GASOHOL 95 PLUS</td>
+                                <td>28/02/2016</td>
+                                <td>S/1,856.40</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button class="btn btn-xs red dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones
+                                            <i class="fa fa-angle-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu pull-right" role="menu">
+                                        	<li>
+                                                <a href="javascript:;">
+                                                    <i class="icon-docs"></i> Visualizar o/c</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="icon-docs"></i> Quitar de este contrato</a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- FIN FILAS -->
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+                                        </div>
+
+
+
+<!-- END MAIN CONTENT -->
+<script>
+    //ComponentsFormTools.init(); // init todo page
+</script>

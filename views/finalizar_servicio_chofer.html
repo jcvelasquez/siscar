@@ -1,0 +1,234 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_servicios">Servicios</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active">Finalizar servicio </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+     
+     <div class="row margin-bottom-20">
+        <div class="col-md-12">
+        	<a ui-sref="private.listar_servicios" class="btn btn-primary btn-success sbold"><i class="fa fa-mail-reply"></i> REGRESAR </a>
+        </div>                       
+	 </div>
+	
+	<div class="row" id="cabecera_servicio">
+        <div class="col-md-12 col-sm-12">
+            <div class="portlet solid blue-hoki">
+                <div class="portlet-title" style="padding:10px 20px 0 20px;">
+                    <div class="caption bold">
+                        <i class="fa fa-info-circle"></i> DETALLES DEL SERVICIO</div>
+                    <div class="actions">
+                        
+                    </div>
+                </div>
+                <div class="portlet-body" style="padding:10px 20px;">
+                	<div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Estado de asignacion</div>
+                        <div class="col-md-4 value"><span class="label label-success" data-display="es_asignado"> </span></div>
+                    </div>
+                	<div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Area solicitante</div>
+                        <div class="col-md-4 value" data-display="nombre_area"> </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Usuario que solicita </div>
+                        <div class="col-md-3 value" data-display="usuario_solicita"> </div>
+                    </div>  
+                    <div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Motivo del servicio </div>
+                        <div class="col-md-4 value" data-display="motivo_comision"> </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Lugar del servicio </div>
+                        <div class="col-md-3 value" data-display="lugar_destino"> </div>
+                    </div>
+                    <div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Fecha / Hora Inicio <br />programada</div>
+                        <div class="col-md-4 value" data-display="fecha_inicio">  </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Fecha / Hora - Fin <br />programada </div>
+                        <div class="col-md-3 value" data-display="fecha_fin"> </div>
+                    </div>   
+                    <div class="row static-info">
+                    	<div class="col-md-2 name sbold uppercase font-yellow-lemon"> Placa Vehiculo </div>
+                        <div class="col-md-4 value" data-display="placa_vehiculo"> </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Tipo de vehiculo </div>
+                        <div class="col-md-3 value" data-display="tipo_vehiculo"> </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    
+    
+    
+    <div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue" id="finalizar_servicio">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-calendar-check-o"></i> CIERRE DE SERVICIO - CHOFER</div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form_cierre_servicio">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                                   
+                                   <div class="row hide">
+                                
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">Fecha inicio (Real)</label>
+                                                    <div class="col-md-8">
+                                                        <div class="input-group">
+                                                            <input id="fecha_inicio_real" name="fecha_inicio_real" readonly="readonly" type="text" class="form-control" data-date-format="dd/mm/yyyy">
+                                                            
+                                                            <span class="input-group-btn">
+                                                                <button class="btn default" type="button">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">Fecha fin (Real)</label>
+                                                    <div class="col-md-8">
+                                                        <div class="input-group">
+                                                            <input id="fecha_fin_real" name="fecha_fin_real" readonly="readonly" type="text" class="form-control" data-date-format="dd/mm/yyyy">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn default" type="button">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                   
+                                   </div>
+                               
+                                   <div class="row">         
+    
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">Hora salida (Real)</label>
+                                                    <div class="col-md-8">
+                                                        <div class="input-group">
+                                                            <input type="text" id="hora_inicio_real" name="hora_inicio_real" readonly="readonly" class="form-control timepicker timepicker-no-seconds">
+                                                            <input type="hidden" value="" id="hora_inicio_bd" name="hora_inicio_bd" />
+                                                            <span class="input-group-btn">
+                                                                <button class="btn default" type="button">
+                                                                    <i class="fa fa-clock-o"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">Hora llegada (Real)</label>
+                                                    <div class="col-md-8">
+                                                        <div class="input-group">
+                                                            <input type="text" id="hora_fin_real" name="hora_fin_real" readonly="readonly" class="form-control timepicker timepicker-no-seconds">
+                                                            <input type="hidden" value="" id="hora_fin_bd" name="hora_fin_bd" />
+                                                            <span class="input-group-btn">
+                                                                <button class="btn default" type="button">
+                                                                    <i class="fa fa-clock-o"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                   
+                                   </div>
+                                        
+     
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">Kilometraje inicio</label>
+                                                    <div class="col-md-4">
+                                                         <input id="kilometraje_inicio" class="form-control" name="kilometraje_inicio" type="text" /> 
+                                                         <span class="help-block text-danger helper hide"><h6>El % de ejecucion debe ser mayor a 10.</h6></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">Kilometraje fin</label>
+                                                    <div class="col-md-4">
+                                                         <input id="kilometraje_fin" class="form-control" name="kilometraje_fin" type="text" /> 
+                                                         <span class="help-block text-danger helper hide"><h6>El % de ejecucion debe ser mayor a 10.</h6></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                    </div>
+                                    
+                                    <div class="row"> 
+                               
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2">Observaciones del chofer sobre la<br />ejecucion del servicio</label>
+                                                    <div class="col-md-10">
+                                                        <textarea class="form-control" name="observaciones_chofer" id="observaciones_chofer" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    
+  
+                        
+                        </div>
+                        	
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" id="grabar_cierre" class="btn green"><i class="fa fa-check"></i> Registrar finalizacion</button>
+                        			<a ui-sref="private.listar_servicios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                    <input type="hidden" name="usuario_creacion" value="{{settings.sesion.usuario}}"/>
+                                    <input type="hidden" name="usuario_modificacion" value="{{settings.sesion.usuario}}"/>
+                                    <input type="hidden" name="vehiculos_idvehiculos" id="vehiculos_idvehiculos" value="" />
+                                    
+                                    <input type="hidden" name="idmantenimiento_alertas" id="idmantenimiento_alertas" value="" />
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                       
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+
+

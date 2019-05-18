@@ -1,0 +1,107 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_modelos">Modelos</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Registrar modelos</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> REGISTRAR MODELO DE VEHICULO</div>
+                    <!--<div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_marcas" class="btn btn-primary btn-danger grabar"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>-->
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                        
+                            <h3 class="form-section font-lg sbold">Información general</h3>
+                            
+                            <div class="row">
+                            
+                            
+                            	 <div class="col-md-6">
+                                	<div class="form-group">
+                                        <label class="control-label col-md-4">Marca</label>
+                                        <div class="col-md-8">
+                                            <select class="bs-select form-control" id="idmarcas_vehiculos" name="idmarcas_vehiculos" data-style="btn-info"
+                                            data-live-search="true" data-size="8">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Modelo de vehiculo </label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="modelo_vehiculo" name="modelo_vehiculo">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                                               
+                            <div class="row">
+                            
+                            	<div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2">Estado </label>
+                                        <div class="col-md-2">
+                                            <select class="bs-select form-control" data-style="btn-info" id="estado_modelo" name="estado_modelo">
+                                            	<option value="">Seleccione</option>
+                                                <option value="1">ACTIVO</option>
+                                                <option value="0">INACTIVO</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                  <!--  <a class="btn btn-primary btn-success grabar"><i class="fa fa-check"></i> Grabar </a>-->
+
+                                    <button type="submit" class="btn green grabar"><i class="fa fa-check"></i> Grabar</button>
+
+                        			<a ui-sref="private.listar_modelos" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>

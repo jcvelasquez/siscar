@@ -1,0 +1,115 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_contratos">Contratos</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Facturas asociadas a contrato</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+
+<div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-info-circle"></i> DETALLES DE LA FACTURA</div>
+                    <div class="actions">
+                        <a ui-sref="private.listar_facturas" class="btn btn-primary btn-success">
+                            <i class="fa fa-mail-reply"></i> Regresar </a>
+                    </div>
+                </div>
+                <div class="portlet-body">
+
+                	<div class="row static-info">
+                        <div class="col-md-2 name"> Factura</div>
+                        <div class="col-md-2 value"> #250-0000045</div>
+                        <div class="col-md-2 name"> Monto Total</div>
+                        <div class="col-md-2 value"> S/1,8450</div>
+                        <div class="col-md-2 name"> Fecha </div>
+                        <div class="col-md-2 value"> 03/03/2017</div>
+                    </div>  
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue-hoki ">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-list"></i> TICKETS ASOCIADOS</div>
+                </div>
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+
+                    </div>
+                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
+                        <thead>
+                            <tr>
+                                <th width="25%">Vehiculo </th>
+                                <th>Chofer</th>
+                                <th>Tarjeta</th>
+                                <th>Producto</th>
+                                <th>Total (gal)</th>
+                                <th>Kilometraje</th>
+                                <th>Fecha</th>
+                                <th>  </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- FILAS -->
+                            <tr class="odd gradeX">
+                                <td>NISSAN FRONTIER | PCV-234</td>
+                                <td>Omar Trevejo</td>
+                                <td>4562</td>
+                                <td>GASOHOL 95</td>
+                                <td>5.5754</td>
+                                <td>82.50</td>
+                                <td>03/03/2016</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button class="btn btn-xs red dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones
+                                            <i class="fa fa-angle-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu pull-right" role="menu">
+                                        	<li>
+                                                <a href="javascript:;">
+                                                    <i class="icon-docs"></i> Visualizar ticket</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="icon-docs"></i> Quitar de esta factura</a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- FIN FILAS -->
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+                                        </div>
+
+
+
+<!-- END MAIN CONTENT -->
+<script>
+    //ComponentsFormTools.init(); // init todo page
+</script>

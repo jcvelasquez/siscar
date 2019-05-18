@@ -1,0 +1,486 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<style> #fechas { width:100%;} </style>
+
+
+
+<div class="row">
+    <div class="col-md-8">
+        <ul class="page-breadcrumb breadcrumb">
+          <li> <a ui-sref="dashboard">Inicio</a> <i class="fa fa-circle"></i> </li>
+          <li> <a ui-sref="private.listar_tickets">Tickets</a> <i class="fa fa-circle"></i> </li>
+          <li class="active"> Tickets de recarga</li>
+        </ul>
+    </div>
+	<div class="col-md-2 pull-right text-right">
+    
+        <div class="btn-group">
+            <a class="btn yellow btn-xs" href="javascript:;" data-toggle="dropdown">
+                <i class="fa fa-question-circle"></i>
+                <span class="hidden-xs"> AYUDA </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+            
+                <li>
+                    <a href="ayuda/REGISTRAR_TICKET.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Registrar un ticket?</a>
+                </li>
+                <li>
+                    <a href="ayuda/REGISTRAR_VALE.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Registrar un vale?</a>
+                </li>
+                <li>
+                    <a href="ayuda/ASIGNAR_FACTURA.mp4" target="_blank">
+                        <i class="fa fa-youtube-play"></i> ¿Asignar ticket a factura?</a>
+                </li>
+                
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+<!-- END PAGE BREADCRUMB -->
+			
+<div class="portlet solid grey-cascade">
+
+        <div class="portlet-title">
+            <div class="caption"><i class="fa fa-database"></i> FILTRAR BÚSQUEDA DE TICKETS</div>
+            <div class="tools"><a href="javascript:;" class="expand" data-original-title="" title=""> </a>  </div>
+            
+        </div>
+        
+        <div class="portlet-body form  portlet-collapsed"> 
+        
+        <form action="#" class="form-horizontal" id="form_search">
+            <div class="form-body">
+                
+                    <div class="row">
+                
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Por sedes</label>
+                                    <div class="col-md-8">
+                                        <select name="sedes_idsedes" class="bs-select form-control" id="sedes_idsedes" data-style="btn-warning"
+                                            data-live-search="true" data-size="8">
+                                            </select>
+                                    </div>
+                                </div>
+                             </div>
+                
+                            <div class="col-md-5">
+                            
+                                <div class="form-group">
+                                    <label class="control-label col-md-6">Por vehiculos</label>
+                                    <div class="col-md-6">
+                                        <select name="idvehiculos" class="bs-select form-control" id="idvehiculos" data-style="btn-warning"
+                                            data-live-search="true" data-size="8">
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="col-md-2 text-right">
+                                
+                                <button type="button" id="filtrar" class="btn btn-success"><i class="fa fa-search"></i> Filtrar</button>
+                                <button type="button" id="limpiar" class="btn btn-danger"><i class="fa fa-times"></i> Limpiar</button>
+                                
+                            </div>
+                    
+                    </div>
+                    
+                    
+                    <div class="row">
+                
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Por combustible</label>
+                                    <div class="col-md-8">
+                                        <select name="idtipo_combustible" class="bs-select form-control" id="idtipo_combustible" data-style="btn-warning"
+                                                data-live-search="true" data-size="8">
+                                            </select>
+                                    </div>
+                                </div>
+                             </div>
+                
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="control-label col-md-6">Chofer</label>
+                                    <div class="col-md-6">
+                                        
+                                        <select class="bs-select form-control" name="idchofer" id="idchofer" data-style="btn-warning"
+                                        data-live-search="true" data-size="8">
+                                        </select>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-2">
+                                
+                               
+                                
+                            </div>
+                    
+                    </div>
+                    
+                    <div class="row">
+                    
+                            <div class="col-md-5">
+                    
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Por fechas</label>
+                                    <div class="col-md-8">
+                                    <!--
+                                        <div id="fechas" class="btn btn-warning">
+                                            <i class="fa fa-calendar"></i> &nbsp;
+                                            <span> </span>
+                                            <b class="fa fa-angle-down"></b>
+                                        </div>
+                                        -->
+                                        <div class="input-group date-picker input-daterange">
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                </span>
+                                                <input type="text" class="form-control btn-warning" data-date-format="dd/mm/yyyy" name="desde" id="desde">
+                                                <span class="input-group-addon"> hasta </span>
+                                                <input type="text" class="form-control btn-warning" data-date-format="dd/mm/yyyy" name="hasta" data-date-end-date="0d" id="hasta"> 
+                                                <span class="input-group-btn">
+                                                    <button class="btn default" type="button">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                </span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                    
+                            </div>
+                            
+
+                                                            
+                            
+                            
+                    </div>
+                                            
+            </div>                        
+            
+        </form>
+        
+
+        
+        </div>
+        
+    </div>
+      
+                
+     <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-list"></i> TICKETS DE RECARGA DE COMBUSTIBLE</div>
+                </div>
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+                            <div class="row">
+                                <div class="col-md-6">                                
+                                    <a href="#/private/registrar_ticket/nuevo" class="btn btn-primary"><i class="fa fa-plus"></i> Registrar ticket </a>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    
+                                    <a class="btn btn-outline dark hide_to_user" data-target="#asignar_factura" id="modal_asignacion" data-toggle="modal"> <i class="fa fa-file-text-o"></i> Asignar a factura </a>
+                                
+                                    <div class="btn-group">
+                                        <a class="btn red " href="javascript:;" data-toggle="dropdown">
+                                            <i class="fa fa-share"></i>
+                                            <span class="hidden-xs"> Opciones de exportación </span>
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right" id="datatable_ajax_tools">
+                                            <li>
+                                                <a href="javascript:;" data-action="0" class="tool-action">
+                                                    <i class="icon-printer"></i> Imprimir</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" data-action="1" class="tool-action">
+                                                    <i class="icon-check"></i> Copiar</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" data-action="2" class="tool-action">
+                                                    <i class="icon-doc"></i> Exportar PDF</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" data-action="3" class="tool-action">
+                                                    <i class="icon-paper-clip"></i> Exportar Excel</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" data-action="4" class="tool-action">
+                                                    <i class="icon-cloud-upload"></i> Exportar CSV</a>
+                                            </li>
+                                            <li class="divider"> </li>
+                                            <li>
+                                                <a href="javascript:;" data-action="5" class="tool-action">
+                                                    <i class="icon-refresh"></i> Actualizar lista</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    <table class="table table-striped table-bordered table-hover" id="datatable_tickets">
+                      <thead>
+                        <tr>
+                          <th class="table-checkbox dt-center">
+                                <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                    <input type="checkbox" class="group-checkable" data-set="#datatable_tickets .checkboxes" />
+                                    <span></span>
+                                </label>
+                          </th>
+                          <th> # Documento </th>
+                          <th> Tipo</th>
+                          <th> Vehiculo </th>
+                          <th> Chofer </th>
+                          <th> Sede </th>
+                          <th> Producto</th>
+                          <th> Galones </th>
+                          <th> Total (S/) </th>
+                          <th> KM Ticket </th>
+                          <th> Fecha Ticket</th>
+                          <th> Hora Ticket</th>
+                          <th> # Factura</th>
+                          <th> </th>
+                        </tr>
+                      </thead>
+                      <tfoot>
+                        <tr>
+                            <th colspan="8" style="text-align:right">TOTALES:&nbsp;&nbsp;</th>
+                            <th colspan="1"></th>
+                            <th colspan="5"></th>
+                        </tr>
+                      </tfoot>
+                      <tbody>
+                      </tbody>
+                    </table>  
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+        
+    </div>
+                                        
+                                        
+
+<!-- stackable -->
+<div id="asignar_factura" class="modal container fade" tabindex="-1" data-focus-on="input:first">
+	
+    <form class="form-horizontal" action="#" id="form_asignar"> 
+    
+    <div class="modal-header bg-blue-hoki bg-font-blue-hoki">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title sbold"><i class="fa fa-tasks"></i> ASIGNAR TICKETS SELECCIONADOS A FACTURA:</h4>
+    </div>
+    
+    <div class="modal-body bg-grey-cararra">
+    	
+        		<div class="form-body">
+                 
+                      <div class="alert alert-danger asignar display-hide">
+                         <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                     </div>
+                   
+                     <div class="row static-info">
+                     
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">Factura:</label>
+                                    <div class="col-md-6">
+                                        <select name="facturas_idfacturas" required class="bs-select form-control" id="facturas_idfacturas" data-style="btn-warning"
+                                            data-live-search="true" data-size="8">
+                                        </select>
+                                    </div>
+                                </div>
+                             </div>
+                             
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">Importe factura:</label>
+                                    <div class="col-md-6">
+                                    		<div class="input-icon right">
+                                                    <i class="fa fa-warning tooltips" data-original-title="please write a valid email"></i>
+                                                    <input name="importe_total_factura" type="text" class="form-control" id="importe_total_factura" readonly="readonly">
+                                            </div>
+                                    </div>
+                                </div>
+                             </div>
+                             
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">Fecha:</label>
+                                    <div class="col-md-6">
+                                        <input name="fecha_factura" type="text" class="form-control" id="fecha_factura" readonly="readonly">
+                                    </div>
+                                </div>
+                             </div>
+                             
+                            
+                             
+                     </div>
+                     
+                     <div class="row static-info">
+                     
+                     		 <div class="col-md-12">
+                                <div class="form-group">
+                                  <label class="control-label col-md-2">Descripcion factura:</label>
+                                    <div class="col-md-10">
+                                        <input name="descrip_factura" type="text" class="form-control" id="descrip_factura" readonly="readonly">
+                                    </div>
+                                </div>
+                             </div>
+
+                     </div>
+                     
+                     <div class="row static-info">
+                     
+                     		 <div class="col-md-12">
+                                <div class="form-group">
+                                  <label class="control-label col-md-2">Observaciones asignacion:</label>
+                                    <div class="col-md-10">
+                                        <input name="descripcion_cabecera" type="text" class="form-control" id="descripcion_cabecera">
+                                    </div>
+                                </div>
+                             </div>
+
+                     </div>
+                     
+                     <div class="row static-info">
+                     
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">Estado asignacion:</label>
+                                    <div class="col-md-6 margin-top-10">
+                                        <span class="label label-sm label-warning" id="estado_asignacion">NO DISPONIBLE</span>
+                                    </div>
+                                </div>
+                             </div>
+                             
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">Importe Asignacion:</label>
+                                    <div class="col-md-6">
+                                    		<div class="input-icon right">
+                                                    <i class="fa fa-warning tooltips" data-original-title="El monto de asignacion no puede ser mayor al monto de la factura!"></i>
+                                                    <input name="monto_asignacion" type="text" class="form-control" id="monto_asignacion" readonly="readonly">
+                                            </div>
+                                    	
+                                    </div>
+                                </div>
+                             </div>
+                             
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="control-label col-md-6">Importe Nota Credito:</label>
+                                    <div class="col-md-6">
+                                    		<div class="input-icon right">
+                                                <i class="fa fa-warning tooltips" data-original-title="El monto de asignacion no puede ser mayor al monto de la factura!"></i>
+                                                <input name="nota_credito" type="text" class="form-control" id="nota_credito" readonly="readonly">
+                                                <input type="hidden" id="idtickets_x_factura_cabecera" name="idtickets_x_factura_cabecera" value=""/>
+                                                <input type="hidden" id="usuario_modificacion" name="usuario_modificacion" value="jvelasquez"/>
+                                            </div>
+                                    	
+                                    </div>
+                                </div>
+                             </div>
+                            
+                             
+                     </div>     
+                                                
+                </div>
+
+              
+              <h3 class="form-section font-lg sbold"><i class="fa fa-clock-o"></i> TICKETS POR ASIGNAR: </h3>
+              
+              <div class="row">  
+              	<div class="col-md-12">            
+                    <table class="table table-striped table-hover" id="datatable_tickets_seleccionados">
+                      <thead>
+                        <tr>
+                          <th> Ticket </th>
+                          <th> Vehiculo </th>
+                          <th> Chofer </th>
+                          <th> Producto</th>
+                          <th> Cantidad </th>
+                          <th> Total (S/) </th>
+                          <th> Kilometraje </th>
+                          <th> Fecha </th>
+                          <th> Hora </th>
+                        </tr>
+                      </thead>
+                      <tfoot>
+                            <tr>
+                                <th colspan="5" style="text-align:right">TOTAL:&nbsp;&nbsp;</th>
+                                <th colspan="4"></th>
+                            </tr>
+                          </tfoot>
+                      <tbody>
+                      </tbody>
+                    </table>  
+                    </div>
+               </div>
+               
+               <h3 class="form-section font-lg sbold"><i class="fa fa-check-square"></i> TICKETS ASIGNADOS: </h3>
+               
+               <div class="row">    
+	               <div class="col-md-12">          
+                    <table class="table table-striped table-hover" id="datatable_tickets_asignados">
+                      <thead>
+                        <tr>
+                          <th> Ticket </th>
+                          <th> Vehiculo </th>
+                          <th> Chofer </th>
+                          <th> Producto</th>
+                          <th> Cantidad </th>
+                          <th> Total (S/) </th>
+                          <th> Kilometraje </th>
+                          <th> Fecha </th>
+                          <th> Hora </th>
+                          <th> </th>
+                        </tr>
+                      </thead>
+                      <tfoot>
+                            <tr>
+                                <th colspan="5" style="text-align:right">TOTAL:&nbsp;&nbsp;</th>
+                                <th colspan="1"></th>
+                                <th colspan="4"></th>
+                            </tr>
+                          </tfoot>
+                      <tbody>
+                      </tbody>
+                    </table>  
+                    </div>
+               </div>
+      
+    </div>
+    
+    
+     <div class="modal-footer bg-grey bg-font-grey"> 
+     	<div class="row">
+        	<div class="col-md-6 text-left">
+            </div>
+            <div class="col-md-6">
+            	<button type="submit" id="confirmar_asignacion" class="btn btn-success"><i class="fa fa-check"></i> Asignar</button>   	
+        		<button type="button" data-dismiss="modal" class="btn btn-danger"><i class="fa fa-times"></i> Cerrar</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    </form>
+    
+</div>
+

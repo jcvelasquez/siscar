@@ -1,0 +1,164 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_sedes">Sedes</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Registrar sede</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue-hoki">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-gift"></i> REGISTRAR SEDE</div>
+                    <!--<div class="actions">
+                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar </a>
+                        <a ui-sref="private.listar_marcas" class="btn btn-primary btn-danger grabar"><i class="fa fa-times"></i> Cancelar </a>
+                    </div>-->
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" class="form-horizontal" id="form">
+                        <div class="form-body">
+
+                           <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button> Compruebe que todos los campos esten completos para poder grabar. 
+                           </div>
+                        
+                            <h3 class="form-section font-lg sbold">Información general</h3>
+                            
+                            <div class="row hide">
+                            
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Empresa</label>
+                                        <div class="col-md-8">
+                                            <!--<select class="bs-select form-control" tabindex="1" data-style="btn-success" id="empresas_idempresas" name="empresas_idempresas">
+                                            </select> -->
+                                            <input name="empresas_idempresas" id="empresas_idempresas" type="hidden" value="1" />
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="row"> 
+                               
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Nombre de sede</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" tabindex="2" id="nombre_sede" name="nombre_sede">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Direccion</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="direccion_uno" tabindex="4" name="direccion_uno">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                            
+                            	
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Telefono fijo</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="telefono_sede"  tabindex="3" name="telefono_sede">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Telefono celular</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="celular_sede" tabindex="4" name="celular_sede">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                              <div class="row">
+                            
+                            	
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Correo electrónico</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="correo_sede"  tabindex="3" name="correo_sede">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Coordenadas</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="coordenadas_sede" tabindex="4" name="coordenadas_sede">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">Estado Sede</label>
+                                        <div class="col-md-4">
+                                            <select class="bs-select form-control" data-style="btn-success" tabindex="6" id="estado_sede" name="estado_sede">
+                                            	<option value="">Seleccione</option>
+                                                <option value="1">ACTIVO</option>
+                                                <option value="0">INACTIVO</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+
+
+                            <!-- END: ROW UPLOAD -->
+                               
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="row">
+                            
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" class="btn green grabar"><i class="fa fa-check"></i> Grabar</button>
+                        			<a ui-sref="private.listar_sedes" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                    <input type="hidden" name="usuario_creacion" value="{{settings.usuario}}"/>
+                                    <input type="hidden" name="usuario_modificacion" value="{{settings.usuario}}"/>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <!-- END FORM-->
+                </div>
+                
+      </div>
+                                                            
+      <!-- END PORTLET-->
+  </div>
+</div>
+

@@ -1,0 +1,306 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a ui-sref="dashboard">Inicio</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a ui-sref="private.listar_servicios">Servicios</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Asignar vehiculo </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+     
+     <div class="row margin-bottom-20">
+        <div class="col-md-12">
+        	<a ui-sref="private.listar_servicios" class="btn btn-primary btn-success sbold"><i class="fa fa-mail-reply"></i> REGRESAR </a>
+        </div>                       
+	 </div>
+	
+	<div class="row" id="cabecera_servicio">
+        <div class="col-md-12 col-sm-12">
+            <div class="portlet solid blue-hoki">
+                <div class="portlet-title" style="padding:10px 20px 0 20px;">
+                    <div class="caption bold">
+                        <i class="fa fa-info-circle"></i> DETALLES DEL SERVICIO</div>
+                    <div class="actions">
+                        
+                    </div>
+                </div>
+                <div class="portlet-body" style="padding:10px 20px;">
+                	<div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Estado de asignacion</div>
+                        <div class="col-md-4 value"><span class="label label-success" data-display="es_asignado"> </span></div>
+                    </div>
+                	<div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Area solicitante</div>
+                        <div class="col-md-4 value" data-display="nombre_area"> </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Usuario que solicita </div>
+                        <div class="col-md-3 value" data-display="usuario_solicita"> </div>
+                    </div>  
+                    <div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Motivo del servicio </div>
+                        <div class="col-md-4 value" data-display="motivo_comision"> </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Lugar del servicio </div>
+                        <div class="col-md-3 value" data-display="lugar_destino"> </div>
+                    </div>
+                    <div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Fecha / Hora - Inicio </div>
+                        <div class="col-md-4 value" data-display="fecha_inicio">  </div>
+                        <div class="col-md-3 name sbold uppercase font-yellow-lemon"> Fecha / Hora - Fin </div>
+                        <div class="col-md-3 value" data-display="fecha_fin"> </div>
+                    </div>   
+                    <div class="row static-info">
+                        <div class="col-md-2 name sbold uppercase font-yellow-lemon"> Tipo de vehiculo </div>
+                        <div class="col-md-4 value" data-display="tipo_vehiculo">  </div>
+                    </div>  
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="fa fa-calendar-check-o"></i> DISPOBILIDAD DE VEHICULOS </div>
+                </div>
+                <div class="portlet-body form">
+                	<form action="#" class="form-horizontal">
+                        <div class="form-body">
+                        
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12">
+                                
+                                    <h3 class="event-form-title margin-bottom-20 font-lg sbold"><i class="fa fa-clock-o"></i> Mostrar disponibilidad para el vehiculo:</h3>
+                                    <div class="margin-bottom-20">
+                                        <select name="idvehiculos" class="bs-select form-control" id="idvehiculos" data-style="btn-info"
+                                            data-live-search="true" data-size="8">
+                                        </select>
+                                	</div> 
+                                    
+                                    <h3 class="event-form-title margin-bottom-20 font-lg sbold"><i class="fa fa-user"></i> Chofer asignado a este vehiculo:</h3>
+                                    
+                                    <div class="margin-bottom-20">
+                                    	<label class="control-label">Luis Alberto Quiñones</label>
+                                    </div>
+                                    
+                                    <hr />
+                                    
+                                    <h3 class="event-form-title margin-bottom-20 font-lg sbold"><i class="fa fa-user"></i> Asignar chofer manualmente:</h3>
+                                    
+                                    <div class="margin-bottom-20">
+                                        <select name="chofer_idchofer" class="bs-select form-control" id="chofer_idchofer" data-style="btn-info"
+                                            data-live-search="true" data-size="8">
+                                        </select>
+                                	</div> 
+                                    
+                                    <hr/>
+                                    
+                                    <h3 class="event-form-title margin-bottom-20 font-lg sbold"><i class="fa fa-gears"></i> Kilometraje salida:</h3>
+                                    
+                                    <div class="row">
+                                    	<div class="col-md-5">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <hr />
+                                    
+                                    <div class="noborder">
+                                        <a class="btn btn-primary btn-success"><i class="fa fa-check"></i> Grabar asignacion(es) </a>
+                       					<a ui-sref="private.listar_servicios" class="btn btn-primary btn-danger"><i class="fa fa-times"></i> Cancelar </a>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-8 col-sm-12">
+                                    
+                                    <div id="calendar" class="has-toolbar"> </div>
+                                </div>
+                            </div>
+                    
+
+                    	</div>
+                        	
+                    </form>
+                </div>
+                
+               
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div id="ver_evento" class="modal container fade form" tabindex="-1" data-focus-on="input:first">
+		
+            <div class="modal-header bg-blue-hoki bg-font-blue-hoki">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title sbold"><i class="fa fa-cab"></i> VER SERVICIO</h4>
+            </div>
+            <div class="modal-body bg-grey-cararra ">
+    			<form class="form-horizontal form-bordered" action="#" id="form_ver_servicio" method="POST">
+                
+                   <h4 class="sbold font-default bg-default bg-font-default" style="padding:15px;"><i class="fa fa-calendar"></i> Fechas de servicio</h4>
+                  
+                    <div class="row static-info">
+                    
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">Fecha de Inicio:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="fecha_inicio"> </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">Fecha de Fin:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="fecha_fin"> </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">¿Es ida y vuelta?:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="es_ida_vuelta"> </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                   <h4 class="sbold font-default bg-default bg-font-default" style="padding:15px;"><i class="fa fa-car"></i> Solicitante</h4>
+                  
+                    <div class="row static-info">
+                    
+                    	<div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">Area solicitante:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="nombre_area"> </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">¿Quien solicita?:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="usuario_solicita"> </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">Tipo de vehiculo:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="tipo_vehiculo"> </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <h4 class="sbold font-default bg-default bg-font-default" style="padding:15px;"><i class="fa fa-map-marker"></i> Ubicacion del servicio</h4>
+                   
+                    <div class="row static-info">
+                    
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">Departamento:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="departamento"> </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">Provincia:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="provincia"> </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">Distrito:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="distrito"> </p>
+                                </div>
+                            </div>
+                        </div>
+                   
+                   </div>
+                   
+                   <div class="row static-info">
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">Lugar destino:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="lugar_destino"> </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">Direccion:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="direccion_destino"> </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label col-md-5 sbold">Motivo comision:</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static" data-display="motivo_comision"> </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+               
+                    <h4 class="sbold font-default bg-default bg-font-default" style="padding:15px;"><i class="fa fa-users"></i> Comisionados</h4>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Expiration:</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static" data-display="card_expiry_date"> </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Payment Options:</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static" data-display="group-c[]"> </p>
+                        </div>
+                    </div>
+                    
+   				</form>
+    
+            </div>
+            <div class="modal-footer bg-grey bg-font-grey">
+                 <button type="button" id="cerrar_solicitud" class="btn btn-info"><i class="fa fa-times"></i> Cerrar</button>
+            </div>
+        
+        
+        
+    </div>
